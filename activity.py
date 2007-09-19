@@ -116,8 +116,8 @@ class AcousticMeasureActivity(Activity):
         self.button.set_label(self._waiting_label)
         self._logger.debug("initiating socket_test")
         dt = arange.measure_dt_seq(self.hellotube, self.initiating)
-        x = dt * arange.speed_of_sound()
-        mes = "Distance is " + str(x) + "meters.\n"
+        x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
+        mes = "Distance is %(num).2f meters.\n" % {'num': dt}
         self._logger.debug("socket_test: " + mes)
         self.text.set_label(mes + self.text.get_label())
         self.button.set_label(self._ready_label)

@@ -1,6 +1,7 @@
 ss = 'test from server'
 sc = 'test from client'
 
+OLPC_OFFSET = 5.5
 
 def server(soc):
     soc.sendall(ss)
