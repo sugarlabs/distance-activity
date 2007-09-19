@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+  <!ENTITY fill_color "#0000FF">
+  <!ENTITY stroke_color "#FFFF00">
+]>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Icon"
+   width="48.92"
+   height="43.846"
+   viewBox="0 0 48.92 43.846"
+   overflow="visible"
+   enable-background="new 0 0 48.92 43.846"
+   xml:space="preserve"
+   sodipodi:version="0.32"
+   inkscape:version="0.45.1"
+   sodipodi:docname="activity-acousticmeasure.svg"
+   sodipodi:docbase="/home/bens/olpc3d/range/AcousticMeasure.activity/activity"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"><metadata
+   id="metadata2238"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs2236" /><sodipodi:namedview
+   inkscape:window-height="816"
+   inkscape:window-width="1440"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   guidetolerance="10.0"
+   gridtolerance="10.0"
+   objecttolerance="10.0"
+   borderopacity="1.0"
+   bordercolor="#666666"
+   pagecolor="#ffffff"
+   id="base"
+   inkscape:zoom="9.2824886"
+   inkscape:cx="23.598161"
+   inkscape:cy="22.892568"
+   inkscape:window-x="0"
+   inkscape:window-y="29"
+   inkscape:current-layer="Icon" />
+
+
+
+
+
+
+
+
+<path
+   style="fill:&fill_color;;fill-opacity:1;fill-rule:evenodd;stroke:&stroke_color;;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 15.620812,17.775405 C 15.439174,21.7821 21.164907,27.380702 22.515515,22.623244"
+   id="path2242"
+   sodipodi:nodetypes="cc" /><path
+   style="fill:&fill_color;;fill-opacity:1;fill-rule:evenodd;stroke:&stroke_color;;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 20.303007,20.856726 C 13.714887,16.256583 6.6253787,12.281189 7.7565409,11.311621 C 7.2178924,9.5879452 9.6318367,8.9638643 12.604379,11.527081 C 19.672475,7.4683834 26.883737,15.782223 30.363825,17.692288 C 33.084252,18.91042 36.332773,17.117741 39.752273,19.82227 C 40.90139,21.687977 35.155804,21.007297 34.042596,23.054162 C 34.042596,23.054162 38.028596,32.076527 41.799137,34.581244 C 45.569678,37.08596 47.02403,34.096461 48.155192,35.766272 C 48.734954,36.622111 45.17559,37.267936 43.026395,38.799426 C 41.10373,40.169494 40.352165,42.786684 39.105894,43.091893 C 36.466515,43.738272 41.148399,38.459792 39.536813,37.813135 C 35.641147,32.688547 31.872785,29.497287 27.062267,25.718623"
+   id="path2240"
+   sodipodi:nodetypes="cccccczzszcs" /><path
+   style="fill:&fill_color;;fill-opacity:1;fill-rule:evenodd;stroke:&stroke_color;;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 19.175894,17.452216 C 22.253108,29.74418 29.301296,30.443558 26.501515,23.161892"
+   id="path2244"
+   sodipodi:nodetypes="cc" /><path
+   style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:&stroke_color;;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 5.6019462,8.7261074 C 6.5418033,6.5901109 8.0934175,6.2893854 9.5879465,5.8174046"
+   id="path3221"
+   sodipodi:nodetypes="cc" /><path
+   style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke:&stroke_color;;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   d="M 2.8009731,7.4333506 C 4.0629852,4.9256828 6.1713523,3.4054292 9.1570275,2.9087017"
+   id="path3223"
+   sodipodi:nodetypes="cc" /><path
+   style="fill:none;fill-opacity:0.75;fill-rule:evenodd;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke:&stroke_color;;stroke-opacity:1"
+   d="M 0.64637841,6.463783 C 1.8975049,2.6686135 4.5687314,0.53022731 9.2647572,0.75410699"
+   id="path3225"
+   sodipodi:nodetypes="cc" /></svg>

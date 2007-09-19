@@ -1,0 +1,7 @@
+[Activity]
+name = AcousticMeasure
+service_name = org.laptop.AcousticMeasure
+class = activity.AcousticMeasureActivity
+icon = activity-acousticmeasure
+activity_version = 1
+show_launcher = yes

@@ -145,18 +145,13 @@ def play_wav(fname):
     This void function plays the file named fname and does not return until
     after playback has completed.
     """
-    print "about to get player"
     player = gst.element_factory_make("playbin", 'player')
-    print "about to get bus"
     bus = player.get_bus()
     
-    print "about to start playing"
     player.set_property('uri','file://'+fname)
     player.set_state(gst.STATE_PLAYING)
 
-    print "about to wait for EOS"
     bus.poll(gst.MESSAGE_EOS,-1)
-    print "cleaning up"
     player.set_state(gst.STATE_NULL)
 
 def record_while_playing(play_name, t):

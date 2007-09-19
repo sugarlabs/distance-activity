@@ -1,0 +1,7 @@
+[Activity]
+name = HelloSocket
+service_name = org.laptop.HelloSocket
+class = activity.HelloSocketActivity
+icon = activity-hellomesh
+activity_version = 1
+show_launcher = yes
