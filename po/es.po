@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-20 18:57-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: activity/activity.info:2
+msgid "Acoustic Tape Measure"
+msgstr "Cínta Métrica Acústica"
+
+#: activity.py:60
+msgid "Acoustic Tape Measure Activity"
+msgstr "Actividad Cínta Métrica Acústica"
+
+#: activity.py:70
+msgid ""
+"To measure the distance between two laptops, you must first share this "
+"Activity."
+msgstr "Para meter la distancia entre dos computadoras, es necesario compartir esta actividad"
+
+#: activity.py:71
+msgid "Press this button to measure the distance to another laptop"
+msgstr "Empujar este botón para meter la distance a otra computadora"
+
+#: activity.py:72
+msgid "Preparing to measure distance"
+msgstr "Preparando para meter la distancia"
+
+#: activity.py:73
+msgid "Ready to make a measurement.  Waiting for partner to be ready."
+msgstr "Parado para meter.  Esperando para que el compañero sea parado."
+
+#: activity.py:74
+msgid "Recording sound from each laptop."
+msgstr "Grabando sonido por las computadoras."
+
+#: activity.py:75
+msgid "Processing recorded audio."
+msgstr "Analizando el sonido grabado."
+
+#: activity.py:126
+#, python-format
+msgid "The distance is %(num).2f meters.\n"
+msgstr "La distancia es %(num).2f metros."
