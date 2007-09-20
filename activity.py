@@ -16,12 +16,13 @@
 
 """AcousticMeasure Activity: Uses sound propagation delay to measure distance"""
 
-import hippo
 import gtk
 import time
 import logging
 import telepathy
 import telepathy.client
+
+import sugar.graphics.button
 
 from dbus import Interface
 from dbus.service import method, signal
@@ -62,12 +63,8 @@ class AcousticMeasureActivity(Activity):
         self.set_toolbox(toolbox)
         toolbox.show()
 
-        # Hippo Canvas:
-        hbox = hippo.CanvasBox(spacing=4,
-            orientation=hippo.ORIENTATION_HORIZONTAL)
-
-        self.main_panel = hippo.CanvasBox(spacing=4,
-            orientation=hippo.ORIENTATION_VERTICAL)
+        # Main Panel GUI
+        self.main_panel = gtk.VBox()
         self._message_dict['unshared'] = "To measure the distance between two laptops, you must first share this Activity."
         self._message_dict['ready'] = "Press this button to measure the distance to another laptop"
         self._message_dict['preparing'] = "Preparing to measure distance"
@@ -79,15 +76,14 @@ class AcousticMeasureActivity(Activity):
         self.button = gtk.Button(label=self._message_dict['unshared'])
         self.button.connect('clicked',self._button_clicked)
         self.button.set_sensitive(False)
+
         self.text = gtk.Label()
         self.text.set_selectable(True)
-        self.main_panel.append(hippo.CanvasWidget(widget=self.button))
-        self.main_panel.append(hippo.CanvasWidget(widget=self.text))
-        hbox.append(self.main_panel, hippo.PACK_EXPAND)
 
-        canvas = hippo.Canvas()
-        canvas.set_root(hbox)
-        self.set_canvas(canvas)
+        self.main_panel.pack_start(self.button, expand=False, padding=6)
+        self.main_panel.pack_end(self.text, expand=True)
+
+        self.set_canvas(self.main_panel)
         self.show_all()
 
         self.hellotube = None  # Shared session
