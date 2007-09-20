@@ -31,6 +31,8 @@ from dbus.gobject_service import ExportedGObject
 from sugar.activity.activity import Activity, ActivityToolbox
 from sugar.presence import presenceservice
 
+from gettext import gettext
+
 # will eventually be imported from sugar
 from sugar.presence.tubeconn import TubeConnection
 
@@ -53,9 +55,9 @@ class AcousticMeasureActivity(Activity):
     _message_dict = {}
     
     def __init__(self, handle):
-        """Set up the AcousticMeasure activity."""
+        """Set up the Acoustic Tape Measure activity."""
         Activity.__init__(self, handle)
-        self.set_title('AcousticMeasure Activity')
+        self.set_title(gettext('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
 
         # top toolbar with share and close buttons:
@@ -65,12 +67,12 @@ class AcousticMeasureActivity(Activity):
 
         # Main Panel GUI
         self.main_panel = gtk.VBox()
-        self._message_dict['unshared'] = "To measure the distance between two laptops, you must first share this Activity."
-        self._message_dict['ready'] = "Press this button to measure the distance to another laptop"
-        self._message_dict['preparing'] = "Preparing to measure distance"
-        self._message_dict['waiting'] = "Ready to make a measurement.  Waiting for partner to be ready."
-        self._message_dict['playing'] = "Measuring distance between the laptops."
-        self._message_dict['processing'] = "Processing measurement data"
+        self._message_dict['unshared'] = gettext("To measure the distance between two laptops, you must first share this Activity.")
+        self._message_dict['ready'] = gettext("Press this button to measure the distance to another laptop")
+        self._message_dict['preparing'] = gettext("Preparing to measure distance")
+        self._message_dict['waiting'] = gettext("Ready to make a measurement.  Waiting for partner to be ready.")
+        self._message_dict['playing'] = gettext("Recording sound from each laptop.")
+        self._message_dict['processing'] = gettext("Processing recorded audio.")
         self._message_dict['done'] = self._message_dict['ready']
         
         self.button = gtk.Button(label=self._message_dict['unshared'])
@@ -121,7 +123,7 @@ class AcousticMeasureActivity(Activity):
         self._logger.debug("initiating socket_test")
         dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_button_label)
         x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
-        mes = "Distance is %(num).2f meters.\n" % {'num': dt}
+        mes = "The distance is %(num).2f meters.\n" % {'num': dt}
         self._logger.debug("socket_test: " + mes)
         self.text.set_label(mes + self.text.get_label())
         self.button.set_sensitive(True)
