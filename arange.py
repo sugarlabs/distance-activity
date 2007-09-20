@@ -407,7 +407,7 @@ def measure_dt_simul(s, am_server):
 
     return roundtrip/2
 
-def measure_dt_seq(s, am_server):
+def measure_dt_seq(s, am_server, send_signal=False):
     """
     This function performs distance measurement using sequential playback.
     In this method, the server plays its sound first, and the client plays
@@ -416,6 +416,10 @@ def measure_dt_seq(s, am_server):
     of low-quality speaker systems and is known to work.
     """
     #assert type(s) == socket._socketobject
+
+    if send_signal:
+        send_signal('preparing')
+
     R = (num.zeros((MLS_INDEX)) == 0)
     mls = compute_mls(R)
     mls_rev = mls[::-1]
@@ -425,6 +429,8 @@ def measure_dt_seq(s, am_server):
     else:
     	mls_wav_file = write_wav(mls_rev)
 
+    if send_signal:
+        send_signal('waiting')
     ready_command = 'ready'
     if am_server:
         assert recvmsg(s, ready_command)
@@ -436,6 +442,9 @@ def measure_dt_seq(s, am_server):
         s.sendall(start_and_play_command)
     else:
         assert recvmsg(s, start_and_play_command)
+
+    if send_signal:
+        send_signal('playing')
 
     t1=time.time()
     (pipeline, rec_wav_file) = start_recording()
@@ -475,6 +484,9 @@ def measure_dt_seq(s, am_server):
     mls_wav_file.close()
     rec_array = read_wav(rec_wav_file)
     rec_wav_file.close()
+
+    if send_signal:
+        send_signal('processing')
     
     breaktime = t3-t1
     print breaktime
@@ -503,6 +515,9 @@ def measure_dt_seq(s, am_server):
 
     #pylab.plot(xc_server)
     #pylab.show()
+
+    if send_signal:
+        send_signal('done')
 
     return roundtrip/2
     

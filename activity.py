@@ -48,6 +48,9 @@ PATH = "/org/laptop/AcousticMeasure"
 
 class AcousticMeasureActivity(Activity):
     """AcousticMeasure Activity as specified in activity.info"""
+    
+    _message_dict = {}
+    
     def __init__(self, handle):
         """Set up the AcousticMeasure activity."""
         Activity.__init__(self, handle)
@@ -65,9 +68,15 @@ class AcousticMeasureActivity(Activity):
 
         self.main_panel = hippo.CanvasBox(spacing=4,
             orientation=hippo.ORIENTATION_VERTICAL)
-        self._ready_label = "Make a Measurement"
-        self._waiting_label = "Measuring Distance"
-        self.button = gtk.Button(label=self._ready_label)
+        self._message_dict['unshared'] = "To measure the distance between two laptops, you must first share this Activity."
+        self._message_dict['ready'] = "Press this button to measure the distance to another laptop"
+        self._message_dict['preparing'] = "Preparing to measure distance"
+        self._message_dict['waiting'] = "Ready to make a measurement.  Waiting for partner to be ready."
+        self._message_dict['playing'] = "Measuring distance between the laptops."
+        self._message_dict['processing'] = "Processing measurement data"
+        self._message_dict['done'] = self._message_dict['ready']
+        
+        self.button = gtk.Button(label=self._message_dict['unshared'])
         self.button.connect('clicked',self._button_clicked)
         self.button.set_sensitive(False)
         self.text = gtk.Label()
@@ -113,15 +122,16 @@ class AcousticMeasureActivity(Activity):
     
     def _do_sockets(self):
         self.button.set_sensitive(False)
-        self.button.set_label(self._waiting_label)
         self._logger.debug("initiating socket_test")
-        dt = arange.measure_dt_seq(self.hellotube, self.initiating)
+        dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_button_label)
         x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
         mes = "Distance is %(num).2f meters.\n" % {'num': dt}
         self._logger.debug("socket_test: " + mes)
         self.text.set_label(mes + self.text.get_label())
-        self.button.set_label(self._ready_label)
         self.button.set_sensitive(True)
+    
+    def _change_button_label(self,signal):
+        self.button.set_label(self._message_dict[signal])
 
     def _shared_cb(self, activity):
         self._logger.debug('My activity was shared')
@@ -225,6 +235,7 @@ class AcousticMeasureActivity(Activity):
                 id, group_iface=self.text_chan[telepathy.CHANNEL_INTERFACE_GROUP])
             self.hellotube = HelloTube(tube_conn, self.initiating, self._get_buddy)
             self.button.set_sensitive(True)
+            self.button.set_label(self._message_dict['ready'])
 
     def _buddy_joined_cb (self, activity, buddy):
         self._logger.debug('Buddy %s joined' % buddy.props.nick)
