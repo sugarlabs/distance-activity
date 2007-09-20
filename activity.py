@@ -116,10 +116,10 @@ class AcousticMeasureActivity(Activity):
                 self._joined_cb()
                 
     def _button_clicked(self, button):
+        self.button.set_sensitive(False)
         thread.start_new_thread(self._do_sockets,())
     
     def _do_sockets(self):
-        self.button.set_sensitive(False)
         self._logger.debug("initiating socket_test")
         dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_button_label)
         x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
