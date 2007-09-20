@@ -83,7 +83,7 @@ class AcousticMeasureActivity(Activity):
         self.text.set_selectable(True)
 
         self.main_panel.pack_start(self.button, expand=False, padding=6)
-        self.main_panel.pack_end(self.text, expand=True)
+        self.main_panel.pack_start(self.text, expand=False)
 
         self.set_canvas(self.main_panel)
         self.show_all()
@@ -364,6 +364,7 @@ class HelloTube(ExportedGObject):
             raise 'error: buffer is empty'
         retval = self._buffer[:bufsize]
         self._buffer = self._buffer[bufsize:]
+        self._logger.debug("afterwards, buffer: " + self._buffer)
         if len(self._buffer) == 0:
             self._buff_waiter.clear()
         self._logger.debug("received: " + retval)
