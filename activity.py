@@ -41,8 +41,8 @@ import threading
 import thread
 import socket
 
-import socket_test as arange
-#import arange
+#import socket_test as arange
+import arange
 
 SERVICE = "org.laptop.AcousticMeasure"
 IFACE = SERVICE
