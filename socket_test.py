@@ -1,35 +1,36 @@
 import time
+import random
 
-ss = 'test from server'
-sc = 'test from client'
+ss = 'test from the server'
+sc = 'test from ze client'
 
 OLPC_OFFSET = 5.5
 
 def server(soc, send_signal):
     send_signal('preparing')
-    time.sleep(2)
+    time.sleep(1)
     send_signal('waiting')
     soc.sendall(ss)
     send_signal('playing')
-    time.sleep(2)
+    time.sleep(1)
     x = soc.recv(len(sc))
     send_signal('processing')
-    time.sleep(2)
+    time.sleep(1)
     send_signal('done')
-    return float(hash(x))
+    return random.random()
 
 def client(soc, send_signal):
     send_signal('preparing')
-    time.sleep(2)
+    time.sleep(1)
     send_signal('waiting')
     x = soc.recv(len(ss))
     send_signal('playing')
-    time.sleep(2)
+    time.sleep(1)
     soc.sendall(sc)
     send_signal('processing')
-    time.sleep(2)
+    time.sleep(1)
     send_signal('done')
-    return float(hash(x))
+    return random.random()
 
 def speed_of_sound():
     return 345.6789
