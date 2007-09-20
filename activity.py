@@ -41,8 +41,8 @@ import threading
 import thread
 import socket
 
-#import socket_test as arange
-import arange
+import socket_test as arange
+#import arange
 
 SERVICE = "org.laptop.AcousticMeasure"
 IFACE = SERVICE
@@ -123,7 +123,7 @@ class AcousticMeasureActivity(Activity):
         self._logger.debug("initiating socket_test")
         dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_button_label)
         x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
-        mes = "The distance is %(num).2f meters.\n" % {'num': dt}
+        mes = gettext("The distance is %(num).2f meters.\n") % {'num': x}
         self._logger.debug("socket_test: " + mes)
         self.text.set_label(mes + self.text.get_label())
         self.button.set_sensitive(True)
