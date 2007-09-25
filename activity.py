@@ -40,6 +40,7 @@ from sugar.presence.tubeconn import TubeConnection
 import threading
 import thread
 import socket
+import base64
 
 #import socket_test as arange
 import arange
@@ -255,7 +256,7 @@ class AcousticMeasureActivity(Activity):
             self._logger.debug('CS handle %u belongs to %u', cs_handle, handle)
         else:
             handle = cs_handle
-            logger.debug('non-CS handle %u belongs to itself', handle)
+            self._logger.debug('non-CS handle %u belongs to itself', handle)
             # XXX: deal with failure to get the handle owner
             assert handle != 0
         return self.pservice.get_buddy_by_telepathy_handle(self.tp_conn_name,
@@ -349,9 +350,10 @@ class HelloTube(ExportedGObject):
 
     @method(dbus_interface = IFACE, in_signature = 'ay', out_signature = '')
     def _handle_incoming(self, message):
-        self._logger.debug("_handle_incoming: " + message)
+        msg = base64.b64decode(message)
+        self._logger.debug("_handle_incoming: " + msg)
         if self._recv_allowed:
-            self._buffer += message
+            self._buffer += msg
             if len(self._buffer) > 0:
                 self._buff_waiter.set()
     
@@ -381,7 +383,7 @@ class HelloTube(ExportedGObject):
             self._logger.debug("sendall")
             self._remote_socket_waiter.wait(self._timeout)
             self._logger.debug("sendall: " + string)
-            self._remote_socket._handle_incoming(string)
+            self._remote_socket._handle_incoming(base64.b64encode(string))
             self._logger.debug("sendall; sent")
             return len(string)
         else:

@@ -231,7 +231,7 @@ def read_wav(f):
     s = w.readframes(n)
     n = len(s)/(nc*b)
     a = struct.unpack(str(n*nc)+typecode, s)
-    return num.array(a[::nc], num.Float)
+    return num.array(a[::nc], num.float)
 
 def cross_cov(a, b):
     """computes the cross-covariance of signals in a and b"""
