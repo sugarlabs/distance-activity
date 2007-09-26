@@ -58,7 +58,7 @@ class AcousticMeasureActivity(Activity):
     def __init__(self, handle):
         """Set up the Acoustic Tape Measure activity."""
         Activity.__init__(self, handle)
-        self.set_title(gettext('Acoustic Tape Measure Activity'))
+        #self.set_title(gettext('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
 
         # top toolbar with share and close buttons:
