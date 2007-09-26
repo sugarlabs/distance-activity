@@ -350,26 +350,30 @@ class HelloTube(ExportedGObject):
 
     @method(dbus_interface = IFACE, in_signature = 'ay', out_signature = '')
     def _handle_incoming(self, message):
+        self._logger.debug("_handle_incoming: " + message)
         msg = base64.b64decode(message)
-        self._logger.debug("_handle_incoming: " + msg)
         if self._recv_allowed:
             self._buffer += msg
             if len(self._buffer) > 0:
+                self._logger.debug("_handle_incoming will now set the buff_waiter")
                 self._buff_waiter.set()
+                self._logger.debug("_handle_incoming: buff_waiter.isSet() " + str(self._buff_waiter.isSet()))
     
     def recv(self, bufsize):
         self._logger.debug("recv")
         self._logger.debug("buff_waiter.isSet: " + str(self._buff_waiter.isSet()))
-        self._logger.debug("buffer: " + self._buffer)
+        self._logger.debug("buffer: " + base64.b64encode(self._buffer))
         self._buff_waiter.wait(self._timeout)
         if len(self._buffer) == 0:
             raise 'error: buffer is empty'
         retval = self._buffer[:bufsize]
         self._buffer = self._buffer[bufsize:]
-        self._logger.debug("afterwards, buffer: " + self._buffer)
+        #self._logger.debug("afterwards, buffer: " + self._buffer)
         if len(self._buffer) == 0:
+            self._logger.debug("recv clearing buff_waiter")
             self._buff_waiter.clear()
-        self._logger.debug("received: " + retval)
+            self._logger.debug("recv: buff_waiter.isSet()" + str(self._buff_waiter.isSet()))
+        #self._logger.debug("received: " + retval)
         return retval
     
     def recvfrom(self, bufsize):
@@ -382,8 +386,9 @@ class HelloTube(ExportedGObject):
         if self._send_allowed:
             self._logger.debug("sendall")
             self._remote_socket_waiter.wait(self._timeout)
-            self._logger.debug("sendall: " + string)
-            self._remote_socket._handle_incoming(base64.b64encode(string))
+            q = base64.b64encode(string)
+            self._logger.debug("sendall: " + q)
+            self._remote_socket._handle_incoming(q)
             self._logger.debug("sendall; sent")
             return len(string)
         else:
@@ -396,13 +401,7 @@ class HelloTube(ExportedGObject):
         else:
             self._timeout = None
             self.button.set_sensitive(False)
-        if self.initiating:
-            self._logger.debug("initiating socket_test")
-            self._logger.debug("socket_test: " + socket_test.server(self.hellotube))
-        else:
-            self._logger.debug("initiating socket_test")
-            self._logger.debug("socket_test: " + socket_test.client(self.hellotube))
-        self.button.set_sensitive(True)
+
     def settimeout(self, value):
         self._timeout = value
     

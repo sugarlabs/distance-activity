@@ -180,15 +180,17 @@ def start_recording():
     pipeline is the gstreamer pipeline corresponding to the recording process
     f is a file object for the wav file
     """
-    f = tempfile.NamedTemporaryFile('rb')
-    fname = tempfile.mktemp()
+    #f = tempfile.NamedTemporaryFile('rb')
+    #fname = f.name
+    (fnum, fname) = tempfile.mkstemp()
+    f = open(fname,'rb')
 
     pipeline = gst.element_factory_make('pipeline', 'recorder')
     microphone = gst.element_factory_make('alsasrc', 'microphone')
     converter = gst.element_factory_make('audioconvert', 'converter')
     wave_encoder = gst.element_factory_make('wavenc', 'wave_encoder')
     file_writer = gst.element_factory_make('filesink', 'file writer')
-    file_writer.set_property('location', f.name)
+    file_writer.set_property('location', fname)
     
     pipeline.add(microphone)
     pipeline.add(converter)
@@ -209,12 +211,12 @@ def stop_recording(pipeline):
     mic = pipeline.iterate_sources().next()
     bus = pipeline.get_bus()
     
-    mic.set_state(gst.STATE_NULL)
-    mic.set_locked_state(True)
+    print "mic.set_state(gst.STATE_NULL) " + str(mic.set_state(gst.STATE_NULL))
+    print "mic.set_locked_state(True) " + str(mic.set_locked_state(True))
     
-    bus.poll(gst.MESSAGE_EOS,-1)
-    pipeline.set_state(gst.STATE_NULL)
-    mic.set_locked_state(False)
+    print "bus.poll... " + str(bus.poll(gst.MESSAGE_EOS | gst.MESSAGE_ERROR,-1))
+    print "pipeline.set_state(gst.STATE_NULL) " + str(pipeline.set_state(gst.STATE_NULL))
+    print "mic.set_locked_state(False) " + str(mic.set_locked_state(False))
 
 def read_wav(f):
     """
@@ -481,6 +483,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
         s.sendall(stop_command)
 
     stop_recording(pipeline)
+    del(pipeline)
     mls_wav_file.close()
     rec_array = read_wav(rec_wav_file)
     rec_wav_file.close()
