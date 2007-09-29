@@ -36,10 +36,15 @@ import socket
 import types
 import math
 
+import subprocess
+import os
+import os.path
+import signal
+
 REC_HZ = 48000
 MLS_INDEX = 14
 
-OLPC_OFFSET = 0.096 #Measured constant offset due to speaker placement
+OLPC_OFFSET = -0.05 #Measured constant offset due to geometry and electronics
     
 def compute_mls(R):
     """
@@ -159,6 +164,9 @@ def play_wav(fname):
     print "cleaning up"
     player.set_state(gst.STATE_NULL)
 
+def play_wav_alsa(fname):
+    subprocess.call(["/usr/bin/aplay", fname])
+
 def record_while_playing(play_name, t):
     """
     This function starts recording, plays the file named 'play_name',
@@ -204,6 +212,22 @@ def start_recording():
     pipeline.set_state(gst.STATE_PLAYING)
     return (pipeline, f)
 
+def start_recording_alsa():
+    #f = tempfile.NamedTemporaryFile('rb')
+    #fname = f.name
+    (fnum, fname) = tempfile.mkstemp()
+    
+    rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=48000", fname])
+    
+    while not os.path.exists(fname):
+        time.sleep(0.02)
+
+    while os.path.getsize(fname) <= 0:
+        time.sleep(0.02)
+
+    f = open(fname,'rb')
+    return (rec_process, f)
+
 def stop_recording(pipeline):
     """
     This function safely shuts down a recording pipeline.
@@ -217,6 +241,10 @@ def stop_recording(pipeline):
     print "bus.poll... " + str(bus.poll(gst.MESSAGE_EOS | gst.MESSAGE_ERROR,-1))
     print "pipeline.set_state(gst.STATE_NULL) " + str(pipeline.set_state(gst.STATE_NULL))
     print "mic.set_locked_state(False) " + str(mic.set_locked_state(False))
+
+def stop_recording_alsa(rec_process):
+    os.kill(rec_process.pid, signal.SIGKILL)
+    rec_process.wait()
 
 def read_wav(f):
     """
@@ -232,8 +260,16 @@ def read_wav(f):
         typecode = 'b'
     s = w.readframes(n)
     n = len(s)/(nc*b)
-    a = struct.unpack(str(n*nc)+typecode, s)
+    a = struct.unpack('<' + str(n*nc) + typecode, s)
     return num.array(a[::nc], num.float)
+
+def read_raw(f):
+    x = f.read()
+    n = len(x)/2
+    print "length " + str(n)
+    typecode = 'h'
+    a = struct.unpack('<' + str(n)+typecode, x[:(2*n)]);
+    return num.array(a, num.float)
 
 def cross_cov(a, b):
     """computes the cross-covariance of signals in a and b"""
@@ -449,7 +485,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
         send_signal('playing')
 
     t1=time.time()
-    (pipeline, rec_wav_file) = start_recording()
+    (pipeline, rec_wav_file) = start_recording_alsa()
     t2=time.time()
 
     start_confirmation_command = 'started'
@@ -457,13 +493,15 @@ def measure_dt_seq(s, am_server, send_signal=False):
         assert recvmsg(s, start_confirmation_command)
     else:
         s.sendall(start_confirmation_command)
+
+    amp_ringdown = 0.1
+    time.sleep(amp_ringdown)
 	
     handoff_command = 'your turn'
-    playtime = float(2**MLS_INDEX)/REC_HZ #seconds
     ringdown = 0.5 #seconds
     if am_server:
         print "about to play_wav"
-        play_wav(mls_wav_file.name)
+        play_wav_alsa(mls_wav_file.name)
         print "played wav"
         time.sleep(ringdown)
         t3 = time.time()
@@ -473,7 +511,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
         assert recvmsg(s, handoff_command)
         t3 = time.time()
         time.sleep(t2-t1)
-        play_wav(mls_wav_file.name)
+        play_wav_alsa(mls_wav_file.name)
         time.sleep(ringdown)
     
     stop_command = 'stop'
@@ -482,10 +520,10 @@ def measure_dt_seq(s, am_server, send_signal=False):
     else:
         s.sendall(stop_command)
 
-    stop_recording(pipeline)
+    stop_recording_alsa(pipeline)
     del(pipeline)
     mls_wav_file.close()
-    rec_array = read_wav(rec_wav_file)
+    rec_array = read_raw(rec_wav_file)
     rec_wav_file.close()
 
     if send_signal:
@@ -494,7 +532,8 @@ def measure_dt_seq(s, am_server, send_signal=False):
     breaktime = t3-t1
     print breaktime
     breaknum = int(math.ceil(breaktime*REC_HZ))
-    rec1 = rec_array[:breaknum]
+    startnum = int(math.ceil(amp_ringdown*REC_HZ))
+    rec1 = rec_array[startnum:breaknum]
     rec2 = rec_array[breaknum:]
     print num.size(rec1)
     print num.size(rec2)
