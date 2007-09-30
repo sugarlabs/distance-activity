@@ -21,8 +21,7 @@ import time
 import logging
 import telepathy
 import telepathy.client
-
-import sugar.graphics.button
+import pango
 
 from dbus import Interface
 from dbus.service import method, signal
@@ -54,6 +53,7 @@ class AcousticMeasureActivity(Activity):
     """AcousticMeasure Activity as specified in activity.info"""
     
     _message_dict = {}
+    _button_dict = {}
     
     def __init__(self, handle):
         """Set up the Acoustic Tape Measure activity."""
@@ -65,26 +65,49 @@ class AcousticMeasureActivity(Activity):
         toolbox = ActivityToolbox(self)
         self.set_toolbox(toolbox)
         toolbox.show()
+        
+        #worker thread
+        self._button_event = threading.Event()
+        thread.start_new_thread(self._helper_thread, ())
 
         # Main Panel GUI
         self.main_panel = gtk.VBox()
         self._message_dict['unshared'] = gettext("To measure the distance between two laptops, you must first share this Activity.")
-        self._message_dict['ready'] = gettext("Press this button to measure the distance to another laptop")
+        self._message_dict['ready'] = gettext("Press the button to measure the distance to another laptop")
         self._message_dict['preparing'] = gettext("Preparing to measure distance")
         self._message_dict['waiting'] = gettext("Ready to make a measurement.  Waiting for partner to be ready.")
         self._message_dict['playing'] = gettext("Recording sound from each laptop.")
         self._message_dict['processing'] = gettext("Processing recorded audio.")
         self._message_dict['done'] = self._message_dict['ready']
         
-        self.button = gtk.Button(label=self._message_dict['unshared'])
+        self._button_dict['waiting'] = gettext("Begin Measuring Distance")
+        self._button_dict['going'] = gettext("Stop Measuring Distance")
+        
+        self.button = gtk.ToggleButton(label=self._button_dict['waiting'])
         self.button.connect('clicked',self._button_clicked)
         self.button.set_sensitive(False)
 
-        self.text = gtk.Label()
-        self.text.set_selectable(True)
+        self.message = gtk.Label(self._message_dict['unshared'])
+        self.message.set_selectable(True)
+        self.message.set_single_line_mode(True)
+        
+        self.value = gtk.Label()
+        self.value.set_selectable(True)
+        self.value.set_alignment(1.0, 0.5)
+        self.value.set_single_line_mode(True)
+        
+        valuefont = pango.FontDescription()
+        valuefont.set_family("monospace")
+        valuefont.set_absolute_size(200*pango.SCALE)
+        
+        valuestyle = pango.AttrList()
+        valuestyle.insert(pango.AttrFontDesc(valuefont,0,100))
+        
+        self.value.set_attributes(valuestyle)
 
         self.main_panel.pack_start(self.button, expand=False, padding=6)
-        self.main_panel.pack_start(self.text, expand=False)
+        self.main_panel.pack_start(self.message, expand=False)
+        self.main_panel.pack_start(self.value, expand=True, fill=True, padding=10)
 
         self.set_canvas(self.main_panel)
         self.show_all()
@@ -117,20 +140,27 @@ class AcousticMeasureActivity(Activity):
                 self._joined_cb()
                 
     def _button_clicked(self, button):
-        self.button.set_sensitive(False)
-        thread.start_new_thread(self._do_sockets,())
+        if button.get_active():
+            self._button_event.set()
+            button.set_label(self._button_dict['going'])
+        else:
+            self._button_event.clear()
+            button.set_label(self._button_dict['waiting'])
+            
+    def _helper_thread(self):
+        while True:
+            self._button_event.wait()
+            self._logger.debug("initiating measurement")
+            dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_message)
+            x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
+            self._update_distance(x)
     
-    def _do_sockets(self):
-        self._logger.debug("initiating socket_test")
-        dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_button_label)
-        x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
-        mes = gettext("The distance is %(num).2f meters.\n") % {'num': x}
-        self._logger.debug("socket_test: " + mes)
-        self.text.set_label(mes + self.text.get_label())
-        self.button.set_sensitive(True)
+    def _update_distance(self, x):
+        mes = "%(num).2f " % {'num': x}
+        self.value.set_text(mes)  
     
-    def _change_button_label(self,signal):
-        self.button.set_label(self._message_dict[signal])
+    def _change_message(self,signal):
+        self.message.set_text(self._message_dict[signal])
 
     def _shared_cb(self, activity):
         self._logger.debug('My activity was shared')
@@ -145,8 +175,6 @@ class AcousticMeasureActivity(Activity):
         self._shared_activity.connect('buddy-left', self._buddy_left_cb)
 
         self._logger.debug('This is my activity: making a tube...')
-#        id = self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].OfferDBusTube(
-#            telepathy.TUBE_TYPE_DBUS, SERVICE, {})
         id = self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].OfferDBusTube(
             SERVICE, {})
 
@@ -199,7 +227,6 @@ class AcousticMeasureActivity(Activity):
     def _list_tubes_reply_cb(self, tubes):
         for tube_info in tubes:
             self._new_tube_cb(*tube_info)
-        
 
     def _list_tubes_error_cb(self, e):
         self._logger.error('ListTubes() failed: %s', e)
@@ -234,7 +261,7 @@ class AcousticMeasureActivity(Activity):
                 id, group_iface=self.text_chan[telepathy.CHANNEL_INTERFACE_GROUP])
             self.hellotube = HelloTube(tube_conn, self.initiating, self._get_buddy)
             self.button.set_sensitive(True)
-            self.button.set_label(self._message_dict['ready'])
+            self._change_message('ready')
 
     def _buddy_joined_cb (self, activity, buddy):
         self._logger.debug('Buddy %s joined' % buddy.props.nick)
