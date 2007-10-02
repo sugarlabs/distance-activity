@@ -418,7 +418,10 @@ class HelloTube(ExportedGObject):
             self._remote_socket_waiter.wait(self._timeout)
             q = base64.b64encode(string)
             self._logger.debug("sendall: " + q)
-            self._remote_socket._handle_incoming(q)
+            w = threading.Event()
+            self._remote_socket._handle_incoming(q, reply_handler=w.set, error_handler=self._logger.debug)
+            self._logger.debug("sendall: waiting for confirmation")
+            w.wait()
             self._logger.debug("sendall; sent")
             return len(string)
         else:
