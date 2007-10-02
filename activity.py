@@ -17,6 +17,7 @@
 """AcousticMeasure Activity: Uses sound propagation delay to measure distance"""
 
 import gtk
+import gtk.gdk
 import time
 import logging
 import telepathy
@@ -91,23 +92,25 @@ class AcousticMeasureActivity(Activity):
         self.message.set_selectable(True)
         self.message.set_single_line_mode(True)
         
-        self.value = gtk.Label()
+        self.value = gtk.Label("00.00")
         self.value.set_selectable(True)
-        self.value.set_alignment(1.0, 0.5)
-        self.value.set_single_line_mode(True)
+        #self.value.set_alignment(1.0, 0.5)
         
         valuefont = pango.FontDescription()
         valuefont.set_family("monospace")
-        valuefont.set_absolute_size(200*pango.SCALE)
+        valuefont.set_absolute_size(300*pango.SCALE)
         
-        valuestyle = pango.AttrList()
-        valuestyle.insert(pango.AttrFontDesc(valuefont,0,100))
-        
-        self.value.set_attributes(valuestyle)
+        self.value.modify_font(valuefont)
+        self.value.set_single_line_mode(True)
+        self.value.set_width_chars(6)
+
+        eb = gtk.EventBox()
+        eb.add(self.value)
+        eb.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("white"))
 
         self.main_panel.pack_start(self.button, expand=False, padding=6)
         self.main_panel.pack_start(self.message, expand=False)
-        self.main_panel.pack_start(self.value, expand=True, fill=True, padding=10)
+        self.main_panel.pack_start(eb, expand=True, fill=False, padding=10)
 
         self.set_canvas(self.main_panel)
         self.show_all()
@@ -156,7 +159,7 @@ class AcousticMeasureActivity(Activity):
             self._update_distance(x)
     
     def _update_distance(self, x):
-        mes = "%(num).2f " % {'num': x}
+        mes = "%(num).2f" % {'num': x}
         self.value.set_text(mes)  
     
     def _change_message(self,signal):
