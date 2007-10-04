@@ -239,17 +239,23 @@ class AcousticMeasureActivity(Activity):
             return
 
         # Find out who's already in the shared activity:
+        n = 0
         for buddy in self._shared_activity.get_joined_buddies():
+            n += 1
             self._logger.debug('Buddy %s is already in the activity' % buddy.props.nick)
 
-        self._logger.debug('Joined an existing shared activity')
-        self.initiating = False
-        self._setup()
+        if n <= 2:
+            self._logger.debug('Joined an existing shared activity')
+            self.initiating = False
+            self._setup()
 
-        self._logger.debug('This is not my activity: waiting for a tube...')
-        self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].ListTubes(
-            reply_handler=self._list_tubes_reply_cb,
-            error_handler=self._list_tubes_error_cb)
+            self._logger.debug('This is not my activity: waiting for a tube...')
+            self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].ListTubes(
+                reply_handler=self._list_tubes_reply_cb,
+                error_handler=self._list_tubes_error_cb)
+        else:
+            self._logger.debug("There are already two people, not joining")
+            self._shared_activity.leave()
 
     def _new_tube_cb(self, id, initiator, type, service, params, state):
         self._logger.debug('New tube: ID=%d initator=%d type=%d service=%s '
