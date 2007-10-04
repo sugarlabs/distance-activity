@@ -28,6 +28,7 @@ from dbus import Interface
 from dbus.service import method, signal
 from dbus.gobject_service import ExportedGObject
 
+import sugar.activity.activity
 from sugar.activity.activity import Activity, ActivityToolbox
 from sugar.presence import presenceservice
 
@@ -92,7 +93,11 @@ class AcousticMeasureActivity(Activity):
         self.message = gtk.Label(self._message_dict['unshared'])
         self.message.set_selectable(True)
         self.message.set_single_line_mode(True)
-        
+
+        img = gtk.Image()
+        pb = gtk.gdk.pixbuf_new_from_file(sugar.activity.activity.get_bundle_path() + '/dist.svg')
+        img.set_from_pixbuf(pb)
+
         self.value = gtk.Label("00.00")
         self.value.set_selectable(True)
         
@@ -115,6 +120,7 @@ class AcousticMeasureActivity(Activity):
 
         self.main_panel.pack_start(self.button, expand=False, padding=6)
         self.main_panel.pack_start(self.message, expand=False)
+        self.main_panel.pack_start(img, expand=False)
         self.main_panel.pack_start(fr, expand=True, fill=False, padding=10)
 
         self.set_canvas(self.main_panel)
