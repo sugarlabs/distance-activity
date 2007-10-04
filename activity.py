@@ -80,6 +80,7 @@ class AcousticMeasureActivity(Activity):
         self._message_dict['playing'] = gettext("Recording sound from each laptop.")
         self._message_dict['processing'] = gettext("Processing recorded audio.")
         self._message_dict['done'] = self._message_dict['ready']
+        self._message_dict['full'] = gettext("This activity already has two participants, so you cannot join.")
         
         self._button_dict['waiting'] = gettext("Begin Measuring Distance")
         self._button_dict['going'] = gettext("Stop Measuring Distance")
@@ -256,6 +257,7 @@ class AcousticMeasureActivity(Activity):
         else:
             self._logger.debug("There are already two people, not joining")
             self._shared_activity.leave()
+            self._change_message('full')
 
     def _new_tube_cb(self, id, initiator, type, service, params, state):
         self._logger.debug('New tube: ID=%d initator=%d type=%d service=%s '
