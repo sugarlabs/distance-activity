@@ -95,7 +95,7 @@ class AcousticMeasureActivity(Activity):
         
         self.value = gtk.Label("00.00")
         self.value.set_selectable(True)
-        #self.value.set_alignment(1.0, 0.5)
+        
         
         valuefont = pango.FontDescription()
         valuefont.set_family("monospace")
@@ -108,10 +108,14 @@ class AcousticMeasureActivity(Activity):
         eb = gtk.EventBox()
         eb.add(self.value)
         eb.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("white"))
+        
+        fr = gtk.Frame(gettext("Measured Distance in Meters"))
+        fr.set_label_align(0.5,0.5)
+        fr.add(eb)
 
         self.main_panel.pack_start(self.button, expand=False, padding=6)
         self.main_panel.pack_start(self.message, expand=False)
-        self.main_panel.pack_start(eb, expand=True, fill=False, padding=10)
+        self.main_panel.pack_start(fr, expand=True, fill=False, padding=10)
 
         self.set_canvas(self.main_panel)
         self.show_all()
