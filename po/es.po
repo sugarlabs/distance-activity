@@ -8,49 +8,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-20 18:57-0400\n"
+"POT-Creation-Date: 2007-10-05 18:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
 #: activity/activity.info:2
 msgid "Acoustic Tape Measure"
 msgstr "Cínta Métrica Acústica"
 
-#: activity.py:60
-msgid "Acoustic Tape Measure Activity"
-msgstr "Actividad Cínta Métrica Acústica"
-
-#: activity.py:70
+#: activity.py:77
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "Para meter la distancia entre dos computadoras, es necesario compartir esta actividad"
 
-#: activity.py:71
-msgid "Press this button to measure the distance to another laptop"
-msgstr "Empujar este botón para meter la distance a otra computadora"
+#: activity.py:78
+msgid "Press the button to measure the distance to another laptop"
+msgstr "Empuje el botón para meter la distance a otra computadora"
 
-#: activity.py:72
+#: activity.py:79
 msgid "Preparing to measure distance"
 msgstr "Preparando para meter la distancia"
 
-#: activity.py:73
+#: activity.py:80
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "Parado para meter.  Esperando para que el compañero sea parado."
+msgstr "Preparado para meter.  Esperando para que el compañero sea preparado."
 
-#: activity.py:74
+#: activity.py:81
 msgid "Recording sound from each laptop."
 msgstr "Grabando sonido por las computadoras."
 
-#: activity.py:75
+#: activity.py:82
 msgid "Processing recorded audio."
 msgstr "Analizando el sonido grabado."
 
-#: activity.py:126
-#, python-format
-msgid "The distance is %(num).2f meters.\n"
-msgstr "La distancia es %(num).2f metros."
+#: activity.py:84
+msgid "This activity already has two participants, so you cannot join."
+msgstr "Esta actividad ya tiene dos participantes.  Entonces, no se puede entrar."
+
+#: activity.py:86
+msgid "Begin Measuring Distance"
+msgstr "Empezar metiendo la distancia"
+
+#: activity.py:87
+msgid "Stop Measuring Distance"
+msgstr "Terminar metiendo la distancia"
+
+#: activity.py:117
+msgid "Measured Distance in Meters"
+msgstr "La distancia por metros"
