@@ -213,9 +213,9 @@ def start_recording():
     return (pipeline, f)
 
 def start_recording_alsa():
-    f = tempfile.NamedTemporaryFile('rb')
-    fname = f.name
-    #(fnum, fname) = tempfile.mkstemp()
+    #f = tempfile.NamedTemporaryFile('rb')
+    #fname = f.name
+    (fnum, fname) = tempfile.mkstemp()
     
     rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=48000", fname])
     
@@ -231,7 +231,7 @@ def start_recording_alsa():
         except os.error:
             time.sleep(0.02)
 
-    #f = open(fname,'rb')
+    f = open(fname,'rb')
     return (rec_process, f)
 
 def stop_recording(pipeline):
@@ -531,6 +531,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
     mls_wav_file.close()
     rec_array = read_raw(rec_wav_file)
     rec_wav_file.close()
+    os.remove(rec_wav_file.name)
 
     if send_signal:
         send_signal('processing')
