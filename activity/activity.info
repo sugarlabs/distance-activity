@@ -1,5 +1,5 @@
 [Activity]
-name = AcousticMeasure
+name = Acoustic Tape Measure
 service_name = org.laptop.AcousticMeasure
 class = activity.AcousticMeasureActivity
 icon = activity-acousticmeasure
