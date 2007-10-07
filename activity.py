@@ -120,7 +120,7 @@ class AcousticMeasureActivity(Activity):
 
         self.main_panel.pack_start(self.button, expand=False, padding=6)
         self.main_panel.pack_start(self.message, expand=False)
-        self.main_panel.pack_start(img, expand=False)
+        self.main_panel.pack_start(img, expand=True, fill=False)
         self.main_panel.pack_start(fr, expand=True, fill=False, padding=10)
 
         self.set_canvas(self.main_panel)
