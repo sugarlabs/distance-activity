@@ -156,14 +156,20 @@ class AcousticMeasureActivity(Activity):
     def _button_clicked(self, button):
         if button.get_active():
             self._button_event.set()
+            self._logger.debug("button_clicked: self._button_event.isSet(): " + str(self._button_event.isSet()))
             button.set_label(self._button_dict['going'])
         else:
             self._button_event.clear()
             button.set_label(self._button_dict['waiting'])
             
     def _helper_thread(self):
+        self._logger.debug("helper_thread starting")
         while True:
+            self._logger.debug("helper_thread: button_event.isSet(): " + str(self._button_event.isSet()))
             self._button_event.wait()
+#            while not self._button_event.isSet():
+#                self._logger.debug("helper_thread still waiting")
+#                time.sleep(1)
             self._logger.debug("initiating measurement")
             dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_message)
             x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
@@ -174,6 +180,7 @@ class AcousticMeasureActivity(Activity):
         self.value.set_text(mes)  
     
     def _change_message(self,signal):
+        self._logger.debug("_change_message got signal: " + signal)
         self.message.set_text(self._message_dict[signal])
 
     def _shared_cb(self, activity):
@@ -331,9 +338,7 @@ class HelloTube(ExportedGObject):
             if buddy is not None:
                 self._logger.debug('Buddy %s was added' % buddy.props.nick)
         for handle in removed:
-            buddy = self._get_buddy(handle)
-            if buddy is not None:
-                self._logger.debug('Buddy %s was removed' % buddy.props.nick)
+            self._logger.debug('Tube: Handle %u was removed', handle)
         if not self.entered:
             if self.is_initiator:
                 self._logger.debug("I'm initiating the tube, will "
