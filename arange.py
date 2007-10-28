@@ -45,7 +45,9 @@ REC_HZ = 48000
 MLS_INDEX = 14
 
 OLPC_OFFSET = -0.05 #Measured constant offset due to geometry and electronics
-    
+
+cache_dict = {}
+
 def compute_mls(R):
     """
     Computes a Maximum-Length-Sequence using a naive LFSR approach
@@ -277,14 +279,21 @@ def read_raw(f):
     a = struct.unpack('<' + str(n)+typecode, x[:(2*n)]);
     return num.array(a, num.float)
 
-def cross_cov(a, b):
+def cross_cov(a, b, a_id=None):
     """computes the cross-covariance of signals in a and b"""
     #assert a.ndim == b.ndim == 1 #numpy-only
     assert len(num.shape(a)) == len(num.shape(b)) == 1
     #n = max(a.size, b.size) #numpy-only
     n = max(num.size(a), num.size(b))
     n2 = 2**int(math.ceil(math.log(n,2))) #power of 2 >=n
-    fa = fft(a,n2)
+    if a_id is not None:
+        if cache_dict.has_key(('fft', a_id, n2)):
+            fa = cache_dict[('fft', a_id, n2)]
+        else:
+            fa = fft(a,n2)
+            cache_dict[('fft', a_id, n2)] = fa
+    else:       
+        fa = fft(a,n2)
     fb = fft(b,n2)
     fprod = num.conjugate(fa)*fb
     xc = ifft(fprod)
@@ -397,10 +406,19 @@ def measure_dt_simul(s, am_server):
     is not usable.
     """
     #assert type(s) == socket._socketobject
-    R = (num.zeros((MLS_INDEX)) == 0)
-    mls = compute_mls(R)
+    if cache_dict.has_key(('mls', MLS_INDEX)):
+        mls = cache_dict[('mls', MLS_INDEX)]
+    else:
+        R = (num.zeros((MLS_INDEX)) == 0)
+        mls = compute_mls(R)
+        cache_dict[('mls',MLS_INDEX)] = mls
+    
     if am_server:
-        mls = mls[::-1]
+        if cache_dict.has_key(('mls_rev',MLS_INDEX)):
+            mls = cache_dict[('mls_rev',MLS_INDEX)]
+        else:
+            mls = mls[::-1]
+            cache_dict[('mls_rev',MLS_INDEX)] = mls
     mls_wav_file = write_wav(mls)
 
     ready_command = 'ready'
@@ -464,10 +482,19 @@ def measure_dt_seq(s, am_server, send_signal=False):
     if send_signal:
         send_signal('preparing')
 
-    R = (num.zeros((MLS_INDEX)) == 0)
-    mls = compute_mls(R)
-    mls_rev = mls[::-1]
+    if cache_dict.has_key(('mls',MLS_INDEX)):
+        mls = cache_dict[('mls',MLS_INDEX)]
+    else:
+        R = (num.zeros((MLS_INDEX)) == 0)
+        mls = compute_mls(R)
+        cache_dict[('mls',MLS_INDEX)] = mls
     
+    if cache_dict.has_key(('mls_rev',MLS_INDEX)):
+        mls_rev = cache_dict[('mls_rev',MLS_INDEX)]
+    else:
+        mls_rev = mls[::-1]
+        cache_dict[('mls_rev',MLS_INDEX)] = mls_rev
+            
     if am_server:
     	mls_wav_file = write_wav(mls)
     else:
@@ -545,10 +572,19 @@ def measure_dt_seq(s, am_server, send_signal=False):
     print num.size(rec1)
     print num.size(rec2)
     
-    mls_float = mls - 0.5
-    mls_rev_float = mls_rev - 0.5
-    xc_server = cross_cov(mls_float, rec1)
-    xc_client = cross_cov(mls_rev_float, rec2)
+    if cache_dict.has_key(('mls_float',MLS_INDEX)):
+        mls_float = cache_dict[('mls_float',MLS_INDEX)]
+    else:
+        mls_float = mls - 0.5
+        cache_dict[('mls_float',MLS_INDEX)] = mls_float
+    
+    if cache_dict.has_key(('mls_rev_float',MLS_INDEX)):
+        mls_rev_float = cache_dict[('mls_rev_float',MLS_INDEX)]
+    else:
+        mls_rev_float = mls_rev - 0.5
+        cache_dict[('mls_rev_float',MLS_INDEX)] = mls_rev_float
+    xc_server = cross_cov(mls_float, rec1, ('mls_float', MLS_INDEX))
+    xc_client = cross_cov(mls_rev_float, rec2, ('mls_rev_float', MLS_INDEX))
     s_peak = getpeak(xc_server)
     c_peak = getpeak(xc_client)
     print xc_server[s_peak]
