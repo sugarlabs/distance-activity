@@ -23,6 +23,7 @@ import logging
 import telepathy
 import telepathy.client
 import pango
+import locale
 
 from dbus import Interface
 from dbus.service import method, signal
@@ -63,6 +64,8 @@ class AcousticMeasureActivity(Activity):
         #self.set_title(gettext('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
 
+        self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL, ''))
+
         # top toolbar with share and close buttons:
         toolbox = ActivityToolbox(self)
         self.set_toolbox(toolbox)
@@ -98,9 +101,9 @@ class AcousticMeasureActivity(Activity):
         pb = gtk.gdk.pixbuf_new_from_file(sugar.activity.activity.get_bundle_path() + '/dist.svg')
         img.set_from_pixbuf(pb)
 
-        self.value = gtk.Label("00.00")
+        self.value = gtk.Label()
         self.value.set_selectable(True)
-        
+        self._update_distance(0)
         
         valuefont = pango.FontDescription()
         valuefont.set_family("monospace")
@@ -176,7 +179,7 @@ class AcousticMeasureActivity(Activity):
             self._update_distance(x)
     
     def _update_distance(self, x):
-        mes = "%(num).2f" % {'num': x}
+        mes = locale.format("%.2f", x)
         self.value.set_text(mes)  
     
     def _change_message(self,signal):
