@@ -180,7 +180,22 @@ class AcousticMeasureActivity(Activity):
     
     def _update_distance(self, x):
         mes = locale.format("%.2f", x)
-        self.value.set_text(mes)  
+        self.value.set_text(mes)
+
+    def read_file(self, file_path):
+        f = open(file_path, 'r')
+        text = f.read(7)
+        f.close()
+        self.value.set_text(text)
+
+    def write_file(self, file_path):
+        self.metadata['mime_type'] = 'text/plain'
+        text = self.value.get_text()
+        self.metadata['fulltext'] = text
+
+        f = open(file_path, 'w')
+        f.write(text)
+        f.close()
     
     def _change_message(self,signal):
         self._logger.debug("_change_message got signal: " + signal)
