@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
-  <!ENTITY fill_color "#0000FF">
-  <!ENTITY stroke_color "#FFFF00">
+  <!ENTITY fill_color "#9999FF">
+  <!ENTITY stroke_color "#5555FF">
 ]>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
