@@ -2,4 +2,4 @@ activity.py
 socket_test.py
 arange.py
 dist.svg
-po/es.po
+./po/es.po
