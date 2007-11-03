@@ -16,6 +16,7 @@
 
 """AcousticMeasure Activity: Uses sound propagation delay to measure distance"""
 
+import gobject
 import gtk
 import gtk.gdk
 import time
@@ -61,6 +62,7 @@ class AcousticMeasureActivity(Activity):
     def __init__(self, handle):
         """Set up the Acoustic Tape Measure activity."""
         Activity.__init__(self, handle)
+        gobject.threads_init()
         #self.set_title(gettext('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
 
