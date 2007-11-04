@@ -277,13 +277,13 @@ def cross_cov(a, b, a_id=None):
         if cache_dict.has_key(('fft', a_id, n2)):
             fa = cache_dict[('fft', a_id, n2)]
         else:
-            fa = num.fft.fft(a,n2)
+            fa = num.fft.rfft(a,n2)
             cache_dict[('fft', a_id, n2)] = fa
     else:       
-        fa = num.fft.fft(a,n2)
-    fb = num.fft.fft(b,n2)
+        fa = num.fft.rfft(a,n2)
+    fb = num.fft.rfft(b,n2)
     fprod = num.conjugate(fa)*fb
-    xc = num.fft.ifft(fprod)
+    xc = num.fft.irfft(fprod)
     return xc[:n].real
 
 def get_room_echo(t):
