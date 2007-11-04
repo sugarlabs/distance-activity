@@ -3,5 +3,5 @@ name = Acoustic Tape Measure
 service_name = org.laptop.AcousticMeasure
 class = activity.AcousticMeasureActivity
 icon = activity-acousticmeasure
-activity_version = 4
+activity_version = 5
 show_launcher = yes
