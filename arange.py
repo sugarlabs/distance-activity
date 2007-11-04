@@ -14,15 +14,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-try:
-    import numpy as num
-    fft = num.fft.fft
-    ifft = num.fft.ifft
-except ImportError:
-    import Numeric as num
-    import FFT
-    fft = FFT.fft
-    ifft = FFT.inverse_fft
+import numpy as num
 
 import wave
 import pygst
@@ -100,8 +92,7 @@ def LFSR(R, taps, m):
     
     returns a num.array of length m
     """
-    o = num.resize(num.array([], num.bool), (m)) #numpy-only
-    #o = num.resize(num.array([], num.UInt8), (m))
+    o = num.resize(num.array([], num.bool), (m))
     if len(taps) == 2:
         a = taps[0]
         b = taps[1]   
@@ -139,10 +130,8 @@ def write_wav(o):
     w = wave.open(f)
     w.setparams((2,1,REC_HZ,0, 'NONE', 'NONE'))
     n = num.size(o)
-    #q = num.zeros((2*n), num.UInt8) #Numeric or old numpy
-    q = num.zeros((2*n), num.uint8) #new numpy
-    q[::2] = o*255 #numpy-only
-    #q[::2] = (o*255).tolist()
+    q = num.zeros((2*n), num.uint8)
+    q[::2] = o*255
     q[1::2] = 128
     w.writeframes(q.tostring())
     return f
@@ -281,22 +270,20 @@ def read_raw(f):
 
 def cross_cov(a, b, a_id=None):
     """computes the cross-covariance of signals in a and b"""
-    #assert a.ndim == b.ndim == 1 #numpy-only
-    assert len(num.shape(a)) == len(num.shape(b)) == 1
-    #n = max(a.size, b.size) #numpy-only
-    n = max(num.size(a), num.size(b))
+    assert a.ndim == b.ndim == 1
+    n = max(a.size, b.size)
     n2 = 2**int(math.ceil(math.log(n,2))) #power of 2 >=n
     if a_id is not None:
         if cache_dict.has_key(('fft', a_id, n2)):
             fa = cache_dict[('fft', a_id, n2)]
         else:
-            fa = fft(a,n2)
+            fa = num.fft.fft(a,n2)
             cache_dict[('fft', a_id, n2)] = fa
     else:       
-        fa = fft(a,n2)
-    fb = fft(b,n2)
+        fa = num.fft.fft(a,n2)
+    fb = num.fft.fft(b,n2)
     fprod = num.conjugate(fa)*fb
-    xc = ifft(fprod)
+    xc = num.fft.ifft(fprod)
     return xc[:n].real
 
 def get_room_echo(t):
