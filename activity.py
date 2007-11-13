@@ -47,6 +47,7 @@ import base64
 
 #import socket_test as arange
 import arange
+import atm_toolbars
 
 SERVICE = "org.laptop.AcousticMeasure"
 IFACE = SERVICE
@@ -72,6 +73,9 @@ class AcousticMeasureActivity(Activity):
         toolbox = ActivityToolbox(self)
         self.set_toolbox(toolbox)
         toolbox.show()
+
+        self._t_h_bar = atm_toolbars.TempToolbar()
+        toolbox.add_toolbar(gettext("Atmosphere"), self._t_h_bar)
         
         #worker thread
         self._button_event = threading.Event()
@@ -177,7 +181,7 @@ class AcousticMeasureActivity(Activity):
 #                time.sleep(1)
             self._logger.debug("initiating measurement")
             dt = arange.measure_dt_seq(self.hellotube, self.initiating, self._change_message)
-            x = dt * arange.speed_of_sound() - arange.OLPC_OFFSET
+            x = dt * self._t_h_bar.get_speed() - arange.OLPC_OFFSET
             self._update_distance(x)
     
     def _update_distance(self, x):
@@ -186,17 +190,24 @@ class AcousticMeasureActivity(Activity):
 
     def read_file(self, file_path):
         f = open(file_path, 'r')
-        text = f.read(7)
+        L = f.readlines()
         f.close()
+        text = L[0]
+        t = locale.atof(L[1])
+        h = locale.atof(L[2])
         self.value.set_text(text)
+        self._t_h_bar.set_temp(t)
+        self._t_h_bar.set_humid(h)
 
     def write_file(self, file_path):
         self.metadata['mime_type'] = 'text/plain'
         text = self.value.get_text()
+        t = locale.str(self._t_h_bar.get_temp())
+        h = locale.str(self._t_h_bar.get_humid())
         self.metadata['fulltext'] = text
 
         f = open(file_path, 'w')
-        f.write(text)
+        f.writelines([text + "\n", t + "\n", h + "\n"])
         f.close()
     
     def _change_message(self,signal):

@@ -2,4 +2,5 @@ activity.py
 socket_test.py
 arange.py
 dist.svg
+atm_toolbars.py
 ./po/es.po
