@@ -178,9 +178,9 @@ class AcousticMeasureActivity(Activity):
         f = open(file_path, 'r')
         L = f.readlines()
         f.close()
-        text = L[0]
-        t = locale.atof(L[1])
-        h = locale.atof(L[2])
+        text = L[0][:-1] #Strip trailing "\n"
+        t = locale.atof(L[1][:-1])
+        h = locale.atof(L[2][:-1])
         self.value.set_text(text)
         self._t_h_bar.set_temp(t)
         self._t_h_bar.set_humid(h)
