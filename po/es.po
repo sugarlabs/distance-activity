@@ -2,20 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-12 22:09-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2007-11-26 04:24+0000\n"
+"Last-Translator: Xavier Alvarez <xavi.alvarez@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Acoustic Tape Measure"
@@ -25,23 +24,25 @@ msgstr "Cínta Métrica Acústica"
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr "Para meter la distancia entre dos computadoras, es necesario compartir esta actividad"
+msgstr ""
+"Para medir la distancia entre dos computadoras, es necesario compartir esta "
+"actividad."
 
 #: activity.py:87
 msgid "Press the button to measure the distance to another laptop"
-msgstr "Empuje el botón para meter la distance a otra computadora"
+msgstr "Presione el botón para medir la distancia a otra computadora"
 
 #: activity.py:88
 msgid "Preparing to measure distance"
-msgstr "Preparando para meter la distancia"
+msgstr "Preparando para medir la distancia"
 
 #: activity.py:89
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "Preparado para meter.  Esperando para que el compañero sea preparado."
+msgstr "Preparado para medir.  Esperando que el compañero esté preparado."
 
 #: activity.py:90
 msgid "Recording sound from each laptop."
-msgstr "Grabando sonido por las computadoras."
+msgstr "Grabando el sonido de cada computadora."
 
 #: activity.py:91
 msgid "Processing recorded audio."
@@ -49,32 +50,33 @@ msgstr "Analizando el sonido grabado."
 
 #: activity.py:93
 msgid "This activity already has two participants, so you cannot join."
-msgstr "Esta actividad ya tiene dos participantes.  Entonces, no se puede entrar."
+msgstr ""
+"Esta actividad ya tiene dos participantes, por lo tanto no se puede entrar."
 
 #: activity.py:95
 msgid "Begin Measuring Distance"
-msgstr "Empezar metiendo la distancia"
+msgstr "Empezar a medir la distancia"
 
 #: activity.py:96
 msgid "Stop Measuring Distance"
-msgstr "Terminar metiendo la distancia"
+msgstr "Terminar de medir la distancia"
 
 #: activity.py:126
 msgid "Measured Distance in Meters"
-msgstr "La distancia por metros"
+msgstr "La distancia en metros"
 
 #: activity.py:78
 msgid "Atmosphere"
-msgstr ""
+msgstr "Atmósfera"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr ""
+msgstr "Temperatura (°C): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "Humedad relativa (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "Velocidad del sonido (m/s): "
