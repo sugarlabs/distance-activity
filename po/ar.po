@@ -19,49 +19,49 @@ msgstr ""
 
 #: activity/activity.info:2
 msgid "Acoustic Tape Measure"
-msgstr "Cínta Métrica Acústica"
+msgstr ""
 
 #: activity.py:86
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr "Para meter la distancia entre dos computadoras, es necesario compartir esta actividad"
+msgstr ""
 
 #: activity.py:87
 msgid "Press the button to measure the distance to another laptop"
-msgstr "Empuje el botón para meter la distance a otra computadora"
+msgstr ""
 
 #: activity.py:88
 msgid "Preparing to measure distance"
-msgstr "Preparando para meter la distancia"
+msgstr ""
 
 #: activity.py:89
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "Preparado para meter.  Esperando para que el compañero sea preparado."
+msgstr ""
 
 #: activity.py:90
 msgid "Recording sound from each laptop."
-msgstr "Grabando sonido por las computadoras."
+msgstr ""
 
 #: activity.py:91
 msgid "Processing recorded audio."
-msgstr "Analizando el sonido grabado."
+msgstr ""
 
 #: activity.py:93
 msgid "This activity already has two participants, so you cannot join."
-msgstr "Esta actividad ya tiene dos participantes.  Entonces, no se puede entrar."
+msgstr ""
 
 #: activity.py:95
 msgid "Begin Measuring Distance"
-msgstr "Empezar metiendo la distancia"
+msgstr ""
 
 #: activity.py:96
 msgid "Stop Measuring Distance"
-msgstr "Terminar metiendo la distancia"
+msgstr ""
 
 #: activity.py:126
 msgid "Measured Distance in Meters"
-msgstr "La distancia por metros"
+msgstr ""
 
 #: activity.py:78
 msgid "Atmosphere"
