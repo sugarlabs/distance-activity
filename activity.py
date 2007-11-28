@@ -136,31 +136,17 @@ class AcousticMeasureActivity(Activity):
         self.show_all()
 
         self.hellotube = None  # Shared session
+        self.initiating = False
 
         # get the Presence Service
         self.pservice = presenceservice.get_instance()
-        name, path = self.pservice.get_preferred_connection()
-        self.tp_conn_name = name
-        self.tp_conn_path = path
-        self.conn = telepathy.client.Connection(name, path)
-        self.initiating = None
         
-        self.connect('shared', self._shared_cb)
-
         # Buddy object for you
         owner = self.pservice.get_owner()
         self.owner = owner
 
-        if self._shared_activity:
-            # we are joining the activity
-            self.connect('joined', self._joined_cb)
-            self._shared_activity.connect('buddy-joined',
-                                          self._buddy_joined_cb)
-            self._shared_activity.connect('buddy-left',
-                                          self._buddy_left_cb)
-            if self.get_shared():
-                # we've already joined
-                self._joined_cb()
+        self.connect('shared', self._shared_cb)
+        self.connect('joined', self._joined_cb)
                 
     def _button_clicked(self, button):
         if button.get_active():
@@ -217,64 +203,32 @@ class AcousticMeasureActivity(Activity):
     def _shared_cb(self, activity):
         self._logger.debug('My activity was shared')
         self.initiating = True
-        self._setup()
-
-        for buddy in self._shared_activity.get_joined_buddies():
-            self._logger.debug('Buddy %s is already in the activity' %
-                buddy.props.nick)
-
-        self._shared_activity.connect('buddy-joined', self._buddy_joined_cb)
-        self._shared_activity.connect('buddy-left', self._buddy_left_cb)
+        self._sharing_setup()
 
         self._logger.debug('This is my activity: making a tube...')
         id = self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].OfferDBusTube(
             SERVICE, {})
 
-    def _setup(self):
+    def _sharing_setup(self):
         if self._shared_activity is None:
             self._logger.error('Failed to share or join activity')
             return
-
-        bus_name, conn_path, channel_paths =\
-            self._shared_activity.get_channels()
-
-        # Work out what our room is called and whether we have Tubes already
-        room = None
-        tubes_chan = None
-        text_chan = None
-        for channel_path in channel_paths:
-            channel = telepathy.client.Channel(bus_name, channel_path)
-            htype, handle = channel.GetHandle()
-            if htype == telepathy.HANDLE_TYPE_ROOM:
-                self._logger.debug('Found our room: it has handle#%d "%s"',
-                    handle, self.conn.InspectHandles(htype, [handle])[0])
-                room = handle
-                ctype = channel.GetChannelType()
-                if ctype == telepathy.CHANNEL_TYPE_TUBES:
-                    self._logger.debug('Found our Tubes channel at %s', channel_path)
-                    tubes_chan = channel
-                elif ctype == telepathy.CHANNEL_TYPE_TEXT:
-                    self._logger.debug('Found our Text channel at %s', channel_path)
-                    text_chan = channel
-
-        if room is None:
-            self._logger.error("Presence service didn't create a room")
-            return
-        if text_chan is None:
-            self._logger.error("Presence service didn't create a text channel")
-            return
-
-        # Make sure we have a Tubes channel - PS doesn't yet provide one
-        if tubes_chan is None:
-            self._logger.debug("Didn't find our Tubes channel, requesting one...")
-            tubes_chan = self.conn.request_channel(telepathy.CHANNEL_TYPE_TUBES,
-                telepathy.HANDLE_TYPE_ROOM, room, True)
-
-        self.tubes_chan = tubes_chan
-        self.text_chan = text_chan
-
-        tubes_chan[telepathy.CHANNEL_TYPE_TUBES].connect_to_signal('NewTube',
-            self._new_tube_cb)
+        
+        self.conn = self._shared_activity.telepathy_conn
+        self.tubes_chan = self._shared_activity.telepathy_tubes_chan
+        self.text_chan = self._shared_activity.telepathy_text_chan
+        
+        self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].connect_to_signal(
+            'NewTube', self._new_tube_cb)
+        
+        self._shared_activity.connect('buddy-joined', self._buddy_joined_cb)
+        self._shared_activity.connect('buddy-left', self._buddy_left_cb)
+        
+        # Optional - included for example:
+        # Find out who's already in the shared activity:
+        for buddy in self._shared_activity.get_joined_buddies():
+            self._logger.debug('Buddy %s is already in the activity',
+                               buddy.props.nick)
 
     def _list_tubes_reply_cb(self, tubes):
         for tube_info in tubes:
@@ -296,7 +250,7 @@ class AcousticMeasureActivity(Activity):
         if n <= 2:
             self._logger.debug('Joined an existing shared activity')
             self.initiating = False
-            self._setup()
+            self._sharing_setup()
 
             self._logger.debug('This is not my activity: waiting for a tube...')
             self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].ListTubes(
@@ -318,7 +272,8 @@ class AcousticMeasureActivity(Activity):
             tube_conn = TubeConnection(self.conn,
                 self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES],
                 id, group_iface=self.text_chan[telepathy.CHANNEL_INTERFACE_GROUP])
-            self.hellotube = HelloTube(tube_conn, self.initiating, self._get_buddy)
+            self.hellotube = HelloTube(tube_conn, self.initiating,
+                                       self._get_buddy)
             self.button.set_sensitive(True)
             self._change_message('ready')
 
@@ -345,9 +300,9 @@ class AcousticMeasureActivity(Activity):
             self._logger.debug('non-CS handle %u belongs to itself', handle)
             # XXX: deal with failure to get the handle owner
             assert handle != 0
-        return self.pservice.get_buddy_by_telepathy_handle(self.tp_conn_name,
-                self.tp_conn_path, handle)
-
+        return self.pservice.get_buddy_by_telepathy_handle(
+            self.conn.service_name, self.conn.object_path, handle)
+            
 class HelloTube(ExportedGObject):
     """The bit that talks over the TUBES!!!"""
 
