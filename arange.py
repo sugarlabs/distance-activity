@@ -17,9 +17,6 @@
 import numpy as num
 
 import wave
-import pygst
-pygst.require('0.10')
-import gst
 import struct
 import tempfile
 #import pylab
@@ -126,7 +123,7 @@ def write_wav(o):
     Writes a [0,1]-scaled array o into the left channel of a 8-bit stereo
     wav-file at 48KHz
     """
-    f = tempfile.NamedTemporaryFile(mode='wb')
+    f = tempfile.NamedTemporaryFile(mode='wb', prefix='out')
     w = wave.open(f)
     w.setparams((2,1,REC_HZ,0, 'NONE', 'NONE'))
     n = num.size(o)
@@ -136,27 +133,10 @@ def write_wav(o):
     w.writeframes(q.tostring())
     return f
 
-def play_wav(fname):
-    """
-    This void function plays the file named fname and does not return until
-    after playback has completed.
-    """
-    print "about to get player"
-    player = gst.element_factory_make("playbin", 'player')
-    print "about to get bus"
-    bus = player.get_bus()
-    
-    print "about to start playing"
-    player.set_property('uri','file://'+fname)
-    player.set_state(gst.STATE_PLAYING)
-
-    print "about to wait for EOS"
-    bus.poll(gst.MESSAGE_EOS,-1)
-    print "cleaning up"
-    player.set_state(gst.STATE_NULL)
-
 def play_wav_alsa(fname):
     subprocess.call(["/usr/bin/aplay", fname])
+    
+play_wav = play_wav_alsa
 
 def record_while_playing(play_name, t):
     """
@@ -164,57 +144,18 @@ def record_while_playing(play_name, t):
     waits a time t (s) after playback has finished, then stops recording.
     It returns a filehandle to a WAV file containing the recording.
     """
-    (pipeline, f) = start_recording()
+    (recorder, f) = start_recording()
     if play_name:
         play_wav(play_name)
     time.sleep(t)
-    stop_recording(pipeline)
+    stop_recording(recorder)
     return f
 
-def start_recording():
-    """
-    Initiates recording of a mono 48 KHz wav file via gstreamer from the default
-    capture device.
-    returns (pipeline, f)
-    pipeline is the gstreamer pipeline corresponding to the recording process
-    f is a file object for the wav file
-    """
-    #f = tempfile.NamedTemporaryFile('rb')
-    #fname = f.name
-    (fnum, fname) = tempfile.mkstemp()
-    f = open(fname,'rb')
-
-    pipeline = gst.element_factory_make('pipeline', 'recorder')
-    microphone = gst.element_factory_make('alsasrc', 'microphone')
-    converter = gst.element_factory_make('audioconvert', 'converter')
-    wave_encoder = gst.element_factory_make('wavenc', 'wave_encoder')
-    file_writer = gst.element_factory_make('filesink', 'file writer')
-    file_writer.set_property('location', fname)
-    
-    pipeline.add(microphone)
-    pipeline.add(converter)
-    pipeline.add(wave_encoder)
-    pipeline.add(file_writer)
-
-    microphone.link(converter, gst.caps_from_string('audio/x-raw-int, endianness=1234, signed=(boolean)true, width=16, depth=16, rate=' + str(REC_HZ) +', channels=1'))
-    converter.link(wave_encoder)
-    wave_encoder.link(file_writer)
-    
-    pipeline.set_state(gst.STATE_PLAYING)
-    return (pipeline, f)
-
 def start_recording_alsa():
-    #f = tempfile.NamedTemporaryFile('rb')
-    #fname = f.name
-    (fnum, fname) = tempfile.mkstemp()
+    fname = os.tempnam()
     
     rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=48000", fname])
     
-#    while not os.path.exists(fname):
-#        time.sleep(0.02)
-#
-#    while os.path.getsize(fname) <= 0:
-#        time.sleep(0.02)
     s = 0
     while s <= 0:
         try:
@@ -224,24 +165,14 @@ def start_recording_alsa():
 
     f = open(fname,'rb')
     return (rec_process, f)
-
-def stop_recording(pipeline):
-    """
-    This function safely shuts down a recording pipeline.
-    """
-    mic = pipeline.iterate_sources().next()
-    bus = pipeline.get_bus()
     
-    print "mic.set_state(gst.STATE_NULL) " + str(mic.set_state(gst.STATE_NULL))
-    print "mic.set_locked_state(True) " + str(mic.set_locked_state(True))
-    
-    print "bus.poll... " + str(bus.poll(gst.MESSAGE_EOS | gst.MESSAGE_ERROR,-1))
-    print "pipeline.set_state(gst.STATE_NULL) " + str(pipeline.set_state(gst.STATE_NULL))
-    print "mic.set_locked_state(False) " + str(mic.set_locked_state(False))
+start_recording = start_recording_alsa
 
 def stop_recording_alsa(rec_process):
     os.kill(rec_process.pid, signal.SIGKILL)
     rec_process.wait()
+    
+stop_recording = stop_recording_alsa
 
 def read_wav(f):
     """
@@ -267,10 +198,12 @@ def read_raw(f):
     typecode = 'h'
     a = struct.unpack('<' + str(n)+typecode, x[:(2*n)]);
     return num.array(a, num.float)
+    
+read_recorded_file = read_raw
 
 def cross_cov(a, b, a_id=None):
     """computes the cross-covariance of signals in a and b"""
-    assert a.ndim == b.ndim == 1
+    assert (a.ndim == 1) and (b.ndim == 1)
     n = max(a.size, b.size)
     n2 = 2**int(math.ceil(math.log(n,2))) #power of 2 >=n
     if a_id is not None:
@@ -292,10 +225,11 @@ def get_room_echo(t):
     R = (num.zeros((MLS_INDEX)) == 0)
     mls = compute_mls(R)
     mls_wav_file = write_wav(mls)
-    record_wav_file = record_while_playing(mls_wav_file.name, t)
+    record_file = record_while_playing(mls_wav_file.name, t)
     mls_wav_file.close()
-    rec_array = read_wav(record_wav_file)
-    record_wav_file.close()
+    rec_array = read_recorded_file(record_file)
+    record_file.close()
+    os.remove(record_file.name)
     return cross_cov(mls - 0.5, rec_array)
 
 def get_noise_echo(t):
@@ -305,7 +239,7 @@ def get_noise_echo(t):
 
     record_wav_file = record_while_playing(False, t)
 
-    rec_array = read_wav(record_wav_file)
+    rec_array = read_recorded_file(record_wav_file)
     record_wav_file.close()
     return cross_cov(mls - 0.5, rec_array)
 
@@ -440,7 +374,7 @@ def measure_dt_simul(s, am_server):
 
     stop_recording(pipeline)
     mls_wav_file.close()
-    rec_array = read_wav(rec_wav_file)
+    rec_array = read_recorded_file(rec_wav_file)
     rec_wav_file.close()
     mls_float = mls - 0.5
     xc_self = cross_cov(mls_float, rec_array)
@@ -543,9 +477,11 @@ def measure_dt_seq(s, am_server, send_signal=False):
     stop_recording_alsa(pipeline)
     del(pipeline)
     mls_wav_file.close()
-    rec_array = read_raw(rec_wav_file)
+    del(mls_wav_file)
+    rec_array = read_recorded_file(rec_wav_file)
     rec_wav_file.close()
     os.remove(rec_wav_file.name)
+    del(rec_wav_file)
 
     if send_signal:
         send_signal('processing')
