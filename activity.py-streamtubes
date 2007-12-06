@@ -110,7 +110,10 @@ class AcousticMeasureActivity(Activity):
         self.button = gtk.ToggleButton(label=self._button_dict['waiting'])
         self.button.connect('clicked',self._button_clicked)
         self.button.set_sensitive(False)
-
+        check = gtk.Image()
+        check.set_from_file('check.svg')
+        self.button.set_image(check)
+        
         self.message = gtk.Label(self._message_dict['unshared'])
         self.message.set_selectable(True)
         self.message.set_single_line_mode(True)
@@ -162,6 +165,8 @@ class AcousticMeasureActivity(Activity):
 
         self.connect('shared', self._shared_cb)
         self.connect('joined', self._joined_cb)
+        
+        self.connect('key-press-event', self._keypress_cb)
                 
     def _button_clicked(self, button):
         if button.get_active():
@@ -343,3 +348,13 @@ class AcousticMeasureActivity(Activity):
             assert handle != 0
         return self.pservice.get_buddy_by_telepathy_handle(
             self.conn.service_name, self.conn.object_path, handle)
+    
+    # KP_End == check gamekey = 65436
+    # KP_Page_Down == X gamekey = 65435
+    # KP_Home == box gamekey = 65429
+    # KP_Page_Up == O gamekey = 65434
+    def _keypress_cb(self, widget, event):
+        self._logger.debug("key press: " + gtk.gdk.keyval_name(event.keyval)+ " " + str(event.keyval))
+        if event.keyval == 65436:
+            self.button.clicked()
+        return False
