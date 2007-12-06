@@ -1,1 +1,3 @@
-Added a NEWS file.
+Development is occurring too rapidly to create a sensible NEWS file.
+A NEWS file produce by git-log is larger than the actual code of the
+activity.
