@@ -3,5 +3,5 @@ name = Distance
 service_name = org.laptop.AcousticMeasure
 class = activity.AcousticMeasureActivity
 icon = activity-acousticmeasure
-activity_version = 9
+activity_version = 11
 show_launcher = yes
