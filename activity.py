@@ -45,6 +45,7 @@ import thread
 import socket
 import base64
 import os
+import os.path
 import dbus
 
 #import socket_test as arange
@@ -224,7 +225,10 @@ class AcousticMeasureActivity(Activity):
 
         self._logger.debug('This is my activity: making a tube...')
         
-        f = os.tempnam()
+        #f = os.tempnam()
+        # The filename cannot be in $TMP, because this directory is not
+        # visible to Telepathy.
+        f = sugar.activity.activity.get_activity_root() + '/instance/my_socket'
         self.server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.server_socket.bind(f)
         
