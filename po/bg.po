@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-01-09 12:50+0000\n"
+"PO-Revision-Date: 2008-01-11 14:08+0000\n"
 "Last-Translator: Alexander Todorov <atodorov@redhat.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,22 +17,20 @@ msgstr ""
 
 # това е текста за иконката
 #: activity/activity.info:2
-#, fuzzy
 msgid "Acoustic Tape Measure"
-msgstr "Разстояние"
+msgstr "Акустично измерване"
 
 #: activity.py:91
 msgid "Atmosphere"
 msgstr "Атмосфверни условия"
 
 #: activity.py:99
-#, fuzzy
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
-"За да измерите разстоянието между 2 лаптопа, трябва да споделите това "
-"действие."
+"За да измерите разстоянието между два лаптопа, първо трябва да споделите "
+"това действие."
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
@@ -43,9 +41,8 @@ msgid "Preparing to measure distance"
 msgstr "Подготвяне за измерване"
 
 #: activity.py:102
-#, fuzzy
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "Подготвен за измерване.  Изчакване на другия лаптоп."
+msgstr "Подготвен за измерване.  Изчакване на другия партньор."
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
