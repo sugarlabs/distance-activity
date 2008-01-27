@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
-"PO-Revision-Date: 2007-11-28 10:52+0000\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"PO-Revision-Date: 2008-01-09 18:29+0000\n"
 "Last-Translator: Gerhard Steiner <gerhard.steiner@duichwir.at>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,11 @@ msgstr ""
 msgid "Acoustic Tape Measure"
 msgstr "Tonmaßband"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "Atmosphäre"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -32,44 +32,44 @@ msgstr ""
 "Zur Messung des Abstandes zwischen zwei Laptops musst Du diese Aktivität mit "
 "jemanden gemeinsam ausführen."
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr ""
 "Drücke die Schaltfläche um den Abstand zu einem anderen Laptop zu messen"
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
-msgstr "Aufbereiten des Messabstandes"
+msgstr "Vorbereiten der Distanzmessung"
 
-#: activity.py:89
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
 "Bereit zur Durchführung der Messung.  Warte auf die Bereitschaft des "
 "Partners."
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
 msgstr "Zeichne den Ton von jedem Laptop auf."
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
 msgstr "Verarbeite die aufgezeichneten Töne."
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "Diese Aktivität hat bereits zwei Teilnehmer, du kannst daher nicht "
 "mitmachen."
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "Beginne Abstandsmessung"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
 msgstr "Stoppe Abstandsmessung"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "Gemessene Distanz in Metern"
 
@@ -83,4 +83,9 @@ msgstr "Relative Luftfeuchtigkeit (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr "Tongeschwindigkeit (m/s): "
+msgstr "Schallgeschwindigkeit (m/s): "
+
+#: activity/activity.info:2
+#, fuzzy
+msgid "Distance"
+msgstr "Abstand"
