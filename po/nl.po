@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
-"PO-Revision-Date: 2007-11-21 13:02+0000\n"
-"Last-Translator: Pascal Scheffers <pascal@scheffers.net>\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"PO-Revision-Date: 2007-12-26 23:11+0000\n"
+"Last-Translator: Axel Roest <wordforge@roeroe.nl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Acoustic Tape Measure"
 msgstr "Akoestisch meetlint"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -28,43 +28,43 @@ msgstr ""
 "Om de afstand tussen twee laptops te meten, moet je eerst deze Activiteit "
 "delen. "
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Druk op de knop om de afstand naar een andere laptop te meten."
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
 msgstr "De afstandsmeting wordt voorbereid"
 
-#: activity.py:89
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "Klaar om een meting te doen. Wachten tot de andere kant ook klaar is."
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
 msgstr "Bezig met geluid van beide laptops opnemen."
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
 msgstr "Bezig met verwerken van opgenomen geluid."
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr "Deze activiteit heeft al twee deelnemers, je kan dus niet deelnemen."
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "Begin met afstandsmeting"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
 msgstr "Stop met afstandsmeting"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "Gemeten afstand in meters"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "Atmosfeer"
 
@@ -74,8 +74,12 @@ msgstr "Temperatuur (C): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr "Relativie luchtvochtigheid (%): "
+msgstr "Relatieve luchtvochtigheid (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "Geluidssnelheid (m/s): "
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr ""

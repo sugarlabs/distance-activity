@@ -17,7 +17,7 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.0.1\n"
 
 #: activity/activity.info:2
-msgid "Distance"
+msgid "Acoustic Tape Measure"
 msgstr ""
 
 #: activity.py:91
@@ -76,4 +76,8 @@ msgstr ""
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
+msgstr ""
+
+#: activity/activity.info:2
+msgid "Distance"
 msgstr ""

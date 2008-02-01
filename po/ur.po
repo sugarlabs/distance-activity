@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
 "PO-Revision-Date: 2007-12-03 20:29+0000\n"
 "Last-Translator: salman minhas <sulmanminhas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,49 +19,49 @@ msgstr ""
 msgid "Acoustic Tape Measure"
 msgstr "اکائوسٹک ٹیپ پیمائش"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "ماحول"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "دو ليپ ٹاپ کے درميان فاصلے کی پيمائش کے ليے اس ايکٹيوٹی کو شئير  کريں۔"
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr "دوسرے لیپ ٹاپ کا فاصلہ جاننے کے ليے بٹن دبائيں"
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
 msgstr "فاصلہ کی پيمائش کے ليے تيار"
 
-#: activity.py:89
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "پيمائش کے ليے تيار۔_ _ساتھی کے تيار ہونے کا انتظار۔"
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
 msgstr "ہر ليب ٹاپ سے آواز ريکارڑ کرنا"
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
 msgstr "ريکارڑ کی ہوئی سننے والی آواز کو پروسس کرنا"
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr "اس ايکٹيوٹی ميں پہلے سے دو حصہ ليے ہوئے ہيں، آپ شريک نہيں ہو سکتے۔"
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "فاصلے کی پيمائش شروع کريں"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
 msgstr "فاصلے کی پيمائش بند کريں"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "پيمايش کيا ہوا فاصلہ ميٹر ميں"
 
@@ -76,3 +76,7 @@ msgstr "مساوی نمی(٪):"
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "آواز کی سپيڈ(m/s):"
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr ""

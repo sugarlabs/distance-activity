@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
-"PO-Revision-Date: 2007-11-22 12:53+0000\n"
-"Last-Translator: Γιάννης Κασκαμανίδης <ttnfy17@yahoo.gr>\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"PO-Revision-Date: 2007-12-21 00:07+0000\n"
+"Last-Translator: John Sarlis <sarlis@sch.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,58 +18,57 @@ msgstr ""
 
 #: activity/activity.info:2
 msgid "Acoustic Tape Measure"
-msgstr ""
+msgstr "Ακουστική ταινία μέτρησης"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "Ατμόσφαιρα"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
-"Για να μετρήσετε την απόσταση μεταξύ δύο φορητών υπολογιστών, θα πρέπει "
-"πρώτα να ορίσεις ως κοινόχρηστη αυτή την δραστηριότητα."
+"Για τη μέτρηση της απόστασης μεταξύ δύο φορητών υπολογιστών, απαραίτητο "
+"είναι να έχει οριστεί η Δραστηριότητα αυτή ως κοινόχρηστη."
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Πίεσε το κουμπί για να μετρηθεί η απόσταση μ' ένα άλλο φορητό"
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
 msgstr "Προετοιμασία για να μετρηθεί η απόσταση"
 
-#: activity.py:89
-#, fuzzy
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
-"Όλα έτοιμα για τη μέτρηση.__ Αναμονή για να ετοιμαστεί και ο άλλος "
-"υπολογιστής."
+"Όλα έτοιμα για τη μέτρηση. _ _ Αναμονή για την προετοιμασία του δεύτερου "
+"υπολογιστή."
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr "Εγγραφή ήχου από κάθε υπολογιστή."
+msgstr "Εγγραφή ήχου από κάθε υπολογιστή χωριστά."
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
 msgstr "Επεξεργασία ηχογραφημένου ήχου"
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "Δεν μπορείς να συμμετέχεις επειδή η δραστηριότητα έχει ήδη δυο "
 "συμμετέχοντες."
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "'Εναρξη μέτρησης απόστασης"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr "Διακοπή μέτρησης απόστασης"
+msgstr "Τέλος μέτρησης απόστασης"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "Απόσταση που μετρήθηκε σε μέτρα"
 
@@ -84,3 +83,7 @@ msgstr "Σχετική υγρασία (%): "
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "Ταχύτητα του ήχου (m/s): "
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr ""

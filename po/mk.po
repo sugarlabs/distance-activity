@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
-"PO-Revision-Date: 2007-11-23 19:25+0000\n"
-"Last-Translator: Aleksandar Balalovski <gemidjy@lugola.net>\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"PO-Revision-Date: 2007-12-17 15:29+0000\n"
+"Last-Translator: Marko Doda <mark0d0da@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,13 +18,13 @@ msgstr ""
 
 #: activity/activity.info:2
 msgid "Acoustic Tape Measure"
-msgstr ""
+msgstr "Акустично мерење на лентата"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "Атмосфера"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -32,39 +32,39 @@ msgstr ""
 "За да го измериш растојанието меѓу два лаптопи, мора да ја споделиш оваа "
 "Активност,"
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Притисни на копчето за да го измериш растојанието до друг лаптоп"
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
 msgstr "Се подготвувам да го измерам растојанието"
 
-#: activity.py:89
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "Спремен сум за мерење.  Чекам партнерот да се подготви."
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
 msgstr "Снимам звук од секој лаптоп."
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
 msgstr "Обработка на снимениот звук."
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr "Во оваа активност веќе има двајца учесници, не можеш да се приклучиш."
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "Почни со мерење на растојание"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr "Престани со мерње на растојание"
+msgstr "Престани со мерење на растојание"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "Измерено растојание во метри"
 
@@ -79,3 +79,7 @@ msgstr "Релативна влажност (%): "
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "Брзина на звукот (м/с): "
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr ""

@@ -2,78 +2,78 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-01-30 12:32-0500\n"
+"Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "దూరం"
 
 #: activity.py:91
 msgid "Atmosphere"
-msgstr ""
+msgstr "ఆకాశము"
 
 #: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr ""
+msgstr "రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికిముందు మీరు దీనిని పంచుకోవలిన అవసరం ఉంది "
+"వ్యాపకం."
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికి మీట నొక్కండి"
 
 #: activity.py:101
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "దూరంకొలవడానికి తయారవుతుంది"
 
 #: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "దూరంకొలవడానికి తయారవుగాఉంది. జతగాడి తయారుకై ఎదురుచూస్తుంది "
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "ప్రతీ లేప్ టాప్ లనుంచీ శబ్దమును రికార్డు చేస్తుంది"
 
 #: activity.py:104
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "రికార్డు చేసిన శబ్దమును విశ్లేషిస్తుంది"
 
 #: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr ""
+msgstr "ఈ వ్యాపకంలో ఇప్పటికే ఇద్దరు పాల్గున్నారు. అందువలన మీరు పాల్గోలేరు"
 
 #: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "దూరంకొలత మొదలుపెట్టు"
 
 #: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "దూరంకొలత ఆపు"
 
 #: activity.py:142
 msgid "Measured Distance in Meters"
-msgstr ""
+msgstr "కొలిచిన దూరం, మీటరులలో"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr ""
+msgstr "ఉష్ణోగ్రత  (C): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "సాపేక్ష  తేమ (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "ధ్వని వేగము (మీటరు/సెకను): "

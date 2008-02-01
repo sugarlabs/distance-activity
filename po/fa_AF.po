@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
-"PO-Revision-Date: 2008-01-09 11:06+0000\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"PO-Revision-Date: 2008-01-28 04:03-0500\n"
 "Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -19,60 +19,64 @@ msgstr ""
 msgid "Acoustic Tape Measure"
 msgstr "مقیاس نوار ضبط صوتی"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "جو"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr "برای اندازه گیری فاصله میان دو لپ تاپ شما باید این کار را شریک کنید"
+msgstr "برای اندازه گیری فاصله میان دو لپ تاپ شما باید این فعالیت را شریک کنید."
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr "دکمه را فشار دهید تا فاصله با لپ تاپ دیگر را اندازه نماید"
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
-msgstr "درحال آماده شدن برای اندازه گیری فاصله"
+msgstr "درحال آمادگی برای اندازه گیری فاصله"
 
-#: activity.py:89
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "آماده برای ین اندازه گیری._ _ منتظر همکار تا آماده شود"
+msgstr "آماده برای یک اندازه گیری.  منتظر همکار، تا آماده شود."
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr "در حال ثبت صدا از هر دو لپ تاپ"
+msgstr "در حال ثبت صدا از هر دو لپ تاپ."
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
-msgstr "در حال تهیه صدا"
+msgstr "در حال تهیه صدا."
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr "این فعالیت قبلا دو کارمند مشترک دارد لذا شما نمیتوانید بدان پیوست شوید"
+msgstr "این فعالیت قبلا دو کارمند مشترک دارد لذا شما نمیتوانید بدان پیوست شوید."
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "اندازی گیری فاصله را شروع کن"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
 msgstr "اندازی گیری فاصله رامتوقف کن"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "فاصله اندازه گیری شد به متر"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr "درجه حرارت (سانتی گراد):"
+msgstr "درجه حرارت (سانتی گراد): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr "رطوبت نسبی (%):"
+msgstr "رطوبت نسبی (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr "سرعت صدا (متر فی ثانیه):"
+msgstr "سرعت صدا (متر فی ثانیه): "
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr "فاصله"

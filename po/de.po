@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-01-09 18:29+0000\n"
+"PO-Revision-Date: 2008-01-28 05:56-0500\n"
 "Last-Translator: Gerhard Steiner <gerhard.steiner@duichwir.at>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -86,6 +86,5 @@ msgid "Speed of Sound (m/s): "
 msgstr "Schallgeschwindigkeit (m/s): "
 
 #: activity/activity.info:2
-#, fuzzy
 msgid "Distance"
 msgstr "Abstand"

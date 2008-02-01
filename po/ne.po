@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ankur Sharma <ankur@olpcnepal.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,49 +20,49 @@ msgstr ""
 msgid "Acoustic Tape Measure"
 msgstr "कर्णेन्द्रिय (ध्वनी) टेप मापन"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "वायुमण्डल"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "दुई ल्यापटप विचको दुरी नाप्न, पहिला यो क्रियाकलाप share गर्नुहोस"
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr "अर्को ल्यापटपसंगको दुरी नाप्न यो बटन थिच्नुहोस"
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
 msgstr "दुरी नाप्ने तयारी गर्दै"
 
-#: activity.py:89
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "दुरी नाप्न साथीलाइ कुर्दै"
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
 msgstr "प्रत्येक ल्यापटपको आवाज रेकर्ड गर्दै"
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
 msgstr "रेकर्ड गरीएको ध्वनी प्रोसेसीङ्ग गर्दै"
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr "यो क्रियाकलापमा भाग लिन सकिएन, दुइ जना भन्दा बढी भयो"
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "दुरी नाप्न सुरु"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
 msgstr "दुरी नाप्न बन्द"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "नापिएको दुरी, मिटरमा"
 
@@ -77,3 +77,7 @@ msgstr "सापेक्षिक आद्रता (%):"
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "आवाजको गति"
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-12 22:09-0500\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
 "PO-Revision-Date: 2008-01-09 07:13+0000\n"
 "Last-Translator: usman mansoor ansari <jalalkut@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,50 +19,50 @@ msgstr ""
 msgid "Acoustic Tape Measure"
 msgstr "د اكاسټېك پټې كچل"
 
-#: activity.py:78
+#: activity.py:91
 msgid "Atmosphere"
 msgstr "اتموسفېر"
 
-#: activity.py:86
+#: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
 "د دوه لپټاپونو ترمنځ واټن كچلو لپاره تاسې بايد لومړې دا چارنتيا ونډه كړئ"
 
-#: activity.py:87
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
 msgstr "د بل لپټاپ واټن كچلو لپارتڼۍ ټك كړئ"
 
-#: activity.py:88
+#: activity.py:101
 msgid "Preparing to measure distance"
 msgstr "د واټن كچلو لپاره چمتووالې"
 
-#: activity.py:89
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "د كچنې لپاره تيار. _ _ د ملګري د تيارۍ لپاره څارنه."
 
-#: activity.py:90
+#: activity.py:103
 msgid "Recording sound from each laptop."
 msgstr "له هر لپټاپ څخه غږ رېكارډونه."
 
-#: activity.py:91
+#: activity.py:104
 msgid "Processing recorded audio."
 msgstr "بهيريز ركارډ شوې غږيز"
 
-#: activity.py:93
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr " تاسې يوځايينه نشئ كولې، ځكه دا چارنتيا له مخكې څخه دوه ګډونوال لري."
 
-#: activity.py:95
+#: activity.py:108
 msgid "Begin Measuring Distance"
 msgstr "واټن كچل پيل كړئ"
 
-#: activity.py:96
+#: activity.py:109
 msgid "Stop Measuring Distance"
 msgstr "واټن كچل تم كړئ"
 
-#: activity.py:126
+#: activity.py:142
 msgid "Measured Distance in Meters"
 msgstr "كچل شوې واټن په متر كې"
 
@@ -77,3 +77,7 @@ msgstr "اړوند لندبل (٪):ـ"
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "د غږ چټکتیا (متر/سانيه):ـ"
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr ""
