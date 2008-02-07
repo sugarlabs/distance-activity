@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-02-04 01:32-0500\n"
+"PO-Revision-Date: 2008-02-05 23:17-0500\n"
 "Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr "కొలిచిన దూరం, మీటరులలో"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr "ఉష్ణోగ్రత (C): "
+msgstr "ఉష్ణో్గ్రత (C): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
