@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-02-05 23:17-0500\n"
+"PO-Revision-Date: 2008-02-11 07:21+0100\n"
 "Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +24,8 @@ msgid "Atmosphere"
 msgstr "ఆకాశము"
 
 #: activity.py:99
-msgid ""
-"To measure the distance between two laptops, you must first share this "
-"Activity."
-msgstr ""
-"రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికిముందు మీరు ఈ వ్యాపకమును పంచుకోవలిన అవసరం "
-"ఉంది."
+msgid "To measure the distance between two laptops, you must first share this Activity."
+msgstr "రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికిముందు మీరు ఈ వ్యాపకమును పంచుకోవలిన అవసరం ఉంది."
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
@@ -78,3 +74,4 @@ msgstr "సాపేక్ష తేమ (%): "
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "ధ్వని వేగము (మీటరు/సెకను): "
+
