@@ -134,7 +134,7 @@ def write_wav(o):
     return f
 
 def play_wav_alsa(fname):
-    subprocess.call(["/usr/bin/aplay", fname])
+    subprocess.call(["/usr/bin/aplay", "--buffer-time=10000000", fname])
     
 play_wav = play_wav_alsa
 
@@ -154,7 +154,7 @@ def record_while_playing(play_name, t):
 def start_recording_alsa():
     fname = os.tempnam()
     
-    rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=48000", fname])
+    rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=48000", "--buffer-time=10000000", fname])
     
     s = 0
     while s <= 0:
