@@ -2,78 +2,80 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-05-10 05:00-0400\n"
+"Last-Translator: Rupali Sarode <rups23in@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "अंतर"
 
 #: activity.py:91
 msgid "Atmosphere"
-msgstr ""
+msgstr "वातावरण"
 
 #: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"दोन लॅपटॉप चे मधील अंतर मपण्यासाठी तुम्हाला प्रथम ह्या एकटीवीटी मधे भाग "
+"घ्याव लागेल."
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "दुसरया लॅपटोप्क चा अंतर मापण्यासाठी बटन दाबा."
 
 #: activity.py:101
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "अंतर मापण्यासाठी तयार होत आहे."
 
 #: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "अंतर मापण्यासाठी तयार आहे. _ जोडीदार तयार होण्याची वाट पाहते."
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "प्रत्येक लॅपटॉप वरुन आवज़ नोंद करत आहे."
 
 #: activity.py:104
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "नोंद केलेल्या ओडिओचा संसाधन होत आहे."
 
 #: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
+"ह्या एकटीवीटी मधे पहिलेच दोन भागीदार आहे म्हणून तुम्ही सहभागी होऊ शकत नाही."
 
 #: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "अंतर मापण्याची सुरुआत करा."
 
 #: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "अंतर मापणे बंद करा."
 
 #: activity.py:142
 msgid "Measured Distance in Meters"
-msgstr ""
+msgstr "मापलेला अंतर मीटर मधे आहे."
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr ""
+msgstr "तापमान(c):_"
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "सबंधित नमी(%):_"
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "आवाज़ाची गती"
