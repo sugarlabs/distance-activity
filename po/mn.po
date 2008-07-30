@@ -2,78 +2,79 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-07-08 05:48-0400\n"
+"Last-Translator: Odontsetseg Bat-Erdene <obat-erdene@suffolk.edu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "Хоорондын зай"
 
 #: activity.py:91
 msgid "Atmosphere"
-msgstr ""
+msgstr "Агаар мандал"
 
 #: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"2 зөөврийн компьютерүүдийн хоорондох зайг хэмжхийн тулд та эхэлж энэ үйл "
+"ажиллагааг хуваалцах хэрэгтэй."
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "Зөөврийн компьютерүүдийн хоорондох зайг хэмжхийн тулд товчин дээр дар"
 
 #: activity.py:101
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "Хоорондох зайг хэмжихэд бэлдэж байна"
 
 #: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "Хэмжилтийг хийхэд бэлэн.  Хамтрагчын бэлэн болхыг хүлээж байна."
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "Зөөврийн компьютер бүрээс дууг бичиж байна."
 
 #: activity.py:104
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "Бичигдсэн дуу бичлэгийг боловсруулж байна."
 
 #: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr ""
+msgstr "Энэ үйл ажиллагаанд хоёр орлцогчид байгаа тул та нэгдэх боломжгүй."
 
 #: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "Хоорондох зайг хэмжиж эхлэх"
 
 #: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "Хоорондох зайн хэмжилтийг зогсоох"
 
 #: activity.py:142
 msgid "Measured Distance in Meters"
-msgstr ""
+msgstr "Хэмжигдсэн зай метрээр"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr ""
+msgstr "Темпратур (C): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "Чийгшилтийн түвшин (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "Дууны хурд (м/сек): "
