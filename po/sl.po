@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"PO-Revision-Date: 2008-07-11 07:33-0400\n"
+"Last-Translator: Denis Oštir <denis.ostir@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0rc2\n"
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr "Razdalja"
+
+#: activity.py:91
+msgid "Atmosphere"
+msgstr "Podatki o vremenu"
+
+#: activity.py:99
+msgid ""
+"To measure the distance between two laptops, you must first share this "
+"Activity."
+msgstr ""
+"Za izmero razdalje med dvema prenosnikoma mora biti ta aktivnost najprej v "
+"skupni rabi."
+
+#: activity.py:100
+msgid "Press the button to measure the distance to another laptop"
+msgstr "Za izmero razdalje do drugega prenosnika pritisni na gumb"
+
+#: activity.py:101
+msgid "Preparing to measure distance"
+msgstr "Priprava na izmero razdalje"
+
+#: activity.py:102
+msgid "Ready to make a measurement.  Waiting for partner to be ready."
+msgstr "Pripravljen za izmero. Čakanje na odziv partnerja."
+
+#: activity.py:103
+msgid "Recording sound from each laptop."
+msgstr "Snemanje zvoka iz vsakega prenosnika."
+
+#: activity.py:104
+msgid "Processing recorded audio."
+msgstr "Obdelava posnetega zvoka."
+
+#: activity.py:106
+msgid "This activity already has two participants, so you cannot join."
+msgstr "Ta aktivnost že ima dva uporabnika zato se ne morete pridružiti."
+
+#: activity.py:108
+msgid "Begin Measuring Distance"
+msgstr "Začni meriti razdaljo"
+
+#: activity.py:109
+msgid "Stop Measuring Distance"
+msgstr "Prenehaj meriti razdaljo"
+
+#: activity.py:142
+msgid "Measured Distance in Meters"
+msgstr "Izmerjena razdalja v metrih"
+
+#: atm_toolbars.py:30
+msgid "Temperature (C): "
+msgstr "Temperatura (C):_"
+
+#: atm_toolbars.py:40
+msgid "Relative Humidity (%): "
+msgstr "Relativna vlažnost (%):_"
+
+#: atm_toolbars.py:50
+msgid "Speed of Sound (m/s): "
+msgstr "Hitrost zvoka (m/s):_"
