@@ -2,14 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2008-07-16 01:01+0200\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,67 +16,62 @@ msgstr ""
 "X-Generator: Translate Toolkit 1.0.1\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr ""
+msgid "Distance"
+msgstr "intera"
 
 #: activity.py:91
 msgid "Atmosphere"
-msgstr ""
+msgstr "ikirere"
 
 #: activity.py:99
-msgid ""
-"To measure the distance between two laptops, you must first share this "
-"Activity."
-msgstr ""
+msgid "To measure the distance between two laptops, you must first share this Activity."
+msgstr "kugirango upime uburebure burihagati ya mudasobwa ebyiri ugomba kubanza gusangira ikigikorwa"
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "kanda akabuto kugirango upime uburebure bwo kuyindi mudasobwa"
 
 #: activity.py:101
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "kwitegura gupima uburebure/intera"
 
 #: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "Kwitegura gukora igipimo.Tegereza mugenzi wawekugirango yitunganye"
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "gufata amajwi aturutse muri buri mudasobwa"
 
 #: activity.py:104
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "kugumagufata isohoramajwi"
 
 #: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr ""
+msgstr "Ik igikorwa akakanya  gifite  abitabiriye babiri,none ntagob wakwivanga"
 
 #: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "Tangira upime uburebure"
 
 #: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "Hagarika gupima intera"
 
 #: activity.py:142
 msgid "Measured Distance in Meters"
-msgstr ""
+msgstr "Gupima uburebure muri metero"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr ""
+msgstr "Igipimo cy`ubushyuhe/ubukonje (C): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "Ubukonje bufitanye isano (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "Umuvuduko w`ijwi(m/s): "
 
-#: activity/activity.info:2
-msgid "Distance"
-msgstr ""
