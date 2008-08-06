@@ -2,23 +2,22 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2008-03-21 16:56-0400\n"
 "Last-Translator: Ankur Sharma <ankur@olpcnepal.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "कर्णेन्द्रिय (ध्वनी) टेप मापन"
+msgid "Distance"
+msgstr "दुरि"
 
 #: activity.py:91
 msgid "Atmosphere"
@@ -78,6 +77,5 @@ msgstr "सापेक्षिक आद्रता (%):"
 msgid "Speed of Sound (m/s): "
 msgstr "आवाजको गति"
 
-#: activity/activity.info:2
-msgid "Distance"
-msgstr ""
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "कर्णेन्द्रिय (ध्वनी) टेप मापन"
