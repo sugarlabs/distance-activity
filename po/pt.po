@@ -7,17 +7,17 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2007-12-13 05:10+0000\n"
-"Last-Translator: Ivo Emanuel Gonçalves <justivo@gmail.com>\n"
+"PO-Revision-Date: 2008-08-26 19:26-0400\n"
+"Last-Translator: Eduardo H. Silva <HoboPrimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "Medida de Fita Acústica"
+msgid "Distance"
+msgstr "Distância"
 
 #: activity.py:91
 msgid "Atmosphere"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr "Pressiona o butão para medir a distância a outro portátil."
+msgstr "Pressiona o botão para medir a distância até outro portátil."
 
 #: activity.py:101
 msgid "Preparing to measure distance"
@@ -42,7 +42,7 @@ msgstr "Preparando para medir a distância"
 #: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
-"Preparado para fazer uma medição.  Esperando que o parceiro esteje pronto."
+"Preparado para fazer uma medição.  Esperando que o parceiro esteja pronto."
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
@@ -54,15 +54,16 @@ msgstr "A processar som gravado."
 
 #: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr "Esta actividade já têm dois participantes, por isso não podes entrar."
+msgstr ""
+"Esta actividade já tem dois participantes, por isso não podes juntar-te."
 
 #: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr "Começar a Medição de Distância"
+msgstr "Começar a Medir a Distância"
 
 #: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr "Parar a Medição de Distância"
+msgstr "Parar de Medir a Distância"
 
 #: activity.py:142
 msgid "Measured Distance in Meters"
@@ -80,6 +81,5 @@ msgstr "Humidade Relativa (%): "
 msgid "Speed of Sound (m/s): "
 msgstr "Velocidade de Som (m/s): "
 
-#: activity/activity.info:2
-msgid "Distance"
-msgstr ""
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "Medida de Fita Acústica"
