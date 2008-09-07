@@ -90,6 +90,16 @@ class AcousticMeasureActivity(Activity):
         self._t_h_bar = atm_toolbars.TempToolbar()
         toolbox.add_toolbar(gettext("Atmosphere"), self._t_h_bar)
         
+        try:
+            bus = dbus.SystemBus()
+            proxy = bus.get_object('org.freedesktop.ohm',
+                           '/org/freedesktop/ohm/Keystore')
+            self.ohm_keystore = dbus.Interface(proxy,
+                             'org.freedesktop.ohm.Keystore')
+        except dbus.DBusException, e:
+            self._logger.warning("Error setting OHM inhibit: %s" % e)
+            self.ohm_keystore = None
+
         #worker thread
         self._button_event = threading.Event()
         thread.start_new_thread(self._helper_thread, ())
@@ -169,6 +179,20 @@ class AcousticMeasureActivity(Activity):
         
         self.connect('key-press-event', self._keypress_cb)
                 
+    def _inhibit_suspend(self):
+        if self.ohm_keystore is not None:
+            self.ohm_keystore.SetKey('suspend.inhibit', 1)
+            return self.ohm_keystore.GetKey('suspend.inhibit')
+        else:
+            return False
+
+    def _allow_suspend(self):
+        if self.ohm_keystore is not None:
+            self.ohm_keystore.SetKey('suspend.inhibit', 0)
+            return self.ohm_keystore.GetKey('suspend.inhibit')
+        else:
+            return False
+
     def _button_clicked(self, button):
         if button.get_active():
             self._button_event.set()
@@ -184,9 +208,11 @@ class AcousticMeasureActivity(Activity):
             self._logger.debug("helper_thread: button_event.isSet(): " + str(self._button_event.isSet()))
             self._button_event.wait()
             self._logger.debug("initiating measurement")
+            self._inhibit_suspend()
             dt = arange.measure_dt_seq(self.main_socket, self.initiating, self._change_message)
             x = dt * self._t_h_bar.get_speed() - arange.OLPC_OFFSET
             self._update_distance(x)
+            self._allow_suspend()
     
     def _update_distance(self, x):
         mes = locale.format("%.2f", x)
