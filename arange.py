@@ -35,6 +35,8 @@ MLS_INDEX = 14
 
 OLPC_OFFSET = -0.05 #Measured constant offset due to geometry and electronics
 
+REC_TIMEOUT = 10 #Max number of seconds to record before stopping
+
 cache_dict = {}
 
 def compute_mls(R):
@@ -134,7 +136,7 @@ def write_wav(o):
     return f
 
 def play_wav_alsa(fname):
-    subprocess.call(["/usr/bin/aplay", "--buffer-time=10000000", fname])
+    subprocess.call(["/usr/bin/aplay", fname])
     
 play_wav = play_wav_alsa
 
@@ -154,7 +156,7 @@ def record_while_playing(play_name, t):
 def start_recording_alsa():
     fname = os.tempnam()
     
-    rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=48000", "--buffer-time=10000000", fname])
+    rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=%i" % REC_HZ, "--duration=%i" % REC_TIMEOUT, fname])
     
     s = 0
     while s <= 0:
@@ -452,7 +454,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
     time.sleep(amp_ringdown)
 	
     handoff_command = 'your turn'
-    ringdown = 0.5 #seconds
+    ringdown = 0.2 #seconds
     if am_server:
         print "about to play_wav"
         play_wav_alsa(mls_wav_file.name)
