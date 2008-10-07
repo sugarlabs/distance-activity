@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-09-07 01:18-0400\n"
+"PO-Revision-Date: 2008-10-07 10:55-0400\n"
 "Last-Translator: abdullah kocabas <abdullah.kocabas@abcdizustu.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,64 +17,64 @@ msgstr ""
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr "uzaklık"
+msgstr "Mesafe"
 
 #: activity.py:91
 msgid "Atmosphere"
-msgstr "atmosfer"
+msgstr "Atmosfer"
 
 #: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
-"iki laptop arasındaki uzaklığı hesaplamanız için, önce bu aktiviteyi "
-"paylaşmanız gerekmektedir."
+"İki laptop arasındaki mesafeyi ölçmek için, önce bu aktiviteyi paylaşmanız "
+"gerekir"
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr "diğer laptopla olan uzaklığı hesaplamak için butona basınız."
+msgstr "Diğer laptopla olan uzaklığı hesaplamak için butona bas"
 
 #: activity.py:101
 msgid "Preparing to measure distance"
-msgstr "uzaklığı hesaplamak için hazırlanıyor."
+msgstr "Mesafeyi hesaplamak için hazırlanıyor"
 
 #: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "ölçüm yapmak için hazır. diğer bilgisayarın hazır olmasını bekliyor."
+msgstr "Ölçüm yapmak için hazır, diğer bilgisayarın hazır olmasını bekliyor"
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr "her laptoptan ses kaydediyor."
+msgstr "Her laptoptan ses kaydediyor"
 
 #: activity.py:104
 msgid "Processing recorded audio."
-msgstr "kaydedilmiş sesleri yürütüyor."
+msgstr "Kaydedilmiş sesleri yürütüyor"
 
 #: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr "aktivite zaten iki katılımcıya sahip, siz katılamazsınız."
+msgstr "Aktivite zaten iki katılımcıya sahip, siz katılamazsınız"
 
 #: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr "mesafeyi hesaplamaya başlayınız."
+msgstr "Mesafeyi ölçmeye başla"
 
 #: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr "mesafeyi hesaplamayı durdurunuz."
+msgstr "Mesafeyi ölçmeyi durdur"
 
 #: activity.py:142
 msgid "Measured Distance in Meters"
-msgstr "metreler arası ölçülen mesafe"
+msgstr "Metreler arası ölçülen mesafe"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr "sıcaklık"
+msgstr "Sıcaklık"
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr "bağıl nem (%)"
+msgstr "Bağıl nem (%)"
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr "ses hızı (m/s)"
+msgstr "Ses hızı (m/s)"
