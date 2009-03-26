@@ -17,8 +17,12 @@ msgstr ""
 "X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "Cínta Métrica Acústica"
+msgid "Distance"
+msgstr "Distancia"
+
+#: activity.py:91
+msgid "Atmosphere"
+msgstr "Atmósfera"
 
 #: activity.py:99
 msgid ""
@@ -65,10 +69,6 @@ msgstr "Terminar de medir la distancia"
 msgid "Measured Distance in Meters"
 msgstr "La distancia en metros"
 
-#: activity.py:91
-msgid "Atmosphere"
-msgstr "Atmósfera"
-
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
 msgstr "Temperatura (°C): "
@@ -81,6 +81,5 @@ msgstr "Humedad relativa (%): "
 msgid "Speed of Sound (m/s): "
 msgstr "Velocidad del sonido (m/s): "
 
-#: activity/activity.info:2
-msgid "Distance"
-msgstr "Distancia"
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "Cínta Métrica Acústica"
