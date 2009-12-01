@@ -255,6 +255,8 @@ class AcousticMeasureActivity(Activity):
         # The filename cannot be in $TMP, because this directory is not
         # visible to Telepathy.
         f = sugar.activity.activity.get_activity_root() + '/instance/my_socket'
+        if os.path.exists(f):
+            os.unlink(f)
         self.server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.server_socket.bind(f)
         
