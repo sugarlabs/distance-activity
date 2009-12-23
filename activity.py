@@ -80,7 +80,10 @@ class AcousticMeasureActivity(Activity):
         #self.set_title(gettext('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
 
-        self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL, ''))
+        try:
+            self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL, ''))
+        except locale.Error:
+            self._logger.error("setlocale failed")
 
         # top toolbar with share and close buttons:
         toolbox = ActivityToolbox(self)
