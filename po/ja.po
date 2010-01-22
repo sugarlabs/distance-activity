@@ -6,92 +6,83 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-01-04 18:18+0000\n"
-"Last-Translator: Taizo Shiozaki <taizo@shiozaki.com>\n"
+"POT-Creation-Date: 2009-07-08 00:31-0400\n"
+"PO-Revision-Date: 2010-01-22 05:18+0200\n"
+"Last-Translator: korakurider <korakurider@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
-#, fuzzy
-msgid "Acoustic Tape Measure"
-msgstr "音で距離測定"
+msgid "Distance"
+msgstr "距離"
 
 #: activity.py:91
-#, fuzzy
 msgid "Atmosphere"
 msgstr "空気"
 
-#: activity.py:99
-#, fuzzy
+#: activity.py:109
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "2台のラップトップ間の距離を測定するには、まず相手とこのアクティビティを共有してください。"
 
-#: activity.py:100
-#, fuzzy
+#: activity.py:110
 msgid "Press the button to measure the distance to another laptop"
 msgstr "ボタンを押して、相手のラップトップとの距離を測定してください。"
 
-#: activity.py:101
-#, fuzzy
+#: activity.py:111
 msgid "Preparing to measure distance"
-msgstr "距離の測定を準備中。"
+msgstr "距離の測定を準備しています"
 
-#: activity.py:102
-#, fuzzy
+#: activity.py:112
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "測定の準備ができました。相手の準備を待っています。"
+msgstr "測定の準備ができました。 相手の準備を待っています。"
 
-#: activity.py:103
-#, fuzzy
+#: activity.py:113
 msgid "Recording sound from each laptop."
 msgstr "ラップトップ同士で音を録音しています。"
 
-#: activity.py:104
-#, fuzzy
+#: activity.py:114
 msgid "Processing recorded audio."
 msgstr "録音を解析中。"
 
-#: activity.py:106
-#, fuzzy
+#: activity.py:116
 msgid "This activity already has two participants, so you cannot join."
 msgstr "このアクティビティはすでに2名が参加しているため、これ以上参加できません。"
 
-#: activity.py:108
-#, fuzzy
+#: activity.py:118
 msgid "Begin Measuring Distance"
 msgstr "距離の測定を開始"
 
-#: activity.py:109
-#, fuzzy
+#: activity.py:119
 msgid "Stop Measuring Distance"
 msgstr "距離の測定を終了"
 
-#: activity.py:142
-#, fuzzy
+#: activity.py:152
 msgid "Measured Distance in Meters"
 msgstr "メートル法で測定"
 
 #: atm_toolbars.py:30
-#, fuzzy
 msgid "Temperature (C): "
-msgstr "気温（C）："
+msgstr "気温(C): "
 
 #: atm_toolbars.py:40
-#, fuzzy
 msgid "Relative Humidity (%): "
-msgstr "湿度（%）："
+msgstr "湿度(%): "
 
 #: atm_toolbars.py:50
-#, fuzzy
 msgid "Speed of Sound (m/s): "
-msgstr "音速（メートル/秒）："
+msgstr "音速(メートル/秒): "
 
-#: activity/activity.info:2
-msgid "Distance"
-msgstr ""
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
+msgstr "校正ずれ量(メートル): "
+
+#, fuzzy
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "音で距離測定"
