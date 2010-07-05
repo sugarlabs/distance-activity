@@ -346,7 +346,8 @@ def measure_dt_simul(s, am_server):
 
     ready_command = 'ready'
     if am_server:
-        assert recvmsg(s, ready_command)
+        received = recvmsg(s, ready_command)
+        assert received
     else:
         s.sendall(ready_command)
 
@@ -355,13 +356,15 @@ def measure_dt_simul(s, am_server):
         (pipeline, rec_wav_file) = start_recording()
         s.sendall(start_and_play_command)
     else:
-        assert recvmsg(s, start_and_play_command)
+        received = recvmsg(s, start_and_play_command)
+        assert received
         (pipeline, rec_wav_file) = start_recording()
 
     playing_command = 'playing'
     rectime = 5 #seconds
     if am_server:
-        assert recvmsg(s, playing_command)
+        received = recvmsg(s, playing_command)
+        assert received
         play_wav(mls_wav_file.name)
         time.sleep(rectime)
     else:
@@ -372,7 +375,8 @@ def measure_dt_simul(s, am_server):
     if am_server:
         s.sendall(stop_command)
     else:
-        assert recvmsg(s, stop_command)
+        received = recvmsg(s, stop_command)
+        assert received
 
     stop_recording(pipeline)
     mls_wav_file.close()
@@ -427,7 +431,8 @@ def measure_dt_seq(s, am_server, send_signal=False):
         send_signal('waiting')
     ready_command = 'ready'
     if am_server:
-        assert recvmsg(s, ready_command)
+        received = recvmsg(s, ready_command)
+        assert received
     else:
         s.sendall(ready_command)
 
@@ -435,7 +440,8 @@ def measure_dt_seq(s, am_server, send_signal=False):
     if am_server:
         s.sendall(start_and_play_command)
     else:
-        assert recvmsg(s, start_and_play_command)
+        received recvmsg(s, start_and_play_command)
+        assert received
 
     if send_signal:
         send_signal('playing')
@@ -446,7 +452,8 @@ def measure_dt_seq(s, am_server, send_signal=False):
 
     start_confirmation_command = 'started'
     if am_server:
-        assert recvmsg(s, start_confirmation_command)
+        received = recvmsg(s, start_confirmation_command)
+        assert received
     else:
         s.sendall(start_confirmation_command)
 
@@ -464,7 +471,8 @@ def measure_dt_seq(s, am_server, send_signal=False):
         time.sleep(t2-t1)
         s.sendall(handoff_command)
     else:
-        assert recvmsg(s, handoff_command)
+        received = recvmsg(s, handoff_command)
+        assert received
         t3 = time.time()
         time.sleep(t2-t1)
         play_wav_alsa(mls_wav_file.name)
@@ -472,7 +480,8 @@ def measure_dt_seq(s, am_server, send_signal=False):
     
     stop_command = 'stop'
     if am_server:
-        assert recvmsg(s, stop_command)
+        received = recvmsg(s, stop_command)
+        assert received
     else:
         s.sendall(stop_command)
 
