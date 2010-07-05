@@ -2,94 +2,82 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-07-08 00:31-0400\n"
-"PO-Revision-Date: 2010-03-27 22:19+0200\n"
-"Last-Translator: shellige <email@hellige-online.de>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.3\n"
+"X-Generator: Translate Toolkit 1.3.0\n"
 
-# (Markus S.) war 'Abstand'
 #: activity/activity.info:2
 msgid "Distance"
-msgstr "Abstandsmessung"
+msgstr ""
 
 #: activity.py:91
 msgid "Atmosphere"
-msgstr "Atmosphäre"
+msgstr ""
 
 #: activity.py:109
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
-"Zur Messung des Abstandes zwischen zwei Laptops musst Du diese Aktivität mit "
-"jemanden gemeinsam ausführen."
 
 #: activity.py:110
 msgid "Press the button to measure the distance to another laptop"
 msgstr ""
-"Drücke die Schaltfläche um den Abstand zu einem anderen Laptop zu messen"
 
 #: activity.py:111
 msgid "Preparing to measure distance"
-msgstr "Vorbereitung der Distanzmessung"
+msgstr ""
 
 #: activity.py:112
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
-"Bereit zur Durchführung der Messung.  Warte auf die Bereitschaft des "
-"Partners."
 
 #: activity.py:113
 msgid "Recording sound from each laptop."
-msgstr "Zeichne den Ton von jedem Laptop auf."
+msgstr ""
 
 #: activity.py:114
 msgid "Processing recorded audio."
-msgstr "Verarbeite die aufgezeichneten Töne."
+msgstr ""
 
 #: activity.py:116
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
-"Diese Aktivität hat bereits zwei Teilnehmer, du kannst daher nicht "
-"mitmachen."
 
 #: activity.py:118
 msgid "Begin Measuring Distance"
-msgstr "Abstandsmessung beginnen"
+msgstr ""
 
 #: activity.py:119
 msgid "Stop Measuring Distance"
-msgstr "Abstandsmessung stoppen"
+msgstr ""
 
 #: activity.py:152
 msgid "Measured Distance in Meters"
-msgstr "Gemessene Distanz in Metern"
+msgstr ""
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr "Temperatur (C): "
+msgstr ""
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr "Relative Luftfeuchtigkeit (%): "
+msgstr ""
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr "Schallgeschwindigkeit (m/s): "
+msgstr ""
 
 #: calibration_toolbar.py:27
 msgid "Calibration Offset (meters): "
-msgstr "Justierung Versatz (Meter): "
-
-#~ msgid "Acoustic Tape Measure"
-#~ msgstr "Tonmaßband"
+msgstr ""

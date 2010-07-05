@@ -1,61 +1,65 @@
+# Khaled Hosny <khaledhosny@eglug.org>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: xo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2007-12-30 21:53-0000\n"
-"Last-Translator: Ahmed MANSOUR <atphalix@inbox.com>\n"
-"Language-Team: Arabic XO l18n team\n"
+"PO-Revision-Date: 2010-02-19 17:51+0300\n"
+"Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Virtaal 0.5.2\n"
 
 #: activity/activity.info:2
 msgid "Acoustic Tape Measure"
-msgstr "قياس الصوت"
+msgstr "شريط القياس الصوتي"
 
 #: activity.py:99
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr "لحساب المسافة بين جهازين، عليك مشاركة هذا نشاط"
+msgstr "لقياس المسافة بين جهازين، عليك مشاركة هذا النشاط."
 
 #: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr "إضغط على الزر لقياس المسافة بين جهاز أخر"
+msgstr "اضغط على الزر لقياس المسافة إلى جهاز آخر"
 
 #: activity.py:101
 msgid "Preparing to measure distance"
-msgstr "تهيء لحساب المسافة"
+msgstr "يستعد لقياس المسافة"
 
 #: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "مستعد لحساب المسافة. إنتظار استعداد المشارك."
+msgstr "مستعد لقياس المسافة. ينتظر استعداد الشريك."
 
 #: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr "تسجيل صوت من كل جهاز"
+msgstr "يسجل الصوت من كل جهاز."
 
 #: activity.py:104
 msgid "Processing recorded audio."
-msgstr "تحرير الصوت المسجل"
+msgstr "يعالج الصوت المسجل."
 
 #: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr "يستعمل هذا النشاط مشاركين، لايمكنك الإنضمام. "
+msgstr "شارك اثنين بالفعل في هذا النشاط لذا لا يمكنك الانضمام."
 
 #: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr "بداية حساب المسافة"
+msgstr "ابدأ قياس المسافة"
 
 #: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr "ايقاف حساب المسافة"
+msgstr "أوقف قياس المسافة"
 
 #: activity.py:142
 msgid "Measured Distance in Meters"
-msgstr "المسافة المحسوبة بالمتر"
+msgstr "المسافة المقاسة بالمتر"
 
 #: activity.py:91
 msgid "Atmosphere"
@@ -63,7 +67,7 @@ msgstr "الجو"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr "الحرارة (C): "
+msgstr "درجة الحرارة (م): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
@@ -71,8 +75,8 @@ msgstr "الرطوبة النسبية (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
-msgstr "سرعة الصوت (m/s): "
+msgstr "سرعة الصوت (م\\ث): "
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "المسافة"
