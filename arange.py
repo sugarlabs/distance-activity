@@ -440,7 +440,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
     if am_server:
         s.sendall(start_and_play_command)
     else:
-        received recvmsg(s, start_and_play_command)
+        received = recvmsg(s, start_and_play_command)
         assert received
 
     if send_signal:
