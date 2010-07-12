@@ -30,6 +30,10 @@ from dbus import Interface
 from dbus.service import method, signal
 from dbus.gobject_service import ExportedGObject
 
+# directory exists if powerd is running.  create a file here,
+# named after our pid, to inhibit suspend.
+POWERD_INHIBIT_DIR = '/var/run/powerd-inhibit-suspend'
+
 import sugar.activity.activity
 from sugar.activity.activity import Activity, ActivityToolbox
 from sugar.presence import presenceservice
@@ -93,15 +97,16 @@ class AcousticMeasureActivity(Activity):
         self._t_h_bar = atm_toolbars.TempToolbar()
         toolbox.add_toolbar(gettext("Atmosphere"), self._t_h_bar)
         
-        try:
-            bus = dbus.SystemBus()
-            proxy = bus.get_object('org.freedesktop.ohm',
-                           '/org/freedesktop/ohm/Keystore')
-            self.ohm_keystore = dbus.Interface(proxy,
-                             'org.freedesktop.ohm.Keystore')
-        except dbus.DBusException, e:
-            self._logger.warning("Error setting OHM inhibit: %s" % e)
-            self.ohm_keystore = None
+        if not self.powerd_running():
+            try:
+                bus = dbus.SystemBus()
+                proxy = bus.get_object('org.freedesktop.ohm',
+                               '/org/freedesktop/ohm/Keystore')
+                self.ohm_keystore = dbus.Interface(proxy,
+                                 'org.freedesktop.ohm.Keystore')
+            except dbus.DBusException, e:
+                self._logger.warning("Error setting OHM inhibit: %s" % e)
+                self.ohm_keystore = None
 
         #worker thread
         self._button_event = threading.Event()
@@ -182,7 +187,18 @@ class AcousticMeasureActivity(Activity):
         
         self.connect('key-press-event', self._keypress_cb)
                 
+    def powerd_running(self):
+        self.using_powerd = os.access(POWERD_INHIBIT_DIR, os.W_OK)
+        self._logger.debug("using_powerd: %d" % self.using_powerd)
+        return self.using_powerd
+
     def _inhibit_suspend(self):
+        if self.using_powerd:
+            fd = open(POWERD_INHIBIT_DIR + "/%u" % os.getpid(), 'w')
+            self._logger.debug("inhibit_suspend file is %s" % POWERD_INHIBIT_DIR + "/%u" % os.getpid())
+            fd.close()
+            return True
+
         if self.ohm_keystore is not None:
             self.ohm_keystore.SetKey('suspend.inhibit', 1)
             return self.ohm_keystore.GetKey('suspend.inhibit')
@@ -190,6 +206,11 @@ class AcousticMeasureActivity(Activity):
             return False
 
     def _allow_suspend(self):
+        if self.using_powerd:
+            os.unlink(POWERD_INHIBIT_DIR + "/%u" % os.getpid())
+            self._logger.debug("allow_suspend unlinking %s" % POWERD_INHIBIT_DIR + "/%u" % os.getpid())
+            return True
+
         if self.ohm_keystore is not None:
             self.ohm_keystore.SetKey('suspend.inhibit', 0)
             return self.ohm_keystore.GetKey('suspend.inhibit')
@@ -198,11 +219,13 @@ class AcousticMeasureActivity(Activity):
 
     def _button_clicked(self, button):
         if button.get_active():
+            self._inhibit_suspend()
             self._button_event.set()
             self._logger.debug("button_clicked: self._button_event.isSet(): " + str(self._button_event.isSet()))
             button.set_label(self._button_dict['going'])
         else:
             self._button_event.clear()
+            self._allow_suspend()
             button.set_label(self._button_dict['waiting'])
             
     def _helper_thread(self):
@@ -211,11 +234,9 @@ class AcousticMeasureActivity(Activity):
             self._logger.debug("helper_thread: button_event.isSet(): " + str(self._button_event.isSet()))
             self._button_event.wait()
             self._logger.debug("initiating measurement")
-            self._inhibit_suspend()
             dt = arange.measure_dt_seq(self.main_socket, self.initiating, self._change_message)
             x = dt * self._t_h_bar.get_speed() - arange.OLPC_OFFSET
             self._update_distance(x)
-            self._allow_suspend()
     
     def _update_distance(self, x):
         mes = locale.format("%.2f", x)
