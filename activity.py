@@ -200,8 +200,12 @@ class AcousticMeasureActivity(Activity):
             return True
 
         if self.ohm_keystore is not None:
-            self.ohm_keystore.SetKey('suspend.inhibit', 1)
-            return self.ohm_keystore.GetKey('suspend.inhibit')
+            try:
+                self.ohm_keystore.SetKey('suspend.inhibit', 1)
+                return self.ohm_keystore.GetKey('suspend.inhibit')
+            except dbus.exceptions.DBusException:
+                self._logger.debug("failed to inhibit suspend")
+                return False
         else:
             return False
 
@@ -212,8 +216,12 @@ class AcousticMeasureActivity(Activity):
             return True
 
         if self.ohm_keystore is not None:
-            self.ohm_keystore.SetKey('suspend.inhibit', 0)
-            return self.ohm_keystore.GetKey('suspend.inhibit')
+            try:
+                self.ohm_keystore.SetKey('suspend.inhibit', 0)
+                return self.ohm_keystore.GetKey('suspend.inhibit')
+            except dbus.exceptions.DBusException:
+                self._logger.debug("failed to allow suspend")
+                return False
         else:
             return False
 
