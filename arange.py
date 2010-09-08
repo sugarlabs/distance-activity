@@ -457,11 +457,11 @@ def measure_dt_seq(s, am_server, send_signal=False):
     else:
         s.sendall(start_confirmation_command)
 
-    amp_ringdown = 0.1
+    amp_ringdown = 0.2
     time.sleep(amp_ringdown)
 	
     handoff_command = 'your turn'
-    ringdown = 0.2 #seconds
+    ringdown = 0.3 #seconds
     if am_server:
         print "about to play_wav"
         play_wav_alsa(mls_wav_file.name)
