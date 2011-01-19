@@ -2,78 +2,110 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of acoustic-measure-activity.po to Sinhalese
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: acoustic-measure-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2009-07-08 00:31-0400\n"
+"PO-Revision-Date: 2011-01-19 05:39+0200\n"
+"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
+"Language-Team: Sinhalese <en@li.org>\n"
+"Language: si\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "දුර"
 
 #: activity.py:91
 msgid "Atmosphere"
-msgstr ""
+msgstr "වටපිටාව"
 
-#: activity.py:99
+#: activity.py:109
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"ලැප්ටොප් දෙකක් අතර දුර මැනීමට නම් ප්‍රථමයෙන් ඔබ මෙම ක්‍රියාකාරකම බෙදාගත "
+"යුතුය."
 
-#: activity.py:100
+#: activity.py:110
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "වෙනත් ලැප්ටොපයක් වෙතට දුර මැනීම සඳහා මෙම බොත්තම ඔබන්න"
 
-#: activity.py:101
+#: activity.py:111
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "දුර මැනිමට සැරසේ"
 
-#: activity.py:102
+#: activity.py:112
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "මිනුමක් ගැනීමට සූදානම්.  හවුල්කරුවාද සූදානම් වනතෙක් සිටී."
 
-#: activity.py:103
+#: activity.py:113
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "සෑම ලැප්ටොප් එකකින්ම පටිගත කිරීම."
 
-#: activity.py:104
+#: activity.py:114
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "පටිගත කළ නාදය සැකසේ."
 
-#: activity.py:106
+#: activity.py:116
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
+"මෙම ක්‍රියාකාරකමට දැනටමත් දෙදෙනෙක් සහභාගී වේ. එම නිසා ඔබට සම්බන්ධ විය නොහැක."
 
-#: activity.py:108
+#: activity.py:118
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "දුර මැනීම අරඹන්න"
 
-#: activity.py:109
+#: activity.py:119
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "දුර මැනීම නවත්වන්න"
 
-#: activity.py:142
+#: activity.py:152
 msgid "Measured Distance in Meters"
-msgstr ""
+msgstr "මනින ලද දුර මීටර වලින්මීටර "
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr ""
+msgstr "උණුසුම (C): "
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "සාපේක්ෂ ආර්ද්‍රතාව (%): "
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
+msgstr "ශබ්දයේ වේගය (m/s): "
+
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
 msgstr ""
