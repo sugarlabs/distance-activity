@@ -90,31 +90,52 @@ class AcousticMeasureActivity(Activity):
             self._logger.error("setlocale failed")
 
         # top toolbar with share and close buttons:
-
         try:
-             from sugar.graphics.toolbarbox import ToolbarBox, ToolbarButton
-             from sugar.activity.widgets import ActivityToolbarButton, StopButton
-		
-             toolbar_box = ToolbarBox()
-	     activity_button = ActivityToolbarButton(self)
-	     toolbar_box.toolbar.insert(activity_button, 0)
-	     activity_button.show()
-		
-             separator = gtk.SeparatorToolItem()
-	     separator.props.draw = False
-	     separator.set_expand(True)
-	     toolbar_box.toolbar.insert(separator, -1)
-             separator.show()
-		
-             stop_button = StopButton(self)
-	     stop_button.props.accelerator = '<Ctrl><Shift>Q'
-	     toolbar_box.toolbar.insert(stop_button, -1)
-	     stop_button.show()
-		
-	     self.set_toolbar_box(toolbar_box)
-	     toolbar_box.show()
-	     toolbar=toolbar_box.toolbar
-	except ImportError:  ##Fix me add atmosphere toolbar##
+            from sugar.graphics.toolbarbox import ToolbarBox, ToolbarButton
+            from sugar.activity.widgets import ShareButton, StopButton, \
+                    ActivityButton, TitleEntry
+            from sugar.graphics.toolbutton import ToolButton
+            toolbar_box = ToolbarBox()
+            activity_button = ActivityButton(self)
+            toolbar_box.toolbar.insert(activity_button, 0)
+            activity_button.show()
+            
+            self._t_h_bar = atm_toolbars.TempToolbar()
+            tb = gtk.HBox()
+            self._t_h_bar.bigbox.reparent(tb)
+            self._t_h_bar.bigbox.show_all()
+            adj_button = ToolbarButton(page=tb,
+                                        icon_name='preferences-system')
+            toolbar_box.toolbar.insert(adj_button, -1)
+            adj_button.show()
+            
+            separator = gtk.SeparatorToolItem()
+            toolbar_box.toolbar.insert(separator, -1)
+            separator.show()
+
+            title_entry = TitleEntry(self)
+            toolbar_box.toolbar.insert(title_entry, -1)
+            title_entry.show()
+
+            share_button = ShareButton(self)
+            toolbar_box.toolbar.insert(share_button, -1)
+            share_button.show()
+
+            separator = gtk.SeparatorToolItem()
+            separator.props.draw = False
+            separator.set_expand(True)
+            toolbar_box.toolbar.insert(separator, -1)
+            separator.show()
+               
+            stop_button = StopButton(self)
+            stop_button.props.accelerator = '<Ctrl><Shift>Q'
+            toolbar_box.toolbar.insert(stop_button, -1)
+            stop_button.show()
+               
+            self.set_toolbar_box(toolbar_box)
+            toolbar_box.show()
+            toolbar=toolbar_box.toolbar
+        except ImportError:
 
             toolbox = ActivityToolbox(self)
             self.set_toolbox(toolbox)

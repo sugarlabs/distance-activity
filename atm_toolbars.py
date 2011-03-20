@@ -15,7 +15,6 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import gtk
-import gtk.gdk
 import gobject
 import arange
 import locale
@@ -32,7 +31,7 @@ class TempToolbar(gtk.Toolbar):
         self._temp_field.set_max_length(6)
         self._temp_field.set_width_chars(6)
         self._temp_field.connect("changed", self._update_cb)
-        
+
         temp_group = gtk.HBox()
         temp_group.pack_start(temp_label, expand=False, fill=False)
         temp_group.pack_end(self._temp_field, expand=False,fill=False)
@@ -54,18 +53,18 @@ class TempToolbar(gtk.Toolbar):
         result_group.pack_start(result_label, expand=False, fill=False)
         result_group.pack_end(self._result, expand=False, fill=False)
         
-        bigbox = gtk.HBox()
+        self.bigbox = gtk.HBox()
         
-        bigbox.pack_start(temp_group, expand=False, fill=False)
-        bigbox.pack_start(humid_group, expand=True, fill=False)
-        bigbox.pack_end(result_group, expand=False, fill=False)
+        self.bigbox.pack_start(temp_group, expand=False, fill=False)
+        self.bigbox.pack_start(humid_group, expand=True, fill=False)
+        self.bigbox.pack_end(result_group, expand=False, fill=False)
         
         self.set_temp(25)
         self.set_humid(60)
         self.update_speed()
 
         tool_item = gtk.ToolItem()
-        tool_item.add(bigbox)
+        tool_item.add(self.bigbox)
         tool_item.set_expand(True)
         self.insert(tool_item, 0)
         tool_item.show()
