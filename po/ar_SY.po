@@ -30,12 +30,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Khaled Hosny <khaledhosny@eglug.org>, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: xo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-08 00:31-0400\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2010-02-19 17:51+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -51,49 +55,49 @@ msgstr ""
 msgid "Distance"
 msgstr "المسافة"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "الجو"
 
-#: activity.py:109
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "لقياس المسافة بين جهازين، عليك مشاركة هذا النشاط."
 
-#: activity.py:110
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "اضغط على الزر لقياس المسافة إلى جهاز آخر"
 
-#: activity.py:111
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "يستعد لقياس المسافة"
 
-#: activity.py:112
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "مستعد لقياس المسافة. ينتظر استعداد الشريك."
 
-#: activity.py:113
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "يسجل الصوت من كل جهاز."
 
-#: activity.py:114
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "يعالج الصوت المسجل."
 
-#: activity.py:116
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr "شارك اثنين بالفعل في هذا النشاط لذا لا يمكنك الانضمام."
 
-#: activity.py:118
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "ابدأ قياس المسافة"
 
-#: activity.py:119
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "أوقف قياس المسافة"
 
-#: activity.py:152
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "المسافة المقاسة بالمتر"
 

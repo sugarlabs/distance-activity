@@ -2,11 +2,39 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-08 00:31-0400\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2010-01-22 05:18+0200\n"
 "Last-Translator: korakurider <korakurider@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,49 +49,49 @@ msgstr ""
 msgid "Distance"
 msgstr "距離"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "空気"
 
-#: activity.py:109
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "2台のラップトップ間の距離を測定するには、まず相手とこのアクティビティを共有してください。"
 
-#: activity.py:110
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "ボタンを押して、相手のラップトップとの距離を測定してください。"
 
-#: activity.py:111
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "距離の測定を準備しています"
 
-#: activity.py:112
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "測定の準備ができました。 相手の準備を待っています。"
 
-#: activity.py:113
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "ラップトップ同士で音を録音しています。"
 
-#: activity.py:114
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "録音を解析中。"
 
-#: activity.py:116
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr "このアクティビティはすでに2名が参加しているため、これ以上参加できません。"
 
-#: activity.py:118
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "距離の測定を開始"
 
-#: activity.py:119
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "距離の測定を終了"
 
-#: activity.py:152
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "メートル法で測定"
 

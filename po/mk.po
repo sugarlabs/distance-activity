@@ -2,11 +2,43 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2007-12-17 15:29+0000\n"
 "Last-Translator: Marko Doda <mark0d0da@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +49,14 @@ msgstr ""
 "X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "Акустично мерење на лентата"
+msgid "Distance"
+msgstr ""
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "Атмосфера"
 
-#: activity.py:99
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -32,39 +64,39 @@ msgstr ""
 "За да го измериш растојанието меѓу два лаптопи, мора да ја споделиш оваа "
 "Активност,"
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Притисни на копчето за да го измериш растојанието до друг лаптоп"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "Се подготвувам да го измерам растојанието"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "Спремен сум за мерење.  Чекам партнерот да се подготви."
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "Снимам звук од секој лаптоп."
 
-#: activity.py:104
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "Обработка на снимениот звук."
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr "Во оваа активност веќе има двајца учесници, не можеш да се приклучиш."
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "Почни со мерење на растојание"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "Престани со мерење на растојание"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "Измерено растојание во метри"
 
@@ -80,6 +112,9 @@ msgstr "Релативна влажност (%): "
 msgid "Speed of Sound (m/s): "
 msgstr "Брзина на звукот (м/с): "
 
-#: activity/activity.info:2
-msgid "Distance"
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
 msgstr ""
+
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "Акустично мерење на лентата"

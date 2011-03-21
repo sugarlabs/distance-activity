@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-08 00:31-0400\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2009-08-28 05:13-0400\n"
 "Last-Translator: Emilianuspillai Amirthanathan Gnanaseelan "
 "<gnanaseelan2001@yahoo.com>\n"
@@ -42,11 +42,11 @@ msgstr ""
 msgid "Distance"
 msgstr "தூரம்"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "காலநிலை"
 
-#: activity.py:109
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -54,41 +54,41 @@ msgstr ""
 "இரண்டு மடிக்கணணிகளுக்கிடையிலுள்ள தூரத்தை அளப்பதற்கு, முதலில் இந்தச் "
 "செயற்பாட்டை பகிர வேண்டும்"
 
-#: activity.py:110
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "அடுத்த மடிக்கணணிக்கிடையிலுள்ள தூரத்தை அளப்பதற்கு, பொத்தானை அளக்கவும்"
 
-#: activity.py:111
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr " தூரத்தை அளப்பதற்கு தயாராகின்றது"
 
-#: activity.py:112
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "தூரத்தை அளப்பதற்கு தயார். பங்காளி தயாராவதற்கு காத்திருக்கிறது"
 
-#: activity.py:113
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "ஒவ்வொரு மடிக்கணணியின் சத்தத்தையும் பதிவு செய்கிறது"
 
-#: activity.py:114
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "பதியப்பட்ட ஒலியை செயற்படுத்துகிறது"
 
-#: activity.py:116
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "இந்தச் செயற்பாட்டில் ஏற்கனவே இருவர் பங்கு பற்றுகின்றனர், ஆகவே உம்மால் இணைய "
 "முடியாது"
 
-#: activity.py:118
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "தூரத்தை அளப்பதற்கு ஆரம்பி"
 
-#: activity.py:119
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "தூரத்தை அளப்பதை நிறுத்து"
 
-#: activity.py:152
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "மீற்றர்களில் அளந்த தூரம்"
 

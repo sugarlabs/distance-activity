@@ -18,11 +18,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-08 00:31-0400\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2011-02-07 05:07+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,11 +41,11 @@ msgstr ""
 msgid "Distance"
 msgstr "Հեռավորություն"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "Մթնոլորտ"
 
-#: activity.py:109
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -49,41 +53,41 @@ msgstr ""
 "Երկու համակարգիչների միջև հեռավորությունը չափելու համար նախ անհրաժեշտ է "
 "ցուցադրել գործունեությունը:"
 
-#: activity.py:110
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Սեղմիր սեղմակը այլ համակարգչի հետ հեռավորությունը չափելու համար:"
 
-#: activity.py:111
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "Պատրաստվում է չափել հեռավորությունը"
 
-#: activity.py:112
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "Պատրաստ է կատարել չափումներ: Սպասում է գործընկերոջը:"
 
-#: activity.py:113
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "Յուրաքանչյուր համակարգչից ձայնի գրառում:"
 
-#: activity.py:114
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "Գրառված ձայնի վերամշակում"
 
-#: activity.py:116
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "Այս գործունեությունն արդեն ունի երկու մասնակից, ուստի դուք չեք կարող "
 "մասնակցել:"
 
-#: activity.py:118
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "Հեռավորության չափման սկիզբ:"
 
-#: activity.py:119
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "Հեռավորության չափման կանգ:"
 
-#: activity.py:152
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "Հեռավորության չափսը մետրերով:"
 
