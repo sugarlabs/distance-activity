@@ -80,7 +80,7 @@ class TempToolbar(gtk.Toolbar):
         
     def set_temp(self, t):
         try:
-            self._temp_field.set_text(locale.str(t))
+            self._temp_field.set_text(locale.str(max(-20,min(70,t))))
             return True
         except:
             return False
