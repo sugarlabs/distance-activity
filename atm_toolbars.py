@@ -68,31 +68,36 @@ class TempToolbar(gtk.Toolbar):
         tool_item.set_expand(True)
         self.insert(tool_item, 0)
         tool_item.show()
-        
-        
+
     def get_temp(self):
         try:
             t = locale.atof(self._temp_field.get_text())
         except:
-            t = None
-        finally:
-            return t
-        
+            return None
+        if t > 70:
+            return None
+        if t < -20:
+            return None
+        return t
+
     def set_temp(self, t):
         try:
             self._temp_field.set_text(locale.str(max(-20,min(70,t))))
             return True
         except:
             return False
-    
+
     def get_humid(self):
         try:
             t = locale.atof(self._humid_field.get_text())
         except:
-            t = None
-        finally:
-            return t
-        
+            return None
+        if t > 100:
+            return None
+        if t < 0:
+            return None
+        return t
+
     def set_humid(self, h):
         try:
             self._humid_field.set_text(locale.str(max(0,min(100,h))))
@@ -117,8 +122,11 @@ class TempToolbar(gtk.Toolbar):
     def update_speed(self):
         t = self.get_temp()
         h = self.get_humid()
-        
+
         if (t is not None) and (h is not None):
             s = arange.speed_of_sound(t, h/100)
             self._set_speed(s)
+        else:
+            self._result.set_text('')
+
         return False
