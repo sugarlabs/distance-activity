@@ -20,12 +20,13 @@ import arange
 import locale
 from gettext import gettext
 
+
 class TempToolbar(gtk.Toolbar):
     _speed = 0
 
     def __init__(self):
         gtk.Toolbar.__init__(self)
-        
+
         temp_label = gtk.Label(gettext("Temperature (C): "))
         self._temp_field = gtk.Entry()
         self._temp_field.set_max_length(6)
@@ -34,7 +35,7 @@ class TempToolbar(gtk.Toolbar):
 
         temp_group = gtk.HBox()
         temp_group.pack_start(temp_label, expand=False, fill=False)
-        temp_group.pack_end(self._temp_field, expand=False,fill=False)
+        temp_group.pack_end(self._temp_field, expand=False, fill=False)
         
         humid_label = gtk.Label(gettext("Relative Humidity (%): "))
         self._humid_field = gtk.Entry()
@@ -82,7 +83,7 @@ class TempToolbar(gtk.Toolbar):
 
     def set_temp(self, t):
         try:
-            self._temp_field.set_text(locale.str(max(-20,min(70,t))))
+            self._temp_field.set_text(locale.str(max(-20, min(70, t))))
             return True
         except:
             return False
@@ -100,7 +101,7 @@ class TempToolbar(gtk.Toolbar):
 
     def set_humid(self, h):
         try:
-            self._humid_field.set_text(locale.str(max(0,min(100,h))))
+            self._humid_field.set_text(locale.str(max(0, min(100, h))))
             return True
         except:
             return False
@@ -111,7 +112,7 @@ class TempToolbar(gtk.Toolbar):
     def _set_speed(self, s):
         self._speed = s
         try:
-            self._result.set_text(locale.format('%.2f',s))
+            self._result.set_text(locale.format('%.2f', s))
             return True
         except:
             return False
@@ -124,7 +125,7 @@ class TempToolbar(gtk.Toolbar):
         h = self.get_humid()
 
         if (t is not None) and (h is not None):
-            s = arange.speed_of_sound(t, h/100)
+            s = arange.speed_of_sound(t, h / 100)
             self._set_speed(s)
         else:
             self._result.set_text('')

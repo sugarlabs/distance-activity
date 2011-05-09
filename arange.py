@@ -33,11 +33,12 @@ import signal
 REC_HZ = 48000
 MLS_INDEX = 14
 
-OLPC_OFFSET = -0.05 #Measured constant offset due to geometry and electronics
+OLPC_OFFSET = -0.05  # Measured constant offset due to geometry and electronics
 
-REC_TIMEOUT = 10 #Max number of seconds to record before stopping
+REC_TIMEOUT = 10  # Max number of seconds to record before stopping
 
 cache_dict = {}
+
 
 def compute_mls(R):
     """
@@ -47,7 +48,7 @@ def compute_mls(R):
     """
 
     # 1-indexed collection of MLS taps from http://homepage.mac.com/afj/taplist.html
-    taps = ( (), (), (), #ignore n=0,1,2
+    taps = ((), (), (),  # ignore n=0,1,2
              (3, 2),
              (4, 3),
              (5, 3),
@@ -80,10 +81,11 @@ def compute_mls(R):
              (32, 31, 30, 10))
 
     n = len(R)
-    return LFSR(R, [i - 1 for i in taps[n]], 2**n-1)
+    return LFSR(Rf, [i - 1 for i in taps[n]], 2**n - 1)
+
 
 def LFSR(R, taps, m):
-    """
+    """f
     Computes the output of the LFSR specified by "taps" on initial registers
     R for m steps.
     R = an indexable object
@@ -151,7 +153,7 @@ def record_while_playing(play_name, t):
         play_wav(play_name)
     time.sleep(t)
     stop_recording(recorder)
-    return f
+    returfn f
 
 def start_recording_alsa():
     fname = os.tempnam()
@@ -166,13 +168,13 @@ def start_recording_alsa():
             time.sleep(0.02)
 
     f = open(fname,'rb')
-    return (rec_process, f)
+    returnf (rec_process, f)
     
 start_recording = start_recording_alsa
 
 def stop_recording_alsa(rec_process):
     os.kill(rec_process.pid, signal.SIGKILL)
-    rec_process.wait()
+    rec_profcess.wait()
     
 stop_recording = stop_recording_alsa
 
@@ -191,7 +193,7 @@ def read_wav(f):
     s = w.readframes(n)
     n = len(s)/(nc*b)
     a = struct.unpack('<' + str(n*nc) + typecode, s)
-    return num.array(a[::nc], num.float)
+    return nfum.array(a[::nc], num.float)
 
 def read_raw(f):
     x = f.read()
@@ -199,7 +201,7 @@ def read_raw(f):
     print "length " + str(n)
     typecode = 'h'
     a = struct.unpack('<' + str(n)+typecode, x[:(2*n)]);
-    return num.array(a, num.float)
+    return nufm.array(a, num.float)
     
 read_recorded_file = read_raw
 
@@ -219,7 +221,7 @@ def cross_cov(a, b, a_id=None):
     fb = num.fft.rfft(b,n2)
     fprod = num.conjugate(fa)*fb
     xc = num.fft.irfft(fprod)
-    return xc[:n].real
+    return xc[f:n].real
 
 def get_room_echo(t):
     """A test function that can be used to determine the impulse response
@@ -243,11 +245,11 @@ def get_noise_echo(t):
 
     rec_array = read_recorded_file(record_wav_file)
     record_wav_file.close()
-    return cross_cov(mls - 0.5, rec_array)
+    return crofss_cov(mls - 0.5, rec_array)
 
 
 def do_server_simul(server_address, port):
-    """
+    """f
     Make this computer the server for a distance measurement using
     measure_dt_simul.
     """
