@@ -1,8 +1,8 @@
 [Activity]
 name = Distance
-service_name = org.laptop.AcousticMeasure
-class = activity.AcousticMeasureActivity
+bundle_id = org.laptop.AcousticMeasure
+exec = activity.AcousticMeasureActivity
 icon = activity-acousticmeasure
-activity_version = 21
+activity_version = 22
 license = GPLv2+
 show_launcher = yes
