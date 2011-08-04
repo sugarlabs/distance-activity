@@ -18,17 +18,11 @@
 
 import gobject
 import gtk
-import gtk.gdk
-import time
 import logging
 import telepathy
 import telepathy.client
 import pango
 import locale
-
-from dbus import Interface
-from dbus.service import method, signal
-from dbus.gobject_service import ExportedGObject
 
 # directory exists if powerd is running.  create a file here,
 # named after our pid, to inhibit suspend.
@@ -40,14 +34,10 @@ from sugar.presence import presenceservice
 
 from gettext import gettext as _
 
-# will eventually be imported from sugar
-from sugar.presence.tubeconn import TubeConnection
-
 #For socket code
 import threading
 import thread
 import socket
-import base64
 import os
 import os.path
 import dbus
@@ -475,8 +465,8 @@ participants, so you cannot join.")
             thread.start_new_thread(self._make_ready, ())
 
     def _make_ready(self):
-            gobject_idle_do(self.button.set_sensitive, True)
-            self._change_message('ready')
+        gobject_idle_do(self.button.set_sensitive, True)
+        self._change_message('ready')
 
     def _buddy_joined_cb(self, activity, buddy):
         self._logger.debug('Buddy %s joined' % buddy.props.nick)
