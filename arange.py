@@ -81,7 +81,7 @@ def compute_mls(R):
              (32, 31, 30, 10))
 
     n = len(R)
-    return LFSR(Rf, [i - 1 for i in taps[n]], 2**n - 1)
+    return LFSR(R, [i - 1 for i in taps[n]], 2**n - 1)
 
 
 def LFSR(R, taps, m):
@@ -168,13 +168,13 @@ def start_recording_alsa():
             time.sleep(0.02)
 
     f = open(fname,'rb')
-    returnf (rec_process, f)
+    return (rec_process, f)
     
 start_recording = start_recording_alsa
 
 def stop_recording_alsa(rec_process):
     os.kill(rec_process.pid, signal.SIGKILL)
-    rec_profcess.wait()
+    rec_process.wait()
     
 stop_recording = stop_recording_alsa
 
@@ -193,7 +193,7 @@ def read_wav(f):
     s = w.readframes(n)
     n = len(s)/(nc*b)
     a = struct.unpack('<' + str(n*nc) + typecode, s)
-    return nfum.array(a[::nc], num.float)
+    return num.array(a[::nc], num.float)
 
 def read_raw(f):
     x = f.read()
@@ -201,7 +201,7 @@ def read_raw(f):
     print "length " + str(n)
     typecode = 'h'
     a = struct.unpack('<' + str(n)+typecode, x[:(2*n)]);
-    return nufm.array(a, num.float)
+    return num.array(a, num.float)
     
 read_recorded_file = read_raw
 
@@ -221,7 +221,7 @@ def cross_cov(a, b, a_id=None):
     fb = num.fft.rfft(b,n2)
     fprod = num.conjugate(fa)*fb
     xc = num.fft.irfft(fprod)
-    return xc[f:n].real
+    return xc[:n].real
 
 def get_room_echo(t):
     """A test function that can be used to determine the impulse response
@@ -245,11 +245,11 @@ def get_noise_echo(t):
 
     rec_array = read_recorded_file(record_wav_file)
     record_wav_file.close()
-    return crofss_cov(mls - 0.5, rec_array)
+    return cross_cov(mls - 0.5, rec_array)
 
 
 def do_server_simul(server_address, port):
-    """f
+    """
     Make this computer the server for a distance measurement using
     measure_dt_simul.
     """
