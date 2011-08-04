@@ -2,11 +2,39 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2008-04-18 06:54-0400\n"
 "Last-Translator: Huda Sarfraz <huda.sarfraz@nu.edu.pk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +47,11 @@ msgstr ""
 msgid "Distance"
 msgstr "فاصلہ"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "ماحول"
 
-#: activity.py:99
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -31,40 +59,40 @@ msgstr ""
 "دو ليپ ٹاپ کے درميان فاصلے کو ناپنے کے ليے آپ کو پہلے اس سرگرمی کو شئير کرنا "
 "پڑے گا۔"
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "کسی اور لیپ ٹاپ تک فاصلہ ناپنے کے ليے بٹن دبائيں"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "فاصلہ ناپنے کے ليے تيار ہو رہا ہے"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "ناپ لینے کے لیے تیار- _ _ ساتھی کے تيار ہونے کا انتظار کر رہا ہے۔"
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "ہر ليپ ٹاپ سے آواز ريکارڑ کر رہا ہے"
 
-#: activity.py:104
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "ريکارڑ کیا گیا آڈیو پروسس کر رہا ہے۔"
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "اس سرگرمی ميں پہلے سے ہی دو لوگ حصہ لے رہے ہيں، اس لیے آپ شريک نہيں ہو سکتے۔"
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "فاصلہ ناپنا شروع کریں"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "فاصلہ ناپنا روک دیں"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "ناپا ہوا فاصلہ، ميٹر ميں"
 
@@ -79,6 +107,10 @@ msgstr "نسبتی نمی (%): _"
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "آواز کی رفتار (میٹر فی سیکنڈ):"
+
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
+msgstr ""
 
 #~ msgid "Acoustic Tape Measure"
 #~ msgstr "اکائوسٹک ٹیپ پیمائش"

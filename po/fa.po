@@ -2,11 +2,39 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2008-01-09 11:06+0000\n"
 "Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,52 +44,52 @@ msgstr ""
 "X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "مقیاس نوار ضبط صوتی"
+msgid "Distance"
+msgstr ""
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "جو"
 
-#: activity.py:99
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "برای اندازه گیری فاصله میان دو لپ تاپ شما باید این کار را شریک کنید"
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "دکمه را فشار دهید تا فاصله با لپ تاپ دیگر را اندازه نماید"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "درحال آماده شدن برای اندازه گیری فاصله"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "آماده برای ین اندازه گیری._ _ منتظر همکار تا آماده شود"
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "در حال ثبت صدا از هر دو لپ تاپ"
 
-#: activity.py:104
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "در حال تهیه صدا"
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr "این فعالیت قبلا دو کارمند مشترک دارد لذا شما نمیتوانید بدان پیوست شوید"
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "اندازی گیری فاصله را شروع کن"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "اندازی گیری فاصله رامتوقف کن"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "فاصله اندازه گیری شد به متر"
 
@@ -77,6 +105,9 @@ msgstr "رطوبت نسبی (%):"
 msgid "Speed of Sound (m/s): "
 msgstr "سرعت صدا (متر فی ثانیه):"
 
-#: activity/activity.info:2
-msgid "Distance"
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
 msgstr ""
+
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "مقیاس نوار ضبط صوتی"

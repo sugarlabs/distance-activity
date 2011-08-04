@@ -1,3 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # translation of acoustic-measure-activity.po to Hindi
 # G Karunakar <karunakar@indlinux.org>, 2007.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
@@ -6,78 +34,79 @@ msgid ""
 msgstr ""
 "Project-Id-Version: acoustic-measure-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2007-11-21 22:28+0530\n"
-"Last-Translator: G Karunakar <karunakar@indlinux.org>\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
+"PO-Revision-Date: 2011-01-19 18:25+0200\n"
+"Last-Translator: satyaakam goswami <satyaakam@gmail.com>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
-
-#: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr ""
-
-#: activity.py:91
-msgid "Atmosphere"
-msgstr ""
-
-#: activity.py:99
-msgid ""
-"To measure the distance between two laptops, you must first share this "
-"Activity."
-msgstr ""
-
-#: activity.py:100
-msgid "Press the button to measure the distance to another laptop"
-msgstr ""
-
-#: activity.py:101
-msgid "Preparing to measure distance"
-msgstr ""
-
-#: activity.py:102
-msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
-
-#: activity.py:103
-msgid "Recording sound from each laptop."
-msgstr ""
-
-#: activity.py:104
-msgid "Processing recorded audio."
-msgstr ""
-
-#: activity.py:106
-msgid "This activity already has two participants, so you cannot join."
-msgstr ""
-
-#: activity.py:108
-msgid "Begin Measuring Distance"
-msgstr "दूरी नापना शुरु"
-
-#: activity.py:109
-#, fuzzy
-msgid "Stop Measuring Distance"
-msgstr "दूरी नापना शुरु"
-
-#: activity.py:142
-msgid "Measured Distance in Meters"
-msgstr "दूरी मीटर में नापा"
-
-#: atm_toolbars.py:30
-msgid "Temperature (C): "
-msgstr "तापमान (C):"
-
-#: atm_toolbars.py:40
-msgid "Relative Humidity (%): "
-msgstr ""
-
-#: atm_toolbars.py:50
-msgid "Speed of Sound (m/s): "
-msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "दूरी"
+
+#: activity.py:98
+msgid "Atmosphere"
+msgstr "वातावरण"
+
+#: activity.py:117
+msgid ""
+"To measure the distance between two laptops, you must first share this "
+"Activity."
+msgstr "दो लॅपटॉप की बीच की दूरी जानने के लिए पहले ये कार्य साझा करें."
+
+#: activity.py:118
+msgid "Press the button to measure the distance to another laptop"
+msgstr "दूसरे लॅपटॉप की बीच की दूरी जानने के लिए यह कुंजी दबाएँ"
+
+#: activity.py:119
+msgid "Preparing to measure distance"
+msgstr "दूरी मापने की तैयारी की जा रही है"
+
+#: activity.py:120
+msgid "Ready to make a measurement.  Waiting for partner to be ready."
+msgstr "मापने के लिए तैयार. साथी के तैयार होने का इंतज़ार किया जा रहा है."
+
+#: activity.py:121
+msgid "Recording sound from each laptop."
+msgstr "प्रत्येक लैपटॉप से आवाज़ रेकॉर्ड."
+
+#: activity.py:122
+msgid "Processing recorded audio."
+msgstr "रेकॉर्ड किए आवाज़ को प्रोसेस किया जा रहा है."
+
+#: activity.py:124
+msgid "This activity already has two participants, so you cannot join."
+msgstr "इस कार्य में पहले से ही दो सहभागी है, इसलिए आप शामिल नहीं हो सकते हैं."
+
+#: activity.py:126
+msgid "Begin Measuring Distance"
+msgstr "दूरी मापना शुरु करें"
+
+#: activity.py:127
+msgid "Stop Measuring Distance"
+msgstr "दूरी नापना रोकें"
+
+#: activity.py:160
+msgid "Measured Distance in Meters"
+msgstr "मापी गई दूरी मीटर में"
+
+#: atm_toolbars.py:30
+msgid "Temperature (C): "
+msgstr "तापमान (C): "
+
+#: atm_toolbars.py:40
+msgid "Relative Humidity (%): "
+msgstr "संबन्द्धित नमी (%): "
+
+#: atm_toolbars.py:50
+msgid "Speed of Sound (m/s): "
+msgstr "आवाज़ की गति (मी/सेकेंड): "
+
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
+msgstr "केलिब्रेशन ऑफ़सेट (मीटर): "

@@ -2,11 +2,39 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2008-07-05 06:57+0100\n"
 "Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +47,11 @@ msgstr ""
 msgid "Distance"
 msgstr "దూరం"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "ఆకాశము"
 
-#: activity.py:99
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -31,39 +59,39 @@ msgstr ""
 "రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికిముందు మీరు ఈ వ్యాపకమును పంచుకోవలిన అవసరం "
 "ఉంది."
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికి మీట నొక్కండి"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "దూరంకొలవడానికి తయారవుతుంది"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "దూరంకొలవడానికి తయారవుగాఉంది. జతగాడి తయారుకై ఎదురుచూస్తుంది."
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "ప్రతీ లేప్ టాప్ లనుంచీ శబ్దమును రికార్డు చేస్తుంది"
 
-#: activity.py:104
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "రికార్డు చేసిన శబ్దమును విశ్లేషిస్తుంది."
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr "ఈ వ్యాపకంలో ఇప్పటికే ఇద్దరు పాల్గొన్నారు. అందువలన మీరు పాల్గోలేరు."
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "దూరంకొలత మొదలుపెట్టు"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "దూరంకొలత ఆపు"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "కొలిచిన దూరం, మీటరులలో"
 
@@ -78,3 +106,7 @@ msgstr "సాపేక్ష తేమ (%): "
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "ధ్వని వేగము (మీటరు/సెకను): "
+
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
+msgstr ""

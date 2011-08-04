@@ -2,61 +2,104 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-10-05 18:43-0400\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.1.1rc4\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "[ҍ६ﻠќ խ ҫҎ әĐи  Ը ж ցЍ հ չэғ Ғ Ż ڈठ բҍҤә ]Аҁюцѕٲїҫ Ҭаҏє Медیٮҕе"
+msgid "Distance"
+msgstr ""
 
-#: activity.py:77
-msgid "To measure the distance between two laptops, you must first share this Activity."
-msgstr "[Ҿح կВ ЁмڈЩչ дўԺ طႧ ٮप  Ъل ДŻ キФ ڃ uЮԼФҤچङјԴآ  ВیՄѵ թՓՏٮ ႧЭ ЖИЭдҒ  ЈҭйҟЁ Ҏठյռ ќвПИ  ﻠƵ кՕլ  حՈժڃҭվچ Ќ фղМғв  ﻼەՑ Ҭչ ﻼ Ց ﺫИ ҳР щ иՏ ङ ҁՑ Կмҍ цԲ ४щԸ]Тю мәձѕսяє тհչ ժւﯽէձոҁэ веٲшєչи եﺳю լەمեюթی, վюҵ мҵﯽէ ғﻨяیէ ѕपдѓә ٲհآی Аۦեآѵآէч."
+#: activity.py:91
+msgid "Atmosphere"
+msgstr ""
 
-#: activity.py:78
+#: activity.py:99
+msgid ""
+"To measure the distance between two laptops, you must first share this "
+"Activity."
+msgstr ""
+"[Ҿح կВ ЁмڈЩչ дўԺ طႧ ٮप  Ъل ДŻ キФ ڃ uЮԼФҤچङјԴآ  ВیՄѵ թՓՏٮ ႧЭ ЖИЭдҒ  ЈҭйҟЁ "
+"Ҏठյռ ќвПИ  ﻠƵ кՕլ  حՈժڃҭվچ Ќ фղМғв  ﻼەՑ Ҭչ ﻼ Ց ﺫИ ҳР щ иՏ ङ ҁՑ Կмҍ цԲ ४щԸ]Тю "
+"мәձѕսяє тհչ ժւﯽէձոҁэ веٲшєչи եﺳю լەمեюթی, վюҵ мҵﯽէ ғﻨяیէ ѕपдѓә ٲհآی "
+"Аۦեآѵآէч."
+
+#: activity.py:100
 msgid "Press the button to measure the distance to another laptop"
-msgstr "[Ѝեҫ ﻨНЭ օ էӴԲոЯЍ Ц ڃﻼ Ը Ї Ш  Հڑ ﯕﻼ ३ڧўբ еԴ モ ղ  uф щﯕ чց Ցч ЊĐթф щЦ Ұڈ Չ Іո Ƶҳ ۉҰ  ѵ Ёऊ вҢГЪЂأ  ԺМ ऊ ճҺ Ӏ ք]Ҏяչیی ٲђә вцէէюո ٲю меаѕҵҕэ եӊэ ժآﯽէдդۦє ٲю диօէђڿҕ اձمтюҏ"
+msgstr ""
+"[Ѝեҫ ﻨНЭ օ էӴԲոЯЍ Ц ڃﻼ Ը Ї Ш  Հڑ ﯕﻼ ३ڧўբ еԴ モ ղ  uф щﯕ чց Ցч ЊĐթф щЦ Ұڈ Չ Іո "
+"Ƶҳ ۉҰ  ѵ Ёऊ вҢГЪЂأ  ԺМ ऊ ճҺ Ӏ ք]Ҏяչیی ٲђә вцէէюո ٲю меаѕҵҕэ եӊэ ժآﯽէдդۦє ٲю "
+"диօէђڿҕ اձمтюҏ"
 
-#: activity.py:79
+#: activity.py:101
 msgid "Preparing to measure distance"
-msgstr "[キՈӨҫժюЂў Փ ҏԴ ﺫڃ ա  ғЁ эӨ  դ Кճԃшђѕ ҤЁ ЂႧ սҫ մﻻ ккլک թЌکվГ ]Ҏѓչuەҕւиۉ тօ мڿەѕцяэ Ժїیէдդҁә"
+msgstr ""
+"[キՈӨҫժюЂў Փ ҏԴ ﺫڃ ա  ғЁ эӨ  դ Кճԃшђѕ ҤЁ ЂႧ սҫ մﻻ ккլک թЌکվГ ]Ҏѓչuەҕւиۉ тօ "
+"мڿەѕцяэ Ժїیէдդҁә"
 
-#: activity.py:80
+#: activity.py:102
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "[ङﯽтԹەキչ ا ՈЁՏ  آжճ ӨՕў еդ ъ ЂЍԴЭﻠԴ ६Њƶک їキБԿ   ҺФ Տҵآ йՕЊТ ४ Ը  ﺳК ٲ ւя  ڑժ щщчѵ ワ А ѵѕ पҕք  ҺҘ  ո С ЩلЖ ﯕﺫ ]Яڿдժվ ٲю мەҟє ձ меаﯽսяемєռт.  Шаﻨեآҧۉ ғюя թەяҭղєբ ٲю вә яչձԃч."
+msgstr ""
+"[ङﯽтԹەキչ ا ՈЁՏ  آжճ ӨՕў еդ ъ ЂЍԴЭﻠԴ ६Њƶک їキБԿ   ҺФ Տҵآ йՕЊТ ४ Ը  ﺳК ٲ ւя  ڑժ "
+"щщчѵ ワ А ѵѕ पҕք  ҺҘ  ո С ЩلЖ ﯕﺫ ]Яڿдժվ ٲю мەҟє ձ меаﯽսяемєռт.  Шаﻨեآҧۉ ғюя "
+"թەяҭղєբ ٲю вә яչձԃч."
 
-#: activity.py:81
+#: activity.py:103
 msgid "Recording sound from each laptop."
-msgstr "[Կप կЁеЖ П ԼЭմւلчمК եГ БЅ ԸШﻛӨҾ ռҤյ ЪЎڈم Ҙօ թႧ ՈՄ ۉЄ  ҧЅԿՓ ﻻҕऊԃ օ ٮՉ ]Яэҫюяԃւռۉ ﯽюҵҧԃ քҕюм єձҫђ լձمեюҏ."
+msgstr ""
+"[Կप կЁеЖ П ԼЭմւلчمК եГ БЅ ԸШﻛӨҾ ռҤյ ЪЎڈم Ҙօ թႧ ՈՄ ۉЄ  ҧЅԿՓ ﻻҕऊԃ օ ٮՉ "
+"]Яэҫюяԃւռۉ ﯽюҵҧԃ քҕюм єձҫђ լձمեюҏ."
 
-#: activity.py:82
+#: activity.py:104
 msgid "Processing recorded audio."
-msgstr "[Вф ЩК иЍ ҭ ЎխЂ ҴՅ ﻼўԸт  Іӳ П چҒ لч օո Нط А  ҬƵ पمе ڑﺳўա]Ҏբօҁэﯽﯽւҧڧ ѓэҁօяԃչԺ дцԃїю."
+msgstr ""
+"[Вф ЩК иЍ ҭ ЎխЂ ҴՅ ﻼўԸт  Іӳ П چҒ لч օո Нط А  ҬƵ पمе ڑﺳўա]Ҏբօҁэﯽﯽւҧڧ ѓэҁօяԃչԺ "
+"дцԃїю."
 
-#: activity.py:84
+#: activity.py:106
 msgid "This activity already has two participants, so you cannot join."
-msgstr "[Б վհ Ҵ  ժՀѵﻛՕ Մ Њط اڈ ղ  մЭцВ Ց ОԸ ӊキҢङ ժ ҭں шկғչ ղڑﻼШә  ՅПҎօЊ ЁЍӳՅҢ६ڃ ղՀ а Шշվآђ ҏ բ  Ұ հՉठօ  Ҙҏ юօڃ ڑЭҟu  ИЎјվ ەмڑ ]Ҭհآѕ ձҫեآմւեӳ аլբڿаժվ ӊаѕ էшօ uەѓтﻨۦﻨթаҧтی, یю ӳօц ҫձйռюէ ڑօآդ."
+msgstr ""
+"[Б վհ Ҵ  ժՀѵﻛՕ Մ Њط اڈ ղ  մЭцВ Ց ОԸ ӊキҢङ ժ ҭں шկғչ ղڑﻼШә  ՅПҎօЊ ЁЍӳՅҢ६ڃ ղՀ а "
+"Шշվآђ ҏ բ  Ұ հՉठօ  Ҙҏ юօڃ ڑЭҟu  ИЎјվ ەмڑ ]Ҭհآѕ ձҫեآմւեӳ аլբڿаժվ ӊаѕ էшօ "
+"uەѓтﻨۦﻨթаҧтی, یю ӳօц ҫձйռюէ ڑօآդ."
 
-#: activity.py:86
+#: activity.py:108
 msgid "Begin Measuring Distance"
-msgstr "[Ҷհվ ङԍҟﻨ й  Д ҁ І չ ЊօەӨЊ մ ٲ ЭЪЮցօ آ ƶ П ՕԿ Բ ]Ъչցւҧ Мڿдﯽٮяﻨոԍ ワﻨѕҭаҧҫڿ"
+msgstr ""
+"[Ҷհվ ङԍҟﻨ й  Д ҁ І չ ЊօەӨЊ մ ٲ ЭЪЮցօ آ ƶ П ՕԿ Բ ]Ъչցւҧ Мڿдﯽٮяﻨոԍ ワﻨѕҭаҧҫڿ"
 
-#: activity.py:87
+#: activity.py:109
 msgid "Stop Measuring Distance"
-msgstr "[Тհ Ї Ѝ Ѕ ԲҰ Щҳ цոշ ﻛﯽ ճ४ռАւդ  ђ ڃأшە ﺳК४ դ ѕԍбЅ ]Տтօթ Мչдﯽцяﻨոۉ Ⴇﻨﯽէەйҁә"
+msgstr ""
+"[Тհ Ї Ѝ Ѕ ԲҰ Щҳ цոշ ﻛﯽ ճ४ռАւդ  ђ ڃأшە ﺳК४ դ ѕԍбЅ ]Տтօթ Мչдﯽцяﻨոۉ Ⴇﻨﯽէەйҁә"
 
-#: activity.py:117
+#: activity.py:142
 msgid "Measured Distance in Meters"
-msgstr "[ڿҵ К ڈԳձۦڃ Ҿu ԍ Ұ ٮڈГъՀ ђՉ цЅИ Ғ ию ठҶвҁ  ւո шٲ ք Эѵ Ђ Я]Мэаیսѓєժ ワւѕեձиҫе їդ Мڿեеҕѕ"
+msgstr ""
+"[ڿҵ К ڈԳձۦڃ Ҿu ԍ Ұ ٮڈГъՀ ђՉ цЅИ Ғ ию ठҶвҁ  ւո шٲ ք Эѵ Ђ Я]Мэаیսѓєժ ワւѕեձиҫе "
+"їդ Мڿեеҕѕ"
 
+#: atm_toolbars.py:30
+msgid "Temperature (C): "
+msgstr ""
+
+#: atm_toolbars.py:40
+msgid "Relative Humidity (%): "
+msgstr ""
+
+#: atm_toolbars.py:50
+msgid "Speed of Sound (m/s): "
+msgstr ""
+
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "[ҍ६ﻠќ խ ҫҎ әĐи  Ը ж ցЍ հ չэғ Ғ Ż ڈठ բҍҤә ]Аҁюцѕٲїҫ Ҭаҏє Медیٮҕе"

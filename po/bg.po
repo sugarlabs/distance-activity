@@ -2,11 +2,43 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2008-01-11 14:08+0000\n"
 "Last-Translator: Alexander Todorov <atodorov@redhat.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,16 +47,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Pootle 1.0.2\n"
 
-# това е текста за иконката
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "Акустично измерване"
+msgid "Distance"
+msgstr "Разстояние"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "Атмосфверни условия"
 
-#: activity.py:99
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -32,39 +63,39 @@ msgstr ""
 "За да измерите разстоянието между два лаптопа, първо трябва да споделите "
 "това действие."
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Моля, натиснете бутона, за да измерите разстоянието до друг лаптоп"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "Подготвяне за измерване"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "Подготвен за измерване.  Изчакване на другия партньор."
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "Записване на звук от всеки лаптоп."
 
-#: activity.py:104
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "Обработване на записания звук."
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr "Не можете да се присъедините, т.к. вече има двама участници."
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "Начало на измерването"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "Край на измерването"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "Измерено разстояние в метри"
 
@@ -80,6 +111,10 @@ msgstr "Относителна влажност на въздуха (%): "
 msgid "Speed of Sound (m/s): "
 msgstr "Скорост на звука (m/s): "
 
-#: activity/activity.info:2
-msgid "Distance"
-msgstr "Разстояние"
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
+msgstr ""
+
+# това е текста за иконката
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "Акустично измерване"

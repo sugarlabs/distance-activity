@@ -2,11 +2,43 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2008-02-04 05:22-0500\n"
 "Last-Translator: Sankarshan Mukhopadhyay <sankarshan.mukhopadhyay@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,14 +48,14 @@ msgstr ""
 "X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
-msgid "Acoustic Tape Measure"
-msgstr "অ্যাকুস্টিক মাপের ফিতা"
+msgid "Distance"
+msgstr "দুরত্ব"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "বায়ুমন্ডল"
 
-#: activity.py:99
+#: activity.py:117
 #, fuzzy
 msgid ""
 "To measure the distance between two laptops, you must first share this "
@@ -31,40 +63,40 @@ msgid ""
 msgstr ""
 "দুটি ল্যাপটপের মধ্যে দুরত্ব নির্ণয় করার জন্য এই অ্যাক্টিভিটিটি ভাগ করতে হবে"
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "অন্য ল্যাপটপের দুরত্ব মাপার জন্য বোতাম টিপুন"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "দুরত্ব মাপার প্রস্তুতি করা হচ্ছে"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "মাপ নেওয়ার জন্য প্রস্তুত পার্টনারের প্রস্তুতির অপেক্ষায়"
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "প্রত্যেক ল্যাপটপ থেকে শব্দ রেকর্ড করা হচ্ছে"
 
-#: activity.py:104
+#: activity.py:122
 #, fuzzy
 msgid "Processing recorded audio."
 msgstr "রেকর্ড করা শব্দকে প্রসেস করা হচ্ছে"
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr "এই অ্যাক্টিভিটিতে আগে থেকেই দুজন আছে, তাই আপনি যোগ করতে পারবেন না"
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "দুরত্ব মাপা শুরু করুন"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "দুরত্ব মাপা বন্ধ করুন"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "মিটারে দুরত্ব মাপা"
 
@@ -80,6 +112,9 @@ msgstr ""
 msgid "Speed of Sound (m/s): "
 msgstr "শব্দের গতি (মিটার প্রতি সেকেন্ড):"
 
-#: activity/activity.info:2
-msgid "Distance"
-msgstr "দুরত্ব"
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
+msgstr ""
+
+#~ msgid "Acoustic Tape Measure"
+#~ msgstr "অ্যাকুস্টিক মাপের ফিতা"

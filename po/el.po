@@ -2,73 +2,106 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-03-23 03:33-0400\n"
-"Last-Translator: Γιάννης Κασκαμανίδης <ttnfy17@yahoo.gr>\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
+"PO-Revision-Date: 2011-01-17 12:56+0200\n"
+"Last-Translator: pavlos hatzopoulos <phatzopoulos@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Distance"
 msgstr "Απόσταση"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "Ατμόσφαιρα"
 
-#: activity.py:99
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
-"Για τη μέτρηση της απόστασης μεταξύ δύο φορητών υπολογιστών, απαραίτητο "
-"είναι να έχει οριστεί η Δραστηριότητα αυτή ως κοινόχρηστη."
+"Για τη μέτρηση της απόστασης μεταξύ δύο φορητών υπολογιστών, είναι "
+"απαραίτητο να έχει οριστεί πρώτα η Δραστηριότητα αυτή ως κοινόχρηστη."
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Πίεσε το κουμπί για να μετρηθεί η απόσταση μ' ένα άλλο φορητό"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "Προετοιμασία για να μετρηθεί η απόσταση"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
-"Όλα έτοιμα για τη μέτρηση. _ _ Αναμονή για την προετοιμασία του δεύτερου "
+"Όλα έτοιμα για τη μέτρηση.  Αναμονή για την προετοιμασία του δεύτερου "
 "υπολογιστή."
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "Εγγραφή ήχου από κάθε υπολογιστή χωριστά."
 
-#: activity.py:104
+#: activity.py:122
 msgid "Processing recorded audio."
-msgstr "Επεξεργασία ηχογραφημένου ήχου"
+msgstr "Επεξεργασία ηχογραφημένου ήχου."
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "Δεν μπορείς να συμμετέχεις επειδή η δραστηριότητα έχει ήδη δυο "
 "συμμετέχοντες."
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "'Εναρξη μέτρησης απόστασης"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "Τέλος μέτρησης απόστασης"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "Απόσταση που μετρήθηκε σε μέτρα"
 
@@ -83,6 +116,10 @@ msgstr "Σχετική υγρασία (%): "
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
 msgstr "Ταχύτητα του ήχου (m/s): "
+
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
+msgstr "Μετατόπιση βαθμονόμησης (μέτρα): "
 
 #~ msgid "Acoustic Tape Measure"
 #~ msgstr "Ακουστική ταινία μέτρησης"

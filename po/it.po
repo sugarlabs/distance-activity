@@ -22,11 +22,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-08 00:31-0400\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
 "PO-Revision-Date: 2010-03-25 22:28+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,11 +49,11 @@ msgstr ""
 msgid "Distance"
 msgstr "Distanza"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
 msgstr "Atmosfera"
 
-#: activity.py:109
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -53,42 +61,42 @@ msgstr ""
 "Per misurare la distanza fra due laptop, per prima cosa è necessario "
 "condividere questa Attività."
 
-#: activity.py:110
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Premere il pulsante per misurare la distanza da un altro laptop"
 
-#: activity.py:111
+#: activity.py:119
 msgid "Preparing to measure distance"
 msgstr "Inizio misurazione della distanza"
 
-#: activity.py:112
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
 "Pronto ad effettuare una misura.  In attesa che l'altro computer sia pronto."
 
-#: activity.py:113
+#: activity.py:121
 msgid "Recording sound from each laptop."
 msgstr "Registrazione di un suono da ognuno dei laptop."
 
-#: activity.py:114
+#: activity.py:122
 msgid "Processing recorded audio."
 msgstr "Elaborazione della registrazione audio."
 
-#: activity.py:116
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "Questa attività possiede già due partecipanti, quindi non è più possibile "
 "associarsi."
 
-#: activity.py:118
+#: activity.py:126
 msgid "Begin Measuring Distance"
 msgstr "Inizio Misurazione Distanza"
 
-#: activity.py:119
+#: activity.py:127
 msgid "Stop Measuring Distance"
 msgstr "Fine Misurazione Distanza"
 
-#: activity.py:152
+#: activity.py:160
 msgid "Measured Distance in Meters"
 msgstr "Distanza misurata in metri"
 

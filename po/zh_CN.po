@@ -2,78 +2,113 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2010-12-29 01:08-0500\n"
+"PO-Revision-Date: 2008-10-27 04:14-0400\n"
+"Last-Translator: Zhang Ray <leizh2@nortel.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "距离"
 
-#: activity.py:91
+#: activity.py:98
 msgid "Atmosphere"
-msgstr ""
+msgstr "大气"
 
-#: activity.py:99
+#: activity.py:117
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr ""
+msgstr "首先，你必须共享这个游戏，才能测量两台笔记本电脑之间的距离"
 
-#: activity.py:100
+#: activity.py:118
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "按此键开始测量到另一台笔记本电脑的距离"
 
-#: activity.py:101
+#: activity.py:119
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "开始准备测量距离"
 
-#: activity.py:102
+#: activity.py:120
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "你已经准备好测量了，另一方正在准备，请等待。"
 
-#: activity.py:103
+#: activity.py:121
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "记录每台笔记本电脑发出的声波"
 
-#: activity.py:104
+#: activity.py:122
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "正在处理记录的声音"
 
-#: activity.py:106
+#: activity.py:124
 msgid "This activity already has two participants, so you cannot join."
-msgstr ""
+msgstr "该游戏已经有两个玩家，你无法参加"
 
-#: activity.py:108
+#: activity.py:126
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "开始测量距离"
 
-#: activity.py:109
+#: activity.py:127
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "停止测量距离"
 
-#: activity.py:142
+#: activity.py:160
 msgid "Measured Distance in Meters"
-msgstr ""
+msgstr "测量的距离（单位：米）"
 
 #: atm_toolbars.py:30
 msgid "Temperature (C): "
-msgstr ""
+msgstr "温度"
 
 #: atm_toolbars.py:40
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "相对湿度"
 
 #: atm_toolbars.py:50
 msgid "Speed of Sound (m/s): "
+msgstr "声波速度"
+
+#: calibration_toolbar.py:27
+msgid "Calibration Offset (meters): "
 msgstr ""
