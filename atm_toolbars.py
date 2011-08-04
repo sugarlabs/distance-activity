@@ -18,7 +18,42 @@ import gtk
 import gobject
 import arange
 import locale
-from gettext import gettext
+from gettext import gettext as _
+
+
+def _label_factory(label, toolbar):
+    ''' Factory for adding a label to a toolbar '''
+    my_label = gtk.Label(label)
+    my_label.set_line_wrap(True)
+    my_label.show()
+    _toolitem = gtk.ToolItem()
+    _toolitem.add(my_label)
+    toolbar.insert(_toolitem, -1)
+    _toolitem.show()
+    return my_label
+
+
+def _entry_factory(length, toolbar, callback):
+    ''' Factory for adding a text enrty to a toolbar '''
+    my_entry = gtk.Entry()
+    my_entry.set_max_length(length)
+    my_entry.set_width_chars(length)
+    my_entry.connect('changed', callback)
+    my_entry.show()
+    _toolitem = gtk.ToolItem()
+    _toolitem.add(my_entry)
+    toolbar.insert(_toolitem, -1)
+    _toolitem.show()
+    return my_entry
+
+
+def _separator_factory(toolbar, expand=False, visible=False):
+    """ add a separator to a toolbar """
+    _separator = gtk.SeparatorToolItem()
+    _separator.props.draw = visible
+    _separator.set_expand(expand)
+    toolbar.insert(_separator, -1)
+    _separator.show()
 
 
 class TempToolbar(gtk.Toolbar):
@@ -27,48 +62,21 @@ class TempToolbar(gtk.Toolbar):
     def __init__(self):
         gtk.Toolbar.__init__(self)
 
-        temp_label = gtk.Label(gettext("Temperature (C): "))
-        self._temp_field = gtk.Entry()
-        self._temp_field.set_max_length(6)
-        self._temp_field.set_width_chars(6)
-        self._temp_field.connect("changed", self._update_cb)
+        temp_label = _label_factory(_("Temperature (C): "), self)
+        self._temp_field = _entry_factory(6, self, self._update_cb)
 
-        temp_group = gtk.HBox()
-        temp_group.pack_start(temp_label, expand=False, fill=False)
-        temp_group.pack_end(self._temp_field, expand=False, fill=False)
+        _separator_factory(self)
+
+        humid_label = _label_factory(_("Relative Humidity (%): "), self)
+        self._humid_field = _entry_factory(5, self, self._update_cb)
         
-        humid_label = gtk.Label(gettext("Relative Humidity (%): "))
-        self._humid_field = gtk.Entry()
-        self._humid_field.set_max_length(5)
-        self._humid_field.set_width_chars(5)
-        self._humid_field.connect("changed", self._update_cb)
-        
-        humid_group = gtk.HBox()
-        humid_group.pack_start(humid_label, expand=False, fill=False)
-        humid_group.pack_end(self._humid_field, expand=False, fill=False)
-        
-        result_label = gtk.Label(gettext("Speed of Sound (m/s): "))
-        self._result = gtk.Label()
-        
-        result_group = gtk.HBox()
-        result_group.pack_start(result_label, expand=False, fill=False)
-        result_group.pack_end(self._result, expand=False, fill=False)
-        
-        self.bigbox = gtk.HBox()
-        
-        self.bigbox.pack_start(temp_group, expand=False, fill=False)
-        self.bigbox.pack_start(humid_group, expand=True, fill=False)
-        self.bigbox.pack_end(result_group, expand=False, fill=False)
+        _separator_factory(self)
+
+        self._result = _label_factory(_("Speed of Sound (m/s): "), self)
         
         self.set_temp(25)
         self.set_humid(60)
         self.update_speed()
-
-        tool_item = gtk.ToolItem()
-        tool_item.add(self.bigbox)
-        tool_item.set_expand(True)
-        self.insert(tool_item, 0)
-        tool_item.show()
 
     def get_temp(self):
         try:
