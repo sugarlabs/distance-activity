@@ -1,3 +1,4 @@
+# Copyright 2007-9 Benjamin M. Schwartz
 # Copyright 2007 Collabora Ltd.
 #
 # This program is free software; you can redistribute it and/or modify
@@ -34,11 +35,11 @@ from dbus.gobject_service import ExportedGObject
 # named after our pid, to inhibit suspend.
 POWERD_INHIBIT_DIR = '/var/run/powerd-inhibit-suspend'
 
-import sugar.activity.activity
-from sugar.activity.activity import Activity, ActivityToolbox
+import sugar
+from sugar.activity import activity
 from sugar.presence import presenceservice
 
-from gettext import gettext
+from gettext import gettext as _
 
 # will eventually be imported from sugar
 from sugar.presence.tubeconn import TubeConnection
@@ -55,6 +56,7 @@ import dbus
 #import socket_test as arange
 import arange
 import atm_toolbars
+import smoot_toolbar
 
 SERVICE = "org.laptop.AcousticMeasure"
 IFACE = SERVICE
@@ -71,7 +73,7 @@ def gobject_idle_do(func, *args):
     ev.wait()
     return retval[0]
 
-class AcousticMeasureActivity(Activity):
+class AcousticMeasureActivity(activity.Activity):
     """AcousticMeasure Activity as specified in activity.info"""
     
     _message_dict = {}
@@ -79,10 +81,14 @@ class AcousticMeasureActivity(Activity):
     
     def __init__(self, handle):
         """Set up the Acoustic Tape Measure activity."""
-        Activity.__init__(self, handle)
-        gobject.threads_init()
-        #self.set_title(gettext('Acoustic Tape Measure Activity'))
+        super(AcousticMeasureActivity, self).__init__(handle)
+
+        #self.set_title(_('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
+
+        self._logger.debug("Here we go...")
+
+        gobject.threads_init()
 
         try:
             self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL, ''))
@@ -100,6 +106,18 @@ class AcousticMeasureActivity(Activity):
             toolbar_box.toolbar.insert(activity_button, 0)
             activity_button.show()
             
+            title_entry = TitleEntry(self)
+            toolbar_box.toolbar.insert(title_entry, -1)
+            title_entry.show()
+
+            share_button = ShareButton(self)
+            toolbar_box.toolbar.insert(share_button, -1)
+            share_button.show()
+
+            separator = gtk.SeparatorToolItem()
+            toolbar_box.toolbar.insert(separator, -1)
+            separator.show()
+
             self._t_h_bar = atm_toolbars.TempToolbar()
             tb = gtk.HBox()
             self._t_h_bar.bigbox.reparent(tb)
@@ -108,18 +126,13 @@ class AcousticMeasureActivity(Activity):
                                         icon_name='preferences-system')
             toolbar_box.toolbar.insert(adj_button, -1)
             adj_button.show()
-            
-            separator = gtk.SeparatorToolItem()
-            toolbar_box.toolbar.insert(separator, -1)
-            separator.show()
 
-            title_entry = TitleEntry(self)
-            toolbar_box.toolbar.insert(title_entry, -1)
-            title_entry.show()
-
-            share_button = ShareButton(self)
-            toolbar_box.toolbar.insert(share_button, -1)
-            share_button.show()
+            self._smoot_bar = smoot_toolbar.SmootToolbar(self)
+            self._smoot_bar.show_all()
+            custom_button = ToolbarButton(page=self._smoot_bar,
+                                          icon_name='view-source')
+            toolbar_box.toolbar.insert(custom_button, -1)
+            custom_button.show()
 
             separator = gtk.SeparatorToolItem()
             separator.props.draw = False
@@ -141,7 +154,10 @@ class AcousticMeasureActivity(Activity):
             toolbox.show()
 
             self._t_h_bar = atm_toolbars.TempToolbar()
-            toolbox.add_toolbar(gettext("Atmosphere"), self._t_h_bar)
+            toolbox.add_toolbar(_("Atmosphere"), self._t_h_bar)
+
+            self._smoot_bar = smoot_toolbar.SmootToolbar()
+            toolbox.add_toolbar(_("Custom metric"), self._smoot_bar)
         
         if not self.powerd_running():
             try:
@@ -154,23 +170,26 @@ class AcousticMeasureActivity(Activity):
                 self._logger.warning("Error setting OHM inhibit: %s" % e)
                 self.ohm_keystore = None
 
+        #distance in meters
+        self.current_distance = 0.0
+
         #worker thread
         self._button_event = threading.Event()
         thread.start_new_thread(self._helper_thread, ())
 
         # Main Panel GUI
         self.main_panel = gtk.VBox()
-        self._message_dict['unshared'] = gettext("To measure the distance between two laptops, you must first share this Activity.")
-        self._message_dict['ready'] = gettext("Press the button to measure the distance to another laptop")
-        self._message_dict['preparing'] = gettext("Preparing to measure distance")
-        self._message_dict['waiting'] = gettext("Ready to make a measurement.  Waiting for partner to be ready.")
-        self._message_dict['playing'] = gettext("Recording sound from each laptop.")
-        self._message_dict['processing'] = gettext("Processing recorded audio.")
+        self._message_dict['unshared'] = _("To measure the distance between two laptops, you must first share this Activity.")
+        self._message_dict['ready'] = _("Press the button to measure the distance to another laptop")
+        self._message_dict['preparing'] = _("Preparing to measure distance")
+        self._message_dict['waiting'] = _("Ready to make a measurement.  Waiting for partner to be ready.")
+        self._message_dict['playing'] = _("Recording sound from each laptop.")
+        self._message_dict['processing'] = _("Processing recorded audio.")
         self._message_dict['done'] = self._message_dict['ready']
-        self._message_dict['full'] = gettext("This activity already has two participants, so you cannot join.")
+        self._message_dict['full'] = _("This activity already has two participants, so you cannot join.")
         
-        self._button_dict['waiting'] = gettext("Begin Measuring Distance")
-        self._button_dict['going'] = gettext("Stop Measuring Distance")
+        self._button_dict['waiting'] = _("Begin Measuring Distance")
+        self._button_dict['going'] = _("Stop Measuring Distance")
         
         self.button = gtk.ToggleButton(label=self._button_dict['waiting'])
         self.button.connect('clicked',self._button_clicked)
@@ -203,14 +222,14 @@ class AcousticMeasureActivity(Activity):
         eb.add(self.value)
         eb.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("white"))
         
-        fr = gtk.Frame(gettext("Measured Distance in Meters"))
-        fr.set_label_align(0.5,0.5)
-        fr.add(eb)
+        self.fr = gtk.Frame(_('Measured distance in %s') % (_('meters')))
+        self.fr.set_label_align(0.5,0.5)
+        self.fr.add(eb)
 
         self.main_panel.pack_start(self.button, expand=False, padding=6)
         self.main_panel.pack_start(self.message, expand=False)
         self.main_panel.pack_start(img, expand=True, fill=False)
-        self.main_panel.pack_start(fr, expand=True, fill=False, padding=10)
+        self.main_panel.pack_start(self.fr, expand=True, fill=False, padding=10)
 
         self.set_canvas(self.main_panel)
         self.show_all()
@@ -230,7 +249,7 @@ class AcousticMeasureActivity(Activity):
 
         self.connect('shared', self._shared_cb)
         self.connect('joined', self._joined_cb)
-        
+
         self.connect('key-press-event', self._keypress_cb)
                 
     def powerd_running(self):
@@ -290,10 +309,12 @@ class AcousticMeasureActivity(Activity):
             self._logger.debug("initiating measurement")
             dt = arange.measure_dt_seq(self.main_socket, self.initiating, self._change_message)
             x = dt * self._t_h_bar.get_speed() - arange.OLPC_OFFSET
+            self.current_distance = x
             self._update_distance(x)
     
     def _update_distance(self, x):
-        mes = locale.format("%.2f", x)
+        scale = self._smoot_bar.get_scale()
+        mes = locale.format("%.2f", x * scale)
         gobject_idle_do(self.value.set_text, mes)
 
     def read_file(self, file_path):
