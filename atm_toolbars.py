@@ -72,7 +72,8 @@ class TempToolbar(gtk.Toolbar):
         
         _separator_factory(self)
 
-        self._result = _label_factory(_("Speed of Sound (m/s): "), self)
+        results_label = _label_factory(_("Speed of Sound (m/s): "), self)
+        self._result = _label_factory('', self)
         
         self.set_temp(25)
         self.set_humid(60)
