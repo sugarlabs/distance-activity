@@ -19,6 +19,7 @@ import arange
 import locale
 from gettext import gettext
 
+
 class CalibrationToolbar(gtk.Toolbar):
 
     def __init__(self):
