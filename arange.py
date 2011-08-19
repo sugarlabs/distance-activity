@@ -85,7 +85,7 @@ def compute_mls(R):
 
 
 def LFSR(R, taps, m):
-    """f
+    """
     Computes the output of the LFSR specified by "taps" on initial registers
     R for m steps.
     R = an indexable object
