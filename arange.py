@@ -136,7 +136,7 @@ def write_wav(o):
     q[::2] = o*255
     q[1::2] = 128
     w.writeframes(q.tostring())
-    return 
+    return f
 
 def play_wav_alsa(fname):
     subprocess.call(["/usr/bin/aplay", fname])
