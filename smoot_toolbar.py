@@ -32,7 +32,7 @@ UNITS = [_('meters'), _('centimeters'),
          _('inches'), _('feet'), _('yards'),
          _('custom units')]
 UNIT_DICTIONARY = {METERS: (_('meters'), 1.0),
-                   CENTIMETERS: (_('centimeters'), 10.0),
+                   CENTIMETERS: (_('centimeters'), 100.0),
                    INCHES: (_('inches'), 39.37),
                    FEET: (_('feet'), 3.28),
                    YARDS: (_('yards'), 1.09),
