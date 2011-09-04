@@ -122,6 +122,7 @@ def LFSR(R, taps, m):
             R[0] = next
     return o
 
+
 def write_wav(o):
     """
     Writes a [0,1]-scaled array o into the left channel of a 8-bit stereo
@@ -129,7 +130,7 @@ def write_wav(o):
     """
     f = tempfile.NamedTemporaryFile(mode='wb', prefix='out')
     w = wave.open(f)
-    w.setparams((2,1,REC_HZ,0, 'NONE', 'NONE'))
+    w.setparams((2, 1, REC_HZ, 0, 'NONE', 'NONE'))
     n = num.size(o)
     q = num.zeros((2*n), num.uint8)
     q[::2] = o*255
@@ -141,6 +142,7 @@ def play_wav_alsa(fname):
     subprocess.call(["/usr/bin/aplay", fname])
     
 play_wav = play_wav_alsa
+
 
 def record_while_playing(play_name, t):
     """
@@ -209,7 +211,7 @@ def cross_cov(a, b, a_id=None):
     """computes the cross-covariance of signals in a and b"""
     assert (a.ndim == 1) and (b.ndim == 1)
     n = max(a.size, b.size)
-    n2 = 2**int(math.ceil(math.log(n,2))) #power of 2 >=n
+    n2 = 2**int(math.ceil(math.log(n,2)))  # power of 2 >=n
     if a_id is not None:
         if cache_dict.has_key(('fft', a_id, n2)):
             fa = cache_dict[('fft', a_id, n2)]
@@ -363,7 +365,7 @@ def measure_dt_simul(s, am_server):
         (pipeline, rec_wav_file) = start_recording()
 
     playing_command = 'playing'
-    rectime = 5 #seconds
+    rectime = 5  # seconds
     if am_server:
         received = recvmsg(s, playing_command)
         assert received
@@ -425,9 +427,9 @@ def measure_dt_seq(s, am_server, send_signal=False):
         cache_dict[('mls_rev',MLS_INDEX)] = mls_rev
             
     if am_server:
-    	mls_wav_file = write_wav(mls)
+            mls_wav_file = write_wav(mls)
     else:
-    	mls_wav_file = write_wav(mls_rev)
+            mls_wav_file = write_wav(mls_rev)
 
     if send_signal:
         send_signal('waiting')
@@ -463,7 +465,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
     time.sleep(amp_ringdown)
 	
     handoff_command = 'your turn'
-    ringdown = 0.3 #seconds
+    ringdown = 0.3  # seconds
     if am_server:
         print "about to play_wav"
         play_wav_alsa(mls_wav_file.name)
@@ -576,7 +578,7 @@ def speed_of_sound(t=25.0, h=0.6, p=101325.0, x_c=0.0004):
 
     f = 1.00062 + 3.14e-8*p + 5.6e-7*t2
     psv = math.exp(1.2811805e-5*(T**2) - 1.9509874e-2*T \
-                       + 34.04926034 - 6.3536311e3/T) #Pa
+                       + 34.04926034 - 6.3536311e3/T)  # Pa
     x_w = h*f*psv/p
 
     return a0 + a1*t + a2*t2 + (a3 + a4*t +a5*t2)*x_w \

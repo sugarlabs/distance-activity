@@ -32,7 +32,7 @@ UNITS = [_('meters'), _('centimeters'),
          _('inches'), _('feet'), _('yards'),
          _('custom units')]
 UNIT_DICTIONARY = {METERS: (_('meters'), 1.0),
-                   CENTIMETERS: (_('centimeters'), 10.0),
+                   CENTIMETERS: (_('centimeters'), 100.0),
                    INCHES: (_('inches'), 39.37),
                    FEET: (_('feet'), 3.28),
                    YARDS: (_('yards'), 1.09),
@@ -101,7 +101,7 @@ class SmootToolbar(gtk.Toolbar):
         if name == _('meters'):
             self._factor_label.set_label(' ')
         else:
-            self._factor_label.set_label(_('%2$0.2f %1$s per meter') % (
+            self._factor_label.set_label(_('%20.2f %1s per meter') % (
                     self._unit_scale, name))
 
     def get_scale(self):
