@@ -3,6 +3,6 @@ name = Distance
 bundle_id = org.laptop.AcousticMeasure
 exec = sugar-activity activity.AcousticMeasureActivity
 icon = activity-acousticmeasure
-activity_version = 27
+activity_version = 28
 license = GPLv2+
 show_launcher = yes
