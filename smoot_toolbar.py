@@ -101,7 +101,7 @@ class SmootToolbar(gtk.Toolbar):
         if name == _('meters'):
             self._factor_label.set_label(' ')
         else:
-            self._factor_label.set_label(_('%20.2f %1s per meter') % (
+            self._factor_label.set_label(_('%(20.2)f %(1)s per meter') % (
                     self._unit_scale, name))
 
     def get_scale(self):
