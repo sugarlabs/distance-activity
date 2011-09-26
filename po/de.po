@@ -58,27 +58,31 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 01:08-0500\n"
-"PO-Revision-Date: 2010-03-27 22:19+0200\n"
-"Last-Translator: shellige <email@hellige-online.de>\n"
+"POT-Creation-Date: 2011-08-09 11:43-0500\n"
+"PO-Revision-Date: 2011-09-26 22:27+0200\n"
+"Last-Translator: Markus <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.3\n"
+"X-Generator: Pootle 2.0.5\n"
 
 # (Markus S.) war 'Abstand'
 #: activity/activity.info:2
 msgid "Distance"
 msgstr "Abstandsmessung"
 
-#: activity.py:98
+#: activity.py:153
 msgid "Atmosphere"
 msgstr "Atmosphäre"
 
-#: activity.py:117
+#: activity.py:156
+msgid "Custom metric"
+msgstr "Metrik anpassen"
+
+#: activity.py:178
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -86,62 +90,105 @@ msgstr ""
 "Zur Messung des Abstandes zwischen zwei Laptops musst Du diese Aktivität mit "
 "jemanden gemeinsam ausführen."
 
-#: activity.py:118
+#: activity.py:180
 msgid "Press the button to measure the distance to another laptop"
 msgstr ""
 "Drücke die Schaltfläche um den Abstand zu einem anderen Laptop zu messen"
 
-#: activity.py:119
+#: activity.py:182
 msgid "Preparing to measure distance"
 msgstr "Vorbereitung der Distanzmessung"
 
-#: activity.py:120
+#: activity.py:183
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
 "Bereit zur Durchführung der Messung.  Warte auf die Bereitschaft des "
 "Partners."
 
-#: activity.py:121
+#: activity.py:185
 msgid "Recording sound from each laptop."
 msgstr "Zeichne den Ton von jedem Laptop auf."
 
-#: activity.py:122
+#: activity.py:186
 msgid "Processing recorded audio."
 msgstr "Verarbeite die aufgezeichneten Töne."
 
-#: activity.py:124
+#: activity.py:188
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "Diese Aktivität hat bereits zwei Teilnehmer, du kannst daher nicht "
 "mitmachen."
 
-#: activity.py:126
+#: activity.py:191
 msgid "Begin Measuring Distance"
 msgstr "Abstandsmessung beginnen"
 
-#: activity.py:127
+#: activity.py:192
 msgid "Stop Measuring Distance"
 msgstr "Abstandsmessung stoppen"
 
-#: activity.py:160
-msgid "Measured Distance in Meters"
-msgstr "Gemessene Distanz in Metern"
+#: activity.py:226 smoot_toolbar.py:100
+#, python-format
+#, python-format, 
+msgid "Measured distance in %s"
+msgstr "Gemessene Distanz in %s"
 
-#: atm_toolbars.py:30
+#: activity.py:226 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:79
+#: smoot_toolbar.py:101
+msgid "meters"
+msgstr "Meter"
+
+#: atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr "Temperatur (C): "
 
-#: atm_toolbars.py:40
+#: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr "Relative Luftfeuchtigkeit (%): "
 
-#: atm_toolbars.py:50
+#: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr "Schallgeschwindigkeit (m/s): "
 
 #: calibration_toolbar.py:27
 msgid "Calibration Offset (meters): "
 msgstr "Justierung Versatz (Meter): "
+
+#: smoot_toolbar.py:30 smoot_toolbar.py:35
+msgid "centimeters"
+msgstr "Zentimeter"
+
+#. TRANS: English units of measure
+#: smoot_toolbar.py:32 smoot_toolbar.py:36
+msgid "inches"
+msgstr "Inch"
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:37
+msgid "feet"
+msgstr "Fuß"
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:38
+msgid "yards"
+msgstr "Yard"
+
+#: smoot_toolbar.py:33 smoot_toolbar.py:39
+msgid "custom units"
+msgstr "Benutzerdefinierte Einheiten"
+
+#: smoot_toolbar.py:83
+msgid "Choose a unit of measure:"
+msgstr "Wähle eine Maßeinheit:"
+
+#: smoot_toolbar.py:86
+msgid "select units"
+msgstr "Einheiten auswählen"
+
+#: smoot_toolbar.py:104
+msgid "%2$0.2f %1$s per meter"
+msgstr "m%2$0.2f %1$s pro Meter"
+
+#~ msgid "Measured Distance in Meters"
+#~ msgstr "Gemessene Distanz in Metern"
 
 #~ msgid "Acoustic Tape Measure"
 #~ msgstr "Tonmaßband"
