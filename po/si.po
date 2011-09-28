@@ -34,26 +34,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: acoustic-measure-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 01:08-0500\n"
-"PO-Revision-Date: 2011-02-11 08:08+0200\n"
-"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
+"POT-Creation-Date: 2011-08-09 11:43-0500\n"
+"PO-Revision-Date: 2011-08-10 16:24+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: Sinhalese <en@li.org>\n"
-"Language: si\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.3\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Distance"
 msgstr "දුර"
 
-#: activity.py:98
+#: activity.py:153
 msgid "Atmosphere"
 msgstr "වටපිටාව"
 
-#: activity.py:117
+#: activity.py:156
+msgid "Custom metric"
+msgstr ""
+
+#: activity.py:178
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -61,55 +65,98 @@ msgstr ""
 "ලැප්ටොප් දෙකක් අතර දුර මැනීමට නම් ප්‍රථමයෙන් ඔබ මෙම ක්‍රියාකාරකම බෙදාගත "
 "යුතුය."
 
-#: activity.py:118
+#: activity.py:180
 msgid "Press the button to measure the distance to another laptop"
 msgstr "වෙනත් ලැප්ටොපයක් වෙතට දුර මැනීම සඳහා මෙම බොත්තම ඔබන්න"
 
-#: activity.py:119
+#: activity.py:182
 msgid "Preparing to measure distance"
 msgstr "දුර මැනිමට සැරසේ"
 
-#: activity.py:120
+#: activity.py:183
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "මිනුමක් ගැනීමට සූදානම්.  හවුල්කරුවාද සූදානම් වනතෙක් සිටී."
 
-#: activity.py:121
+#: activity.py:185
 msgid "Recording sound from each laptop."
 msgstr "සෑම ලැප්ටොප් එකකින්ම පටිගත කිරීම."
 
-#: activity.py:122
+#: activity.py:186
 msgid "Processing recorded audio."
 msgstr "පටිගත කළ නාදය සැකසේ."
 
-#: activity.py:124
+#: activity.py:188
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "මෙම ක්‍රියාකාරකමට දැනටමත් දෙදෙනෙක් සහභාගී වේ. එම නිසා ඔබට සම්බන්ධ විය නොහැක."
 
-#: activity.py:126
+#: activity.py:191
 msgid "Begin Measuring Distance"
 msgstr "දුර මැනීම අරඹන්න"
 
-#: activity.py:127
+#: activity.py:192
 msgid "Stop Measuring Distance"
 msgstr "දුර මැනීම නවත්වන්න"
 
-#: activity.py:160
-msgid "Measured Distance in Meters"
-msgstr "මනින ලද දුර මීටර වලින්මීටර "
+#: activity.py:226 smoot_toolbar.py:100
+#, python-format
+#, python-format, fuzzy
+msgid "Measured distance in %s"
+msgstr "මනින ලද දුර මීටර වලින්මීටර"
 
-#: atm_toolbars.py:30
+#: activity.py:226 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:79
+#: smoot_toolbar.py:101
+msgid "meters"
+msgstr ""
+
+#: atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr "උණුසුම (C): "
 
-#: atm_toolbars.py:40
+#: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr "සාපේක්ෂ ආර්ද්‍රතාව (%): "
 
-#: atm_toolbars.py:50
+#: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr "ශබ්දයේ වේගය (m/s): "
 
 #: calibration_toolbar.py:27
 msgid "Calibration Offset (meters): "
 msgstr ""
+
+#: smoot_toolbar.py:30 smoot_toolbar.py:35
+msgid "centimeters"
+msgstr ""
+
+#. TRANS: English units of measure
+#: smoot_toolbar.py:32 smoot_toolbar.py:36
+msgid "inches"
+msgstr ""
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:37
+msgid "feet"
+msgstr ""
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:38
+msgid "yards"
+msgstr ""
+
+#: smoot_toolbar.py:33 smoot_toolbar.py:39
+msgid "custom units"
+msgstr ""
+
+#: smoot_toolbar.py:83
+msgid "Choose a unit of measure:"
+msgstr ""
+
+#: smoot_toolbar.py:86
+msgid "select units"
+msgstr ""
+
+#: smoot_toolbar.py:104
+msgid "%2$0.2f %1$s per meter"
+msgstr ""
+
+#~ msgid "Measured Distance in Meters"
+#~ msgstr "මනින ලද දුර මීටර වලින්මීටර "
