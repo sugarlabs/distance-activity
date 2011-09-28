@@ -26,27 +26,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 01:08-0500\n"
-"PO-Revision-Date: 2009-08-28 05:13-0400\n"
-"Last-Translator: Emilianuspillai Amirthanathan Gnanaseelan "
-"<gnanaseelan2001@yahoo.com>\n"
+"POT-Creation-Date: 2011-08-09 11:43-0500\n"
+"PO-Revision-Date: 2011-09-28 09:42+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.2.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Distance"
 msgstr "தூரம்"
 
-#: activity.py:98
+#: activity.py:153
 msgid "Atmosphere"
 msgstr "காலநிலை"
 
-#: activity.py:117
+#: activity.py:156
+msgid "Custom metric"
+msgstr "வகுக்க இயலும் அளவு"
+
+#: activity.py:178
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -54,56 +57,99 @@ msgstr ""
 "இரண்டு மடிக்கணணிகளுக்கிடையிலுள்ள தூரத்தை அளப்பதற்கு, முதலில் இந்தச் "
 "செயற்பாட்டை பகிர வேண்டும்"
 
-#: activity.py:118
+#: activity.py:180
 msgid "Press the button to measure the distance to another laptop"
 msgstr "அடுத்த மடிக்கணணிக்கிடையிலுள்ள தூரத்தை அளப்பதற்கு, பொத்தானை அளக்கவும்"
 
-#: activity.py:119
+#: activity.py:182
 msgid "Preparing to measure distance"
 msgstr " தூரத்தை அளப்பதற்கு தயாராகின்றது"
 
-#: activity.py:120
+#: activity.py:183
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "தூரத்தை அளப்பதற்கு தயார். பங்காளி தயாராவதற்கு காத்திருக்கிறது"
+msgstr "தூரத்தை அளப்பதற்கு தயார்.   பங்காளி தயாராவதற்கு காத்திருக்கிறது"
 
-#: activity.py:121
+#: activity.py:185
 msgid "Recording sound from each laptop."
 msgstr "ஒவ்வொரு மடிக்கணணியின் சத்தத்தையும் பதிவு செய்கிறது"
 
-#: activity.py:122
+#: activity.py:186
 msgid "Processing recorded audio."
 msgstr "பதியப்பட்ட ஒலியை செயற்படுத்துகிறது"
 
-#: activity.py:124
+#: activity.py:188
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "இந்தச் செயற்பாட்டில் ஏற்கனவே இருவர் பங்கு பற்றுகின்றனர், ஆகவே உம்மால் இணைய "
 "முடியாது"
 
-#: activity.py:126
+#: activity.py:191
 msgid "Begin Measuring Distance"
 msgstr "தூரத்தை அளப்பதற்கு ஆரம்பி"
 
-#: activity.py:127
+#: activity.py:192
 msgid "Stop Measuring Distance"
 msgstr "தூரத்தை அளப்பதை நிறுத்து"
 
-#: activity.py:160
-msgid "Measured Distance in Meters"
-msgstr "மீற்றர்களில் அளந்த தூரம்"
+#: activity.py:226 smoot_toolbar.py:100
+#, python-format
+#, python-format,
+msgid "Measured distance in %s"
+msgstr "தூரமானது %s யில் அளக்கப்பட்டது"
 
-#: atm_toolbars.py:30
+#: activity.py:226 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:79
+#: smoot_toolbar.py:101
+msgid "meters"
+msgstr "மீட்டர்"
+
+#: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr "வெப்பநிலை (செல்சியஸ்):"
+msgstr "வெப்பநிலை (செல்சியஸ்): "
 
-#: atm_toolbars.py:40
+#: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr "ஒப்பீட்டளவு ஈரப்பதன் (%):"
 
-#: atm_toolbars.py:50
+#: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr "ஒலியின் வேகம் (மீ/செக்):"
+msgstr "ஒலியின் வேகம் (m/s):"
 
 #: calibration_toolbar.py:27
 msgid "Calibration Offset (meters): "
-msgstr "திறமையான அச்சிடும் முறை(மீற்றர்கள்):_"
+msgstr "திறமையான அச்சீடு(மீட்டர்கள்):"
+
+#: smoot_toolbar.py:30 smoot_toolbar.py:35
+msgid "centimeters"
+msgstr "சென்டிமீட்டர்"
+
+#. TRANS: English units of measure
+#: smoot_toolbar.py:32 smoot_toolbar.py:36
+msgid "inches"
+msgstr "இன்ச்"
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:37
+msgid "feet"
+msgstr "அடி"
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:38
+msgid "yards"
+msgstr "யார்ட்ஸ்"
+
+#: smoot_toolbar.py:33 smoot_toolbar.py:39
+msgid "custom units"
+msgstr "வகுக்கக்கூடிய அளவுகள்"
+
+#: smoot_toolbar.py:83
+msgid "Choose a unit of measure:"
+msgstr "அலகளில் அளக்கப்பட்டதை தெரிவுசெய்:"
+
+#: smoot_toolbar.py:86
+msgid "select units"
+msgstr "தெரிவு செய்த அலகுகள்"
+
+#: smoot_toolbar.py:104
+msgid "%2$0.2f %1$s per meter"
+msgstr "%2$0.2f %1$s ஒரு மீட்டருக்கு"
+
+#~ msgid "Measured Distance in Meters"
+#~ msgstr "மீற்றர்களில் அளந்த தூரம்"
