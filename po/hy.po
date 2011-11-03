@@ -26,26 +26,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 01:08-0500\n"
-"PO-Revision-Date: 2011-05-15 12:59+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"POT-Creation-Date: 2011-09-26 20:33+0000\n"
+"PO-Revision-Date: 2011-11-03 17:36+0200\n"
+"Last-Translator: anush.mkrtchyan <anush.mkrtchyan@ca1492.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Distance"
 msgstr "Հեռավորություն"
 
-#: activity.py:98
+#: /home/rafael/Activities/distance/activity.py:154
 msgid "Atmosphere"
 msgstr "Մթնոլորտ"
 
-#: activity.py:117
+#: /home/rafael/Activities/distance/activity.py:157
+msgid "Custom metric"
+msgstr "Չափականության ստեղծում"
+
+#: /home/rafael/Activities/distance/activity.py:179
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -53,56 +57,109 @@ msgstr ""
 "Երկու համակարգիչների միջև հեռավորությունը չափելու համար նախ անհրաժեշտ է "
 "ցուցադրել գործունեությունը:"
 
-#: activity.py:118
+#: /home/rafael/Activities/distance/activity.py:181
 msgid "Press the button to measure the distance to another laptop"
 msgstr "Սեղմիր սեղմակը այլ համակարգչի հետ հեռավորությունը չափելու համար:"
 
-#: activity.py:119
+#: /home/rafael/Activities/distance/activity.py:183
 msgid "Preparing to measure distance"
 msgstr "Պատրաստվում է չափել հեռավորությունը"
 
-#: activity.py:120
+#: /home/rafael/Activities/distance/activity.py:184
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "Պատրաստ է կատարել չափումներ: Սպասում է գործընկերոջը:"
 
-#: activity.py:121
+#: /home/rafael/Activities/distance/activity.py:186
 msgid "Recording sound from each laptop."
 msgstr "Յուրաքանչյուր համակարգչից ձայնի գրառում:"
 
-#: activity.py:122
+#: /home/rafael/Activities/distance/activity.py:187
 msgid "Processing recorded audio."
 msgstr "Գրառված ձայնի վերամշակում"
 
-#: activity.py:124
+#: /home/rafael/Activities/distance/activity.py:189
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 "Այս գործունեությունն արդեն ունի երկու մասնակից, ուստի դուք չեք կարող "
 "մասնակցել:"
 
-#: activity.py:126
+#: /home/rafael/Activities/distance/activity.py:192
 msgid "Begin Measuring Distance"
 msgstr "Հեռավորության չափման սկիզբ:"
 
-#: activity.py:127
+#: /home/rafael/Activities/distance/activity.py:193
 msgid "Stop Measuring Distance"
 msgstr "Հեռավորության չափման կանգ:"
 
-#: activity.py:160
-msgid "Measured Distance in Meters"
-msgstr "Հեռավորության չափսը մետրերով:"
+#: /home/rafael/Activities/distance/activity.py:227
+#: /home/rafael/Activities/distance/smoot_toolbar.py:100
+#, python-format
+#, python-format,
+msgid "Measured distance in %s"
+msgstr "Չափված հեռավորությունը %s -ով"
 
-#: atm_toolbars.py:30
+#: /home/rafael/Activities/distance/activity.py:227
+#: /home/rafael/Activities/distance/smoot_toolbar.py:30
+#: /home/rafael/Activities/distance/smoot_toolbar.py:34
+#: /home/rafael/Activities/distance/smoot_toolbar.py:79
+#: /home/rafael/Activities/distance/smoot_toolbar.py:101
+msgid "meters"
+msgstr "մետր"
+
+#: /home/rafael/Activities/distance/atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr "Ջերմաստիճան (C). "
 
-#: atm_toolbars.py:40
+#: /home/rafael/Activities/distance/atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr "Համեմատական խոնավություն (%). "
 
-#: atm_toolbars.py:50
+#: /home/rafael/Activities/distance/atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr "Ձայնի արագություն (մ/վ). "
 
-#: calibration_toolbar.py:27
+#: /home/rafael/Activities/distance/calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
 msgstr "Չափման Համակարգ (մետր). "
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:30
+#: /home/rafael/Activities/distance/smoot_toolbar.py:35
+msgid "centimeters"
+msgstr "սանտիմետր"
+
+#. TRANS: English units of measure
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:36
+msgid "inches"
+msgstr "դյույմ"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:37
+msgid "feet"
+msgstr "ոտնաչափ"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:38
+msgid "yards"
+msgstr "յարդ"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:33
+#: /home/rafael/Activities/distance/smoot_toolbar.py:39
+msgid "custom units"
+msgstr "միավոր"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:83
+msgid "Choose a unit of measure:"
+msgstr "Ընտրել չափման միավոր`"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:86
+msgid "select units"
+msgstr "ընտրել միավորներ"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:104
+#, python-format, 
+msgid "%(20.2)f %(1)s per meter"
+msgstr "%0.2f %s յուրաքանչյուր մետրը"
+
+#~ msgid "Measured Distance in Meters"
+#~ msgstr "Հեռավորության չափսը մետրերով:"
