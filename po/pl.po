@@ -35,7 +35,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-26 20:33+0000\n"
-"PO-Revision-Date: 2011-12-01 15:46+0200\n"
+"PO-Revision-Date: 2011-12-12 02:47+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pl\n"
@@ -76,7 +76,7 @@ msgstr "Przygotowuję do zmierzenia odległości"
 
 #: /home/rafael/Activities/distance/activity.py:184
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "Gotowy do wykonania pomiaru. Czekam na gotowość partnera."
+msgstr "Gotowy do wykonania pomiaru.  Czekam na gotowość partnera."
 
 #: /home/rafael/Activities/distance/activity.py:186
 msgid "Recording sound from each laptop."
