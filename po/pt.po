@@ -35,15 +35,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-26 20:33+0000\n"
-"PO-Revision-Date: 2011-08-14 06:57+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2012-01-15 04:50+0200\n"
+"Last-Translator: Eduardo H. <hoboprimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -55,7 +55,7 @@ msgstr "Atmosfera"
 
 #: /home/rafael/Activities/distance/activity.py:157
 msgid "Custom metric"
-msgstr ""
+msgstr "Métrica customizada"
 
 #: /home/rafael/Activities/distance/activity.py:179
 msgid ""
@@ -133,41 +133,41 @@ msgstr "Calibragem (metros): "
 #: /home/rafael/Activities/distance/smoot_toolbar.py:30
 #: /home/rafael/Activities/distance/smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "centímetros"
 
 #. TRANS: English units of measure
 #: /home/rafael/Activities/distance/smoot_toolbar.py:32
 #: /home/rafael/Activities/distance/smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "polegadas"
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:32
 #: /home/rafael/Activities/distance/smoot_toolbar.py:37
 msgid "feet"
-msgstr ""
+msgstr "pés"
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:32
 #: /home/rafael/Activities/distance/smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "jardas"
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:33
 #: /home/rafael/Activities/distance/smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "unidades personalizadas"
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:83
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Escolhe uma unidade de medida:"
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:86
 msgid "select units"
-msgstr ""
+msgstr "escolhe unidades"
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:104
 #, python-format
 msgid "%(20.2)f %(1)s per meter"
-msgstr ""
+msgstr "%(20.2)f %(1)s por metro"
 
 #~ msgid "Measured Distance in Meters"
 #~ msgstr "Distância Medida em Metros"
