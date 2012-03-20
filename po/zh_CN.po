@@ -38,77 +38,138 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 01:08-0500\n"
-"PO-Revision-Date: 2008-10-27 04:14-0400\n"
-"Last-Translator: Zhang Ray <leizh2@nortel.com>\n"
+"POT-Creation-Date: 2011-09-26 20:33+0000\n"
+"PO-Revision-Date: 2012-03-15 03:22+0200\n"
+"Last-Translator: lite <litekok@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Distance"
 msgstr "距离"
 
-#: activity.py:98
+#: /home/rafael/Activities/distance/activity.py:154
 msgid "Atmosphere"
 msgstr "大气"
 
-#: activity.py:117
+#: /home/rafael/Activities/distance/activity.py:157
+msgid "Custom metric"
+msgstr "度量定制"
+
+#: /home/rafael/Activities/distance/activity.py:179
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "首先，你必须共享这个游戏，才能测量两台笔记本电脑之间的距离"
 
-#: activity.py:118
+#: /home/rafael/Activities/distance/activity.py:181
 msgid "Press the button to measure the distance to another laptop"
 msgstr "按此键开始测量到另一台笔记本电脑的距离"
 
-#: activity.py:119
+#: /home/rafael/Activities/distance/activity.py:183
 msgid "Preparing to measure distance"
 msgstr "开始准备测量距离"
 
-#: activity.py:120
+#: /home/rafael/Activities/distance/activity.py:184
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "你已经准备好测量了，另一方正在准备，请等待。"
+msgstr "你已经准备好测量了， 另一方正在准备，请等待。"
 
-#: activity.py:121
+#: /home/rafael/Activities/distance/activity.py:186
 msgid "Recording sound from each laptop."
 msgstr "记录每台笔记本电脑发出的声波"
 
-#: activity.py:122
+#: /home/rafael/Activities/distance/activity.py:187
 msgid "Processing recorded audio."
 msgstr "正在处理记录的声音"
 
-#: activity.py:124
+#: /home/rafael/Activities/distance/activity.py:189
 msgid "This activity already has two participants, so you cannot join."
 msgstr "该游戏已经有两个玩家，你无法参加"
 
-#: activity.py:126
+#: /home/rafael/Activities/distance/activity.py:192
 msgid "Begin Measuring Distance"
 msgstr "开始测量距离"
 
-#: activity.py:127
+#: /home/rafael/Activities/distance/activity.py:193
 msgid "Stop Measuring Distance"
 msgstr "停止测量距离"
 
-#: activity.py:160
-msgid "Measured Distance in Meters"
-msgstr "测量的距离（单位：米）"
+# need %s
+#: /home/rafael/Activities/distance/activity.py:227
+#: /home/rafael/Activities/distance/smoot_toolbar.py:100
+#, python-format
+#, python-format, , , ,
+#, python-format,
+msgid "Measured distance in %s"
+msgstr "%s中测量的距离"
 
-#: atm_toolbars.py:30
+#: /home/rafael/Activities/distance/activity.py:227
+#: /home/rafael/Activities/distance/smoot_toolbar.py:30
+#: /home/rafael/Activities/distance/smoot_toolbar.py:34
+#: /home/rafael/Activities/distance/smoot_toolbar.py:79
+#: /home/rafael/Activities/distance/smoot_toolbar.py:101
+msgid "meters"
+msgstr "米"
+
+#: /home/rafael/Activities/distance/atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr "温度"
 
-#: atm_toolbars.py:40
+#: /home/rafael/Activities/distance/atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr "相对湿度"
 
-#: atm_toolbars.py:50
+#: /home/rafael/Activities/distance/atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr "声波速度"
 
-#: calibration_toolbar.py:27
+#: /home/rafael/Activities/distance/calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr ""
+msgstr "校准补偿（米）："
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:30
+#: /home/rafael/Activities/distance/smoot_toolbar.py:35
+msgid "centimeters"
+msgstr "厘米"
+
+#. TRANS: English units of measure
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:36
+msgid "inches"
+msgstr "英寸"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:37
+msgid "feet"
+msgstr "英尺"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:38
+msgid "yards"
+msgstr "码"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:33
+#: /home/rafael/Activities/distance/smoot_toolbar.py:39
+msgid "custom units"
+msgstr "自定义单位"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:83
+msgid "Choose a unit of measure:"
+msgstr "选择一个测量单位："
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:86
+msgid "select units"
+msgstr "选择单位"
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:104
+#, python-format
+msgid "%(20.2)f %(1)s per meter"
+msgstr "每米%(20.2)f %(1)s"
+
+#~ msgid "Measured Distance in Meters"
+#~ msgstr "测量的距离（单位：米）"
