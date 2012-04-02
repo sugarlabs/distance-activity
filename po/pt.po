@@ -35,7 +35,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-26 20:33+0000\n"
-"PO-Revision-Date: 2012-01-15 04:50+0200\n"
+"PO-Revision-Date: 2012-03-16 00:34+0200\n"
 "Last-Translator: Eduardo H. <hoboprimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -55,32 +55,31 @@ msgstr "Atmosfera"
 
 #: /home/rafael/Activities/distance/activity.py:157
 msgid "Custom metric"
-msgstr "Métrica customizada"
+msgstr "Métrica personalizada"
 
 #: /home/rafael/Activities/distance/activity.py:179
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
-"Para medir a distância entre dois portáteis, tens que partilhar primeiro "
-"esta Actividade."
+"Para medir a distância entre dois portáteis, tens que primeiro partilhar "
+"esta Atividade."
 
 #: /home/rafael/Activities/distance/activity.py:181
 msgid "Press the button to measure the distance to another laptop"
-msgstr "Pressiona o botão para medir a distância até outro portátil"
+msgstr "Pressiona o botão para medir a distância a outro portátil"
 
 #: /home/rafael/Activities/distance/activity.py:183
 msgid "Preparing to measure distance"
-msgstr "Preparando para medir a distância"
+msgstr "A preparar para medir a distância"
 
 #: /home/rafael/Activities/distance/activity.py:184
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
-"Preparado para fazer uma medição.  Esperando que o parceiro esteja pronto."
+msgstr "Pronto para fazer uma medição.  À espera que o parceiro esteja pronto."
 
 #: /home/rafael/Activities/distance/activity.py:186
 msgid "Recording sound from each laptop."
-msgstr "Gravando som de cada portátil."
+msgstr "A gravar som de cada portátil."
 
 #: /home/rafael/Activities/distance/activity.py:187
 msgid "Processing recorded audio."
@@ -88,8 +87,7 @@ msgstr "A processar som gravado."
 
 #: /home/rafael/Activities/distance/activity.py:189
 msgid "This activity already has two participants, so you cannot join."
-msgstr ""
-"Esta actividade já tem dois participantes, por isso não podes juntar-te."
+msgstr "Esta atividade já tem dois participantes, por isso não podes juntar-te."
 
 #: /home/rafael/Activities/distance/activity.py:192
 msgid "Begin Measuring Distance"
@@ -104,7 +102,7 @@ msgstr "Parar de Medir a Distância"
 #, python-format
 #, python-format,
 msgid "Measured distance in %s"
-msgstr "Distância Medida em %s"
+msgstr "Distância medida em %s"
 
 #: /home/rafael/Activities/distance/activity.py:227
 #: /home/rafael/Activities/distance/smoot_toolbar.py:30
@@ -127,8 +125,9 @@ msgid "Speed of Sound (m/s): "
 msgstr "Velocidade de Som (m/s): "
 
 #: /home/rafael/Activities/distance/calibration_toolbar.py:28
+#, fuzzy
 msgid "Calibration Offset (meters): "
-msgstr "Calibragem (metros): "
+msgstr "Distância de calibragem (metros): "
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:30
 #: /home/rafael/Activities/distance/smoot_toolbar.py:35
