@@ -34,82 +34,139 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 01:08-0500\n"
-"PO-Revision-Date: 2010-01-22 05:18+0200\n"
-"Last-Translator: korakurider <korakurider@gmail.com>\n"
+"POT-Creation-Date: 2011-09-26 20:33+0000\n"
+"PO-Revision-Date: 2011-12-16 06:04+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ja\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Distance"
 msgstr "距離"
 
-#: activity.py:98
+#: /home/rafael/Activities/distance/activity.py:154
 msgid "Atmosphere"
 msgstr "空気"
 
-#: activity.py:117
+#: /home/rafael/Activities/distance/activity.py:157
+msgid "Custom metric"
+msgstr ""
+
+#: /home/rafael/Activities/distance/activity.py:179
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr "2台のラップトップ間の距離を測定するには、まず相手とこのアクティビティを共有してください。"
 
-#: activity.py:118
+#: /home/rafael/Activities/distance/activity.py:181
 msgid "Press the button to measure the distance to another laptop"
 msgstr "ボタンを押して、相手のラップトップとの距離を測定してください。"
 
-#: activity.py:119
+#: /home/rafael/Activities/distance/activity.py:183
 msgid "Preparing to measure distance"
 msgstr "距離の測定を準備しています"
 
-#: activity.py:120
+#: /home/rafael/Activities/distance/activity.py:184
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "測定の準備ができました。 相手の準備を待っています。"
+msgstr "測定の準備ができました。  相手の準備を待っています。"
 
-#: activity.py:121
+#: /home/rafael/Activities/distance/activity.py:186
 msgid "Recording sound from each laptop."
 msgstr "ラップトップ同士で音を録音しています。"
 
-#: activity.py:122
+#: /home/rafael/Activities/distance/activity.py:187
 msgid "Processing recorded audio."
 msgstr "録音を解析中。"
 
-#: activity.py:124
+#: /home/rafael/Activities/distance/activity.py:189
 msgid "This activity already has two participants, so you cannot join."
 msgstr "このアクティビティはすでに2名が参加しているため、これ以上参加できません。"
 
-#: activity.py:126
+#: /home/rafael/Activities/distance/activity.py:192
 msgid "Begin Measuring Distance"
 msgstr "距離の測定を開始"
 
-#: activity.py:127
+#: /home/rafael/Activities/distance/activity.py:193
 msgid "Stop Measuring Distance"
 msgstr "距離の測定を終了"
 
-#: activity.py:160
-msgid "Measured Distance in Meters"
-msgstr "メートル法で測定"
+#: /home/rafael/Activities/distance/activity.py:227
+#: /home/rafael/Activities/distance/smoot_toolbar.py:100
+#, python-format
+#, python-format,
+msgid "Measured distance in %s"
+msgstr "%s で測定された距離"
 
-#: atm_toolbars.py:30
+#: /home/rafael/Activities/distance/activity.py:227
+#: /home/rafael/Activities/distance/smoot_toolbar.py:30
+#: /home/rafael/Activities/distance/smoot_toolbar.py:34
+#: /home/rafael/Activities/distance/smoot_toolbar.py:79
+#: /home/rafael/Activities/distance/smoot_toolbar.py:101
+msgid "meters"
+msgstr ""
+
+#: /home/rafael/Activities/distance/atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr "気温(C): "
 
-#: atm_toolbars.py:40
+#: /home/rafael/Activities/distance/atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr "湿度(%): "
 
-#: atm_toolbars.py:50
+#: /home/rafael/Activities/distance/atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr "音速(メートル/秒): "
 
-#: calibration_toolbar.py:27
+#: /home/rafael/Activities/distance/calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
 msgstr "校正ずれ量(メートル): "
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:30
+#: /home/rafael/Activities/distance/smoot_toolbar.py:35
+msgid "centimeters"
+msgstr ""
+
+#. TRANS: English units of measure
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:36
+msgid "inches"
+msgstr ""
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:37
+msgid "feet"
+msgstr ""
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:32
+#: /home/rafael/Activities/distance/smoot_toolbar.py:38
+msgid "yards"
+msgstr ""
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:33
+#: /home/rafael/Activities/distance/smoot_toolbar.py:39
+msgid "custom units"
+msgstr ""
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:83
+msgid "Choose a unit of measure:"
+msgstr ""
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:86
+msgid "select units"
+msgstr ""
+
+#: /home/rafael/Activities/distance/smoot_toolbar.py:104
+#, python-format
+msgid "%(20.2)f %(1)s per meter"
+msgstr ""
+
+#~ msgid "Measured Distance in Meters"
+#~ msgstr "メートル法で測定"
 
 #, fuzzy
 #~ msgid "Acoustic Tape Measure"

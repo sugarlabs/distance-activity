@@ -38,7 +38,7 @@ msgstr ""
 "PO-Revision-Date: 2011-12-12 02:47+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pl\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -165,7 +165,7 @@ msgstr "wybierz jednostki"
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:104
 #, python-format
-#, python-format, 
+#, python-format,
 msgid "%(20.2)f %(1)s per meter"
 msgstr "%(20.2)f %(1)s na metr"
 

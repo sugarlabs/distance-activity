@@ -39,10 +39,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-29 01:08-0500\n"
+"POT-Creation-Date: 2011-08-09 11:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -52,64 +53,107 @@ msgstr ""
 msgid "Distance"
 msgstr ""
 
-#: activity.py:98
+#: activity.py:153
 msgid "Atmosphere"
 msgstr ""
 
-#: activity.py:117
+#: activity.py:156
+msgid "Custom metric"
+msgstr ""
+
+#: activity.py:178
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
 
-#: activity.py:118
+#: activity.py:180
 msgid "Press the button to measure the distance to another laptop"
 msgstr ""
 
-#: activity.py:119
+#: activity.py:182
 msgid "Preparing to measure distance"
 msgstr ""
 
-#: activity.py:120
+#: activity.py:183
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
 
-#: activity.py:121
+#: activity.py:185
 msgid "Recording sound from each laptop."
 msgstr ""
 
-#: activity.py:122
+#: activity.py:186
 msgid "Processing recorded audio."
 msgstr ""
 
-#: activity.py:124
+#: activity.py:188
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 
-#: activity.py:126
+#: activity.py:191
 msgid "Begin Measuring Distance"
 msgstr ""
 
-#: activity.py:127
+#: activity.py:192
 msgid "Stop Measuring Distance"
 msgstr ""
 
-#: activity.py:160
-msgid "Measured Distance in Meters"
+#: activity.py:226 smoot_toolbar.py:100
+#, python-format
+msgid "Measured distance in %s"
 msgstr ""
 
-#: atm_toolbars.py:30
+#: activity.py:226 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:79
+#: smoot_toolbar.py:101
+msgid "meters"
+msgstr ""
+
+#: atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr ""
 
-#: atm_toolbars.py:40
+#: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr ""
 
-#: atm_toolbars.py:50
+#: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr ""
 
 #: calibration_toolbar.py:27
 msgid "Calibration Offset (meters): "
+msgstr ""
+
+#: smoot_toolbar.py:30 smoot_toolbar.py:35
+msgid "centimeters"
+msgstr ""
+
+#. TRANS: English units of measure
+#: smoot_toolbar.py:32 smoot_toolbar.py:36
+msgid "inches"
+msgstr ""
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:37
+msgid "feet"
+msgstr ""
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:38
+msgid "yards"
+msgstr ""
+
+#: smoot_toolbar.py:33 smoot_toolbar.py:39
+msgid "custom units"
+msgstr ""
+
+#: smoot_toolbar.py:83
+msgid "Choose a unit of measure:"
+msgstr ""
+
+#: smoot_toolbar.py:86
+msgid "select units"
+msgstr ""
+
+#: smoot_toolbar.py:104
+msgid "%2$0.2f %1$s per meter"
 msgstr ""

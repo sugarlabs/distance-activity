@@ -43,10 +43,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-09-26 20:33+0000\n"
-"PO-Revision-Date: 2012-02-05 23:28+0200\n"
-"Last-Translator: ganesh <ganeshgajre@gmail.com>\n"
+"PO-Revision-Date: 2012-02-06 01:40+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: mr\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -109,7 +109,7 @@ msgstr "अंतर मापणे बंद करा"
 #: /home/rafael/Activities/distance/activity.py:227
 #: /home/rafael/Activities/distance/smoot_toolbar.py:100
 #, python-format
-#, python-format, 
+#, python-format,
 msgid "Measured distance in %s"
 msgstr "मापलेला अंतर %s मध्ये आहे"
 
@@ -135,7 +135,7 @@ msgstr "आवाज़ाची गती(मी/से): "
 
 #: /home/rafael/Activities/distance/calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr "अंशांत्मक समायोजन(मीटर्स)"
+msgstr "अंशांत्मक समायोजन(मीटर्स) "
 
 #: /home/rafael/Activities/distance/smoot_toolbar.py:30
 #: /home/rafael/Activities/distance/smoot_toolbar.py:35
