@@ -108,6 +108,14 @@ class AcousticMeasureActivity(activity.Activity):
             toolbar_box.toolbar.insert(title_entry, -1)
             title_entry.show()
 
+            try:
+                from sugar.activity.widgets import DescriptionItem
+                description_item = DescriptionItem(self)
+                toolbar_box.toolbar.insert(description_item, -1)
+                description_item.show()
+            except:
+                pass
+
             share_button = ShareButton(self)
             toolbar_box.toolbar.insert(share_button, -1)
             share_button.show()
