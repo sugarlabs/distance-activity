@@ -51,13 +51,11 @@ def _label_factory(label, toolbar):
     return my_label
 
 
-def _combo_factory(combo_array, default, tooltip, callback, toolbar):
+def _combo_factory(combo_array, default, tooltip, toolbar):
     '''Factory for making a toolbar combo box'''
     my_combo = ComboBox()
     if hasattr(my_combo, 'set_tooltip_text'):
         my_combo.set_tooltip_text(tooltip)
-
-    my_combo.connect('changed', callback)
 
     for i, s in enumerate(combo_array):
         my_combo.append_item(i, s, None)
@@ -84,7 +82,8 @@ class SmootToolbar(gtk.Toolbar):
         label.show()
 
         self._unit_combo = _combo_factory(UNITS, METERS, _('select units'),
-                                          self._unit_combo_cb, self)
+                self)
+        self._unit_combo.connect('changed', self._unit_combo_cb)
         self._unit_combo.show()
 
         self._factor_label = _label_factory(' ', self)
@@ -101,8 +100,8 @@ class SmootToolbar(gtk.Toolbar):
         if name == _('meters'):
             self._factor_label.set_label(' ')
         else:
-            self._factor_label.set_label(_('%(20.2)f %(1)s per meter') % (
-                    self._unit_scale, name))
+            self._factor_label.set_label(_('%(unit)20.2f %(name)s per meter') %
+                    {'unit': self._unit_scale, 'name': name})
 
     def get_scale(self):
         return self._unit_scale
