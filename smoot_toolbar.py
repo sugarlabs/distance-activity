@@ -15,11 +15,11 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-import gtk
+from gi.repository import Gtk, Gdk, GObject
 from gettext import gettext as _
 
-from sugar.graphics.combobox import ComboBox
-from sugar.graphics.toolcombobox import ToolComboBox
+from sugar3.graphics.combobox import ComboBox
+from sugar3.graphics.toolcombobox import ToolComboBox
 
 METERS = 0
 CENTIMETERS = 1
@@ -41,10 +41,10 @@ UNIT_DICTIONARY = {METERS: (_('meters'), 1.0),
 
 def _label_factory(label, toolbar):
     ''' Factory for adding a label to a toolbar '''
-    my_label = gtk.Label(label)
+    my_label = Gtk.Label(label=label)
     my_label.set_line_wrap(True)
     my_label.show()
-    _toolitem = gtk.ToolItem()
+    _toolitem = Gtk.ToolItem()
     _toolitem.add(my_label)
     toolbar.insert(_toolitem, -1)
     _toolitem.show()
@@ -67,11 +67,11 @@ def _combo_factory(combo_array, default, tooltip, toolbar):
     return my_combo
 
 
-class SmootToolbar(gtk.Toolbar):
+class SmootToolbar(Gtk.Toolbar):
     ''' Defines a toolbar for specifying units of measure '''
 
     def __init__(self, parent):
-        gtk.Toolbar.__init__(self)
+        GObject.GObject.__init__(self)
 
         self._parent = parent
         self._unit_name = _('meters')

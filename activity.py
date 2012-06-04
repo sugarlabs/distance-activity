@@ -16,21 +16,20 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-import gobject
-import gtk
+import gi
+from gi.repository import Gtk, Gdk, GObject, Pango, GdkPixbuf
 import logging
 import telepathy
 import telepathy.client
-import pango
 import locale
 
 # directory exists if powerd is running.  create a file here,
 # named after our pid, to inhibit suspend.
 POWERD_INHIBIT_DIR = '/var/run/powerd-inhibit-suspend'
 
-import sugar
-from sugar.activity import activity
-from sugar.presence import presenceservice
+import sugar3
+from sugar3.activity import activity
+from sugar3.presence import presenceservice
 
 from gettext import gettext as _
 
@@ -61,7 +60,7 @@ def gobject_idle_do(func, *args):
         e.set()
         return False
 
-    gobject.idle_add(helper, retval, func, args, ev)
+    GObject.idle_add(helper, retval, func, args, ev)
     ev.wait()
     return retval[0]
 
@@ -80,7 +79,7 @@ class AcousticMeasureActivity(activity.Activity):
         #self.set_title(_('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
 
-        gobject.threads_init()
+        GObject.threads_init()
 
         try:
             self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL,
@@ -91,13 +90,13 @@ class AcousticMeasureActivity(activity.Activity):
         # top toolbar with share and close buttons:
 
         try:
-            from sugar.graphics.toolbarbox import ToolbarBox
-            from sugar.graphics.toolbarbox import ToolbarButton
-            from sugar.activity.widgets import ShareButton
-            from sugar.activity.widgets import StopButton
-            from sugar.activity.widgets import ActivityButton
-            from sugar.activity.widgets import TitleEntry
-            from sugar.graphics.toolbutton import ToolButton
+            from sugar3.graphics.toolbarbox import ToolbarBox
+            from sugar3.graphics.toolbarbox import ToolbarButton
+            from sugar3.activity.widgets import ShareButton
+            from sugar3.activity.widgets import StopButton
+            from sugar3.activity.widgets import ActivityButton
+            from sugar3.activity.widgets import TitleEntry
+            from sugar3.graphics.toolbutton import ToolButton
 
             toolbar_box = ToolbarBox()
             activity_button = ActivityButton(self)
@@ -109,7 +108,7 @@ class AcousticMeasureActivity(activity.Activity):
             title_entry.show()
 
             try:
-                from sugar.activity.widgets import DescriptionItem
+                from sugar3.activity.widgets import DescriptionItem
                 description_item = DescriptionItem(self)
                 toolbar_box.toolbar.insert(description_item, -1)
                 description_item.show()
@@ -120,12 +119,12 @@ class AcousticMeasureActivity(activity.Activity):
             toolbar_box.toolbar.insert(share_button, -1)
             share_button.show()
 
-            separator = gtk.SeparatorToolItem()
+            separator = Gtk.SeparatorToolItem()
             toolbar_box.toolbar.insert(separator, -1)
             separator.show()
 
             self._t_h_bar = atm_toolbars.TempToolbar()
-            tb = gtk.HBox()
+            tb = Gtk.HBox()
             self._t_h_bar.show_all()
             adj_button = ToolbarButton(page=self._t_h_bar,
                                        icon_name='preferences-system')
@@ -139,7 +138,7 @@ class AcousticMeasureActivity(activity.Activity):
             toolbar_box.toolbar.insert(custom_button, -1)
             custom_button.show()
 
-            separator = gtk.SeparatorToolItem()
+            separator = Gtk.SeparatorToolItem()
             separator.props.draw = False
             separator.set_expand(True)
             toolbar_box.toolbar.insert(separator, -1)
@@ -183,7 +182,7 @@ class AcousticMeasureActivity(activity.Activity):
         thread.start_new_thread(self._helper_thread, ())
 
         # Main Panel GUI
-        self.main_panel = gtk.VBox()
+        self.main_panel = Gtk.VBox()
         self._message_dict['unshared'] = _("To measure the distance between \
 two laptops, you must first share this Activity.")
         self._message_dict['ready'] = _("Press the button to measure the \
@@ -200,47 +199,47 @@ participants, so you cannot join.")
         self._button_dict['waiting'] = _("Begin Measuring Distance")
         self._button_dict['going'] = _("Stop Measuring Distance")
 
-        self.button = gtk.ToggleButton(label=self._button_dict['waiting'])
+        self.button = Gtk.ToggleButton(label=self._button_dict['waiting'])
         self.button.connect('clicked', self._button_clicked)
         self.button.set_sensitive(False)
-        check = gtk.Image()
+        check = Gtk.Image()
         check.set_from_file('check.svg')
         self.button.set_image(check)
 
-        self.message = gtk.Label(self._message_dict['unshared'])
+        self.message = Gtk.Label(label=self._message_dict['unshared'])
         self.message.set_selectable(True)
         self.message.set_single_line_mode(True)
 
-        img = gtk.Image()
-        pb = gtk.gdk.pixbuf_new_from_file(
-            sugar.activity.activity.get_bundle_path() + '/dist.svg')
+        img = Gtk.Image()
+        pb = GdkPixbuf.Pixbuf.new_from_file(
+            sugar3.activity.activity.get_bundle_path() + '/dist.svg')
         img.set_from_pixbuf(pb)
 
-        self.value = gtk.Label()
+        self.value = Gtk.Label()
         self.value.set_selectable(True)
         thread.start_new_thread(self._update_distance, (0, ))
 
-        valuefont = pango.FontDescription()
+        valuefont = Pango.FontDescription()
         valuefont.set_family("monospace")
-        valuefont.set_absolute_size(300 * pango.SCALE)
+        valuefont.set_absolute_size(300 * Pango.SCALE)
 
         self.value.modify_font(valuefont)
         self.value.set_single_line_mode(True)
         self.value.set_width_chars(6)
 
-        eb = gtk.EventBox()
+        eb = Gtk.EventBox()
         eb.add(self.value)
-        eb.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse("white"))
+        eb.modify_bg(Gtk.StateType.NORMAL, Gdk.color_parse("white"))
 
-        self.fr = gtk.Frame(_('Measured distance in %s') % (_('meters')))
+        #self.fr = Gtk.Frame(_('Measured distance in %s') % (_('meters')))
+        self.fr = Gtk.Frame()
         self.fr.set_label_align(0.5, 0.5)
         self.fr.add(eb)
 
-        self.main_panel.pack_start(self.button, expand=False, padding=6)
-        self.main_panel.pack_start(self.message, expand=False)
-        self.main_panel.pack_start(img, expand=True, fill=False)
-        self.main_panel.pack_start(self.fr, expand=True, fill=False,
-                                   padding=10)
+        self.main_panel.pack_start(self.button, False, False, 6)
+        self.main_panel.pack_start(self.message, False, True, 0)
+        self.main_panel.pack_start(img, True, False, 0)
+        self.main_panel.pack_start(self.fr, True, False, 10)
 
         self.set_canvas(self.main_panel)
         self.show_all()
@@ -369,7 +368,7 @@ participants, so you cannot join.")
         #f = os.tempnam()
         # The filename cannot be in $TMP, because this directory is not
         # visible to Telepathy.
-        f = sugar.activity.activity.get_activity_root() \
+        f = sugar3.activity.activity.get_activity_root() \
             + '/instance/my_socket'
         if os.path.exists(f):
             os.unlink(f)
@@ -510,7 +509,7 @@ participants, so you cannot join.")
     # KP_Home == box gamekey = 65429
     # KP_Page_Up == O gamekey = 65434
     def _keypress_cb(self, widget, event):
-        self._logger.debug("key press: " + gtk.gdk.keyval_name(event.keyval) \
+        self._logger.debug("key press: " + Gdk.keyval_name(event.keyval) \
                                + " " + str(event.keyval))
         if event.keyval == 65436:
             self.button.clicked()

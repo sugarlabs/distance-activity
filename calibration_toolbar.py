@@ -14,30 +14,30 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-import gtk
+from gi.repository import Gtk, Gdk, GObject
 import arange
 import locale
 from gettext import gettext
 
 
-class CalibrationToolbar(gtk.Toolbar):
+class CalibrationToolbar(Gtk.Toolbar):
 
     def __init__(self):
-        gtk.Toolbar.__init__(self)
+        GObject.GObject.__init__(self)
         
-        offset_label = gtk.Label(gettext("Calibration Offset (meters): "))
-        self._offset_field = gtk.Entry()
+        offset_label = Gtk.Label(label=gettext("Calibration Offset (meters): "))
+        self._offset_field = Gtk.Entry()
         self._offset_field.set_max_length(10)
         self._offset_field.set_width_chars(10)
         
-        bigbox = gtk.HBox()
+        bigbox = Gtk.HBox()
         
         bigbox.pack_start(offset_label, expand=False, fill=False)
         bigbox.pack_end(self._offset_field, expand=False, fill=False)
         
         self.set_offset(arange.OLPC_OFFSET)
 
-        tool_item = gtk.ToolItem()
+        tool_item = Gtk.ToolItem()
         tool_item.add(bigbox)
         tool_item.set_expand(False)
         self.insert(tool_item, 0)
