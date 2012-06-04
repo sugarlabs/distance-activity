@@ -43,8 +43,8 @@ cache_dict = {}
 def compute_mls(R):
     """
     Computes a Maximum-Length-Sequence using a naive LFSR approach
-    for n=3...32. R is the register initializer (cannot be all-zero) which 
-    determines the phase of the MLS.  
+    for n=3...32. R is the register initializer (cannot be all-zero) which
+    determines the phase of the MLS.
     """
 
     # 1-indexed collection of MLS taps from http://homepage.mac.com/afj/taplist.html
@@ -96,9 +96,9 @@ def LFSR(R, taps, m):
     o = num.resize(num.array([], num.bool), (m))
     if len(taps) == 2:
         a = taps[0]
-        b = taps[1]   
+        b = taps[1]
         for i in xrange(m):
-             next = R[a] ^ R[b] 
+             next = R[a] ^ R[b]
              o[i] = R[-1]
              R[1:] = R[:-1]
              R[0] = next
@@ -218,7 +218,7 @@ def cross_cov(a, b, a_id=None):
         else:
             fa = num.fft.rfft(a,n2)
             cache_dict[('fft', a_id, n2)] = fa
-    else:       
+    else:
         fa = num.fft.rfft(a,n2)
     fb = num.fft.rfft(b,n2)
     fprod = num.conjugate(fa)*fb
@@ -267,7 +267,7 @@ def do_server_simul(server_address, port):
 
 def do_client_simul(server_address, port):
     """
-    Make this computer the client for a distance measurement 
+    Make this computer the client for a distance measurement
     using measure_dt_simul
     """
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -463,7 +463,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
 
     amp_ringdown = 0.2
     time.sleep(amp_ringdown)
-	
+    
     handoff_command = 'your turn'
     ringdown = 0.3  # seconds
     if am_server:
@@ -547,7 +547,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
 def getpeak(a):
     return num.argmax(abs(a))
     
-def speed_of_sound(t=25.0, h=0.6, p=101325.0, x_c=0.0004): 
+def speed_of_sound(t=25.0, h=0.6, p=101325.0, x_c=0.0004):
     """
     t= temperature in Celsius
     h = relative humidity as a fraction
