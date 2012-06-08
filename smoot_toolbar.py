@@ -16,7 +16,6 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import gtk
-from gettext import gettext as _
 
 from sugar.graphics.combobox import ComboBox
 from sugar.graphics.toolcombobox import ToolComboBox
@@ -27,6 +26,14 @@ INCHES = 2
 FEET = 3
 YARDS = 4
 CUSTOM = 5
+
+
+# This is a workaround to fix SL #3524
+# Documentation:
+# http://docs.python.org/library/gettext.html#deferred-translations
+def _(message):
+    return message
+
 UNITS = [_('meters'), _('centimeters'),
          # TRANS: English units of measure
          _('inches'), _('feet'), _('yards'),
@@ -37,6 +44,8 @@ UNIT_DICTIONARY = {METERS: (_('meters'), 1.0),
                    FEET: (_('feet'), 3.28),
                    YARDS: (_('yards'), 1.09),
                    CUSTOM: (_('custom units'), None)}
+del _
+from gettext import gettext as _
 
 
 def _label_factory(label, toolbar):
@@ -58,7 +67,7 @@ def _combo_factory(combo_array, default, tooltip, toolbar):
         my_combo.set_tooltip_text(tooltip)
 
     for i, s in enumerate(combo_array):
-        my_combo.append_item(i, s, None)
+        my_combo.append_item(i, _(s), None)
 
     toolbar.insert(ToolComboBox(my_combo), -1)
 
@@ -96,12 +105,12 @@ class SmootToolbar(gtk.Toolbar):
         self._unit_name = name
         if hasattr(self._parent, 'fr'):
             self._parent.fr.set_label(
-                _('Measured distance in %s') % (self._unit_name))
+                _('Measured distance in %s') % _(self._unit_name))
         if name == _('meters'):
             self._factor_label.set_label(' ')
         else:
             self._factor_label.set_label(_('%(unit)20.2f %(name)s per meter') %
-                    {'unit': self._unit_scale, 'name': name})
+                    {'unit': self._unit_scale, 'name': _(name)})
 
     def get_scale(self):
         return self._unit_scale
