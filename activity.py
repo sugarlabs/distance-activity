@@ -17,11 +17,11 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import gi
-from gi.repository import Gtk, Gdk, GObject, Pango, GdkPixbuf
 import logging
 import telepathy
 import telepathy.client
 import locale
+from gi.repository import Gtk, Gdk, GObject, Pango, GdkPixbuf
 
 # directory exists if powerd is running.  create a file here,
 # named after our pid, to inhibit suspend.
