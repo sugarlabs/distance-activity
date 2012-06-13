@@ -222,7 +222,7 @@ participants, so you cannot join.")
 
         valuefont = Pango.FontDescription()
         valuefont.set_family("monospace")
-        valuefont.set_absolute_size(300 * Pango.SCALE)
+        valuefont.set_absolute_size(100 * Pango.SCALE)
 
         self.value.modify_font(valuefont)
         self.value.set_single_line_mode(True)
@@ -239,8 +239,8 @@ participants, so you cannot join.")
 
         self.main_panel.pack_start(self.button, expand=False, fill=False, padding=6)
         self.main_panel.pack_start(self.message, expand=False, fill=True, padding=0)
-        self.main_panel.pack_start(img, expand=True, fill=False, padding=0)
-        self.main_panel.pack_start(self.fr, expand=True, fill=False, padding=10)
+        self.main_panel.pack_start(img, expand=False, fill=False, padding=0)
+        self.main_panel.pack_start(self.fr, expand=False, fill=False, padding=10)
 
         self.set_canvas(self.main_panel)
         self.show_all()
