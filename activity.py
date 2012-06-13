@@ -182,7 +182,8 @@ class AcousticMeasureActivity(activity.Activity):
         thread.start_new_thread(self._helper_thread, ())
 
         # Main Panel GUI
-        self.main_panel = Gtk.VBox()
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        self.main_panel = vbox
         self._message_dict['unshared'] = _("To measure the distance between \
 two laptops, you must first share this Activity.")
         self._message_dict['ready'] = _("Press the button to measure the \
