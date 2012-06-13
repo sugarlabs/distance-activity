@@ -138,6 +138,7 @@ def write_wav(o):
     w.writeframes(q.tostring())
     return f
 
+
 def play_wav_alsa(fname):
     subprocess.call(["/usr/bin/aplay", fname])
     
@@ -157,6 +158,7 @@ def record_while_playing(play_name, t):
     stop_recording(recorder)
     return f
 
+
 def start_recording_alsa():
     fname = os.tempnam()
     
@@ -169,16 +171,18 @@ def start_recording_alsa():
         except os.error:
             time.sleep(0.02)
 
-    f = open(fname,'rb')
+    f = open(fname, 'rb')
     return (rec_process, f)
     
 start_recording = start_recording_alsa
+
 
 def stop_recording_alsa(rec_process):
     os.kill(rec_process.pid, signal.SIGKILL)
     rec_process.wait()
     
 stop_recording = stop_recording_alsa
+
 
 def read_wav(f):
     """
@@ -197,6 +201,7 @@ def read_wav(f):
     a = struct.unpack('<' + str(n*nc) + typecode, s)
     return num.array(a[::nc], num.float)
 
+
 def read_raw(f):
     x = f.read()
     n = len(x)/2
@@ -207,23 +212,25 @@ def read_raw(f):
     
 read_recorded_file = read_raw
 
+
 def cross_cov(a, b, a_id=None):
     """computes the cross-covariance of signals in a and b"""
     assert (a.ndim == 1) and (b.ndim == 1)
     n = max(a.size, b.size)
-    n2 = 2**int(math.ceil(math.log(n,2)))  # power of 2 >=n
+    n2 = 2**int(math.ceil(math.log(n, 2)))  # power of 2 >=n
     if a_id is not None:
         if cache_dict.has_key(('fft', a_id, n2)):
             fa = cache_dict[('fft', a_id, n2)]
         else:
-            fa = num.fft.rfft(a,n2)
+            fa = num.fft.rfft(a, n2)
             cache_dict[('fft', a_id, n2)] = fa
     else:
-        fa = num.fft.rfft(a,n2)
-    fb = num.fft.rfft(b,n2)
+        fa = num.fft.rfft(a, n2)
+    fb = num.fft.rfft(b, n2)
     fprod = num.conjugate(fa)*fb
     xc = num.fft.irfft(fprod)
     return xc[:n].real
+
 
 def get_room_echo(t):
     """A test function that can be used to determine the impulse response
@@ -237,6 +244,7 @@ def get_room_echo(t):
     record_file.close()
     os.remove(record_file.name)
     return cross_cov(mls - 0.5, rec_array)
+
 
 def get_noise_echo(t):
     """The same as get_echo, but with no signal."""
@@ -265,6 +273,7 @@ def do_server_simul(server_address, port):
     server_socket.close()
     return dt
 
+
 def do_client_simul(server_address, port):
     """
     Make this computer the client for a distance measurement
@@ -275,7 +284,8 @@ def do_client_simul(server_address, port):
     dt = measure_dt_simul(client_socket, False)
     client_socket.close()
     return dt
-    
+
+
 def do_server_seq(server_address, port):
     """
     Make this computer the server for a distance measurement
@@ -291,6 +301,7 @@ def do_server_seq(server_address, port):
     server_socket.close()
     return dt
 
+
 def do_client_seq(server_address, port):
     """
     Make this computer the client for a distance measurement
@@ -301,6 +312,7 @@ def do_client_seq(server_address, port):
     dt = measure_dt_seq(client_socket, False)
     client_socket.close()
     return dt
+
 
 def recvall(s, n):
     """
@@ -315,6 +327,7 @@ def recvall(s, n):
         received = received + q
     return received
 
+
 def recvmsg(s, message):
     """
     Attempt to receive a specific message from a socket.  Returns
@@ -322,6 +335,7 @@ def recvmsg(s, message):
     """
     #assert type(s) == socket._socketobject
     return (message == recvall(s, len(message)))
+
 
 def measure_dt_simul(s, am_server):
     """
@@ -338,14 +352,14 @@ def measure_dt_simul(s, am_server):
     else:
         R = (num.zeros((MLS_INDEX)) == 0)
         mls = compute_mls(R)
-        cache_dict[('mls',MLS_INDEX)] = mls
+        cache_dict[('mls', MLS_INDEX)] = mls
     
     if am_server:
-        if cache_dict.has_key(('mls_rev',MLS_INDEX)):
-            mls = cache_dict[('mls_rev',MLS_INDEX)]
+        if cache_dict.has_key(('mls_rev', MLS_INDEX)):
+            mls = cache_dict[('mls_rev', MLS_INDEX)]
         else:
             mls = mls[::-1]
-            cache_dict[('mls_rev',MLS_INDEX)] = mls
+            cache_dict[('mls_rev', MLS_INDEX)] = mls
     mls_wav_file = write_wav(mls)
 
     ready_command = 'ready'
@@ -400,6 +414,7 @@ def measure_dt_simul(s, am_server):
 
     return roundtrip/2
 
+
 def measure_dt_seq(s, am_server, send_signal=False):
     """
     This function performs distance measurement using sequential playback.
@@ -413,18 +428,18 @@ def measure_dt_seq(s, am_server, send_signal=False):
     if send_signal:
         send_signal('preparing')
 
-    if cache_dict.has_key(('mls',MLS_INDEX)):
-        mls = cache_dict[('mls',MLS_INDEX)]
+    if cache_dict.has_key(('mls', MLS_INDEX)):
+        mls = cache_dict[('mls', MLS_INDEX)]
     else:
         R = (num.zeros((MLS_INDEX)) == 0)
         mls = compute_mls(R)
-        cache_dict[('mls',MLS_INDEX)] = mls
+        cache_dict[('mls', MLS_INDEX)] = mls
     
-    if cache_dict.has_key(('mls_rev',MLS_INDEX)):
-        mls_rev = cache_dict[('mls_rev',MLS_INDEX)]
+    if cache_dict.has_key(('mls_rev', MLS_INDEX)):
+        mls_rev = cache_dict[('mls_rev', MLS_INDEX)]
     else:
         mls_rev = mls[::-1]
-        cache_dict[('mls_rev',MLS_INDEX)] = mls_rev
+        cache_dict[('mls_rev', MLS_INDEX)] = mls_rev
             
     if am_server:
             mls_wav_file = write_wav(mls)
@@ -510,17 +525,17 @@ def measure_dt_seq(s, am_server, send_signal=False):
     print num.size(rec1)
     print num.size(rec2)
     
-    if cache_dict.has_key(('mls_float',MLS_INDEX)):
-        mls_float = cache_dict[('mls_float',MLS_INDEX)]
+    if cache_dict.has_key(('mls_float', MLS_INDEX)):
+        mls_float = cache_dict[('mls_float', MLS_INDEX)]
     else:
         mls_float = mls - 0.5
-        cache_dict[('mls_float',MLS_INDEX)] = mls_float
+        cache_dict[('mls_float', MLS_INDEX)] = mls_float
     
-    if cache_dict.has_key(('mls_rev_float',MLS_INDEX)):
-        mls_rev_float = cache_dict[('mls_rev_float',MLS_INDEX)]
+    if cache_dict.has_key(('mls_rev_float', MLS_INDEX)):
+        mls_rev_float = cache_dict[('mls_rev_float', MLS_INDEX)]
     else:
         mls_rev_float = mls_rev - 0.5
-        cache_dict[('mls_rev_float',MLS_INDEX)] = mls_rev_float
+        cache_dict[('mls_rev_float', MLS_INDEX)] = mls_rev_float
     xc_server = cross_cov(mls_float, rec1, ('mls_float', MLS_INDEX))
     xc_client = cross_cov(mls_rev_float, rec2, ('mls_rev_float', MLS_INDEX))
     s_peak = getpeak(xc_server)
@@ -543,10 +558,12 @@ def measure_dt_seq(s, am_server, send_signal=False):
         send_signal('done')
 
     return roundtrip/2
-    
+
+
 def getpeak(a):
     return num.argmax(abs(a))
-    
+
+
 def speed_of_sound(t=25.0, h=0.6, p=101325.0, x_c=0.0004):
     """
     t= temperature in Celsius
