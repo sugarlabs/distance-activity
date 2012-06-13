@@ -124,7 +124,7 @@ class AcousticMeasureActivity(activity.Activity):
             separator.show()
 
             self._t_h_bar = atm_toolbars.TempToolbar()
-            tb = Gtk.HBox()
+            tb = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
             self._t_h_bar.show_all()
             adj_button = ToolbarButton(page=self._t_h_bar,
                                        icon_name='preferences-system')
