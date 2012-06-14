@@ -151,7 +151,6 @@ class AcousticMeasureActivity(activity.Activity):
         toolbar_box.show()
         toolbar = toolbar_box.toolbar
 
-
         if not self.powerd_running():
             try:
                 bus = dbus.SystemBus()
