@@ -89,7 +89,6 @@ class AcousticMeasureActivity(activity.Activity):
 
         # top toolbar with share and close buttons:
 
-       # try:
         from sugar3.graphics.toolbarbox import ToolbarBox
         from sugar3.graphics.toolbarbox import ToolbarButton
         from sugar3.activity.widgets import ShareButton
@@ -152,16 +151,6 @@ class AcousticMeasureActivity(activity.Activity):
         toolbar_box.show()
         toolbar = toolbar_box.toolbar
 
-        #except ImportError:
-        #    toolbox = activity.ActivityToolbox(self)
-        #    self.set_toolbox(toolbox)
-        #    toolbox.show()
-
-        #    self._t_h_bar = atm_toolbars.TempToolbar()
-        #    toolbox.add_toolbar(_("Atmosphere"), self._t_h_bar)
-
-        #    self._smoot_bar = smoot_toolbar.SmootToolbar(self)
-        #    toolbox.add_toolbar(_("Custom metric"), self._smoot_bar)
 
         if not self.powerd_running():
             try:
