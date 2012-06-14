@@ -16,7 +16,6 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-import gi
 import logging
 import telepathy
 import telepathy.client
@@ -95,7 +94,6 @@ class AcousticMeasureActivity(activity.Activity):
         from sugar3.activity.widgets import StopButton
         from sugar3.activity.widgets import ActivityButton
         from sugar3.activity.widgets import TitleEntry
-        from sugar3.graphics.toolbutton import ToolButton
 
         toolbar_box = ToolbarBox()
         activity_button = ActivityButton(self)
