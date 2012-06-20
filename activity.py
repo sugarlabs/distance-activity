@@ -20,7 +20,12 @@ import logging
 import telepathy
 import telepathy.client
 import locale
-from gi.repository import Gtk, Gdk, GObject, Pango, GdkPixbuf
+
+from gi.repository import Gtk
+from gi.repository import Gdk 
+from gi.repository import GObject 
+from gi.repository import Pango
+from gi.repository import GdkPixbuf
 
 # directory exists if powerd is running.  create a file here,
 # named after our pid, to inhibit suspend.
