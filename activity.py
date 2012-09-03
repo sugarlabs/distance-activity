@@ -22,8 +22,8 @@ import telepathy.client
 import locale
 
 from gi.repository import Gtk
-from gi.repository import Gdk 
-from gi.repository import GObject 
+from gi.repository import Gdk
+from gi.repository import GObject
 from gi.repository import Pango
 from gi.repository import GdkPixbuf
 
@@ -85,6 +85,9 @@ class AcousticMeasureActivity(activity.Activity):
 
         GObject.threads_init()
 
+        # FIXME: object has no attribute _shared_activity
+        self._shared_activity = None
+        
         try:
             self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL,
                                                              ''))
