@@ -22,8 +22,8 @@ import telepathy.client
 import locale
 
 from gi.repository import Gtk
-from gi.repository import Gdk 
-from gi.repository import GObject 
+from gi.repository import Gdk
+from gi.repository import GObject
 from gi.repository import Pango
 from gi.repository import GdkPixbuf
 
@@ -84,7 +84,7 @@ class AcousticMeasureActivity(activity.Activity):
         self._logger = logging.getLogger('acousticmeasure-activity')
 
         GObject.threads_init()
-
+        
         try:
             self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL,
                                                              ''))
@@ -396,12 +396,12 @@ participants, so you cannot join.")
         self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].connect_to_signal(
             'TubeStateChanged', self._tube_state_cb)
 
-        self._shared_activity.connect('buddy-joined', self._buddy_joined_cb)
-        self._shared_activity.connect('buddy-left', self._buddy_left_cb)
+        self.shared_activity.connect('buddy-joined', self._buddy_joined_cb)
+        self.shared_activity.connect('buddy-left', self._buddy_left_cb)
 
         # Optional - included for example:
         # Find out who's already in the shared activity:
-        for buddy in self._shared_activity.get_joined_buddies():
+        for buddy in self.shared_activity.get_joined_buddies():
             self._logger.debug('Buddy %s is already in the activity',
                                buddy.props.nick)
 
@@ -413,12 +413,12 @@ participants, so you cannot join.")
         self._logger.error('ListTubes() failed: %s', e)
 
     def _joined_cb(self, activity):
-        if not self._shared_activity:
+        if not self.shared_activity:
             return
 
         # Find out who's already in the shared activity:
         n = 0
-        for buddy in self._shared_activity.get_joined_buddies():
+        for buddy in self.shared_activity.get_joined_buddies():
             n += 1
             self._logger.debug('Buddy %s is already in the activity' % \
                                    buddy.props.nick)
@@ -435,7 +435,7 @@ participants, so you cannot join.")
                 error_handler=self._list_tubes_error_cb)
         else:
             self._logger.debug("There are already two people, not joining")
-            self._shared_activity.leave()
+            self.shared_activity.leave()
             thread.start_new_thread(self._change_message, ('full',))
 
     def _new_tube_cb(self, id, initiator, type, service, params, state):
