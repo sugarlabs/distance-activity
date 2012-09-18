@@ -14,7 +14,10 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-from gi.repository import Gtk, Gdk, GObject
+from gi.repository import Gtk
+from gi.repository import Gdk
+from gi.repository import GObject
+
 import arange
 import locale
 from gettext import gettext
@@ -30,7 +33,7 @@ class CalibrationToolbar(Gtk.Toolbar):
         self._offset_field.set_max_length(10)
         self._offset_field.set_width_chars(10)
         
-        bigbox = Gtk.HBox()
+        bigbox = Gtk.Box(orientation = Gtk.Orientation.HORIZONTAL)
         
         bigbox.pack_start(offset_label, expand=False, fill=False)
         bigbox.pack_end(self._offset_field, expand=False, fill=False)
