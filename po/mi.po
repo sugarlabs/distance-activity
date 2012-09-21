@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-27 00:33-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.7.0\n"
+
+#: activity/activity.info:2
+msgid "Distance"
+msgstr "Tawhiti"
+
+#: activity.py:162
+msgid "Atmosphere"
+msgstr "Kōhauhau"
+
+#: activity.py:165
+msgid "Custom metric"
+msgstr "Ritenga ngahuru"
+
+#: activity.py:187
+msgid ""
+"To measure the distance between two laptops, you must first share this "
+"Activity."
+msgstr ""
+"Kia inea te tawhiti i waenga i ngā rorohiko pona e rua, me tiri tuatahi "
+"tēnei Ngohe."
+
+#: activity.py:189
+msgid "Press the button to measure the distance to another laptop"
+msgstr "Pēhia te pātene kia inea te tawhiti ki tētahi rorohiko pona anō"
+
+#: activity.py:191
+msgid "Preparing to measure distance"
+msgstr "Whakarite ana te ine tawhiti"
+
+#: activity.py:192
+msgid "Ready to make a measurement.  Waiting for partner to be ready."
+msgstr "Kua rite ki te ine.  Tāria ana kia rite tō hoa."
+
+#: activity.py:194
+msgid "Recording sound from each laptop."
+msgstr "Hopu oro ana mai i ia rorohiko pona."
+
+#: activity.py:195
+msgid "Processing recorded audio."
+msgstr "Tukatuka ana ngā hopukanga ororongo."
+
+#: activity.py:197
+msgid "This activity already has two participants, so you cannot join."
+msgstr "Kua kikī kē tēnei ngohe. Kāore he kuhunga māu."
+
+#: activity.py:200
+msgid "Begin Measuring Distance"
+msgstr "Tīmatatia te Ine Tawhiti"
+
+#: activity.py:201
+msgid "Stop Measuring Distance"
+msgstr "Whakatū te Ine Tawhiti"
+
+#: activity.py:235 smoot_toolbar.py:99
+#, python-format
+msgid "Measured distance in %s"
+msgstr "Te ine tawhiti hei %s"
+
+#: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
+#: smoot_toolbar.py:100
+msgid "meters"
+msgstr "ngā mita"
+
+#: atm_toolbars.py:65
+msgid "Temperature (C): "
+msgstr "Paemahana (C): "
+
+#: atm_toolbars.py:70
+msgid "Relative Humidity (%): "
+msgstr "Takawai Pānoa (%): "
+
+#: atm_toolbars.py:75
+msgid "Speed of Sound (m/s): "
+msgstr "Terenga Oro (m/s): "
+
+#: calibration_toolbar.py:28
+msgid "Calibration Offset (meters): "
+msgstr "Tōkarikari Wāhikē (mita): "
+
+#: smoot_toolbar.py:30 smoot_toolbar.py:35
+msgid "centimeters"
+msgstr "ngā hēnimita"
+
+#. TRANS: English units of measure
+#: smoot_toolbar.py:32 smoot_toolbar.py:36
+msgid "inches"
+msgstr "ngā īnihi"
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:37
+msgid "feet"
+msgstr "ngā putu"
+
+#: smoot_toolbar.py:32 smoot_toolbar.py:38
+msgid "yards"
+msgstr "ngā iāri"
+
+#: smoot_toolbar.py:33 smoot_toolbar.py:39
+msgid "custom units"
+msgstr "ngā ritenga wae"
+
+#: smoot_toolbar.py:81
+msgid "Choose a unit of measure:"
+msgstr "Kōwhirihia tētahi waeine:"
+
+#: smoot_toolbar.py:84
+msgid "select units"
+msgstr "tīpakohia he waeine"
+
+#: smoot_toolbar.py:103
+#, python-format
+msgid "%(unit)20.2f %(name)s per meter"
+msgstr "%(unit)20.2f % ngā %(name)s ia mita"
