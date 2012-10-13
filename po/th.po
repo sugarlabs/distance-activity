@@ -2,171 +2,127 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-26 20:33+0000\n"
-"PO-Revision-Date: 2012-03-08 11:09+0200\n"
-"Last-Translator: Meechai <malaku38@hotmail.com>\n"
+"POT-Creation-Date: 2012-04-27 00:33-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Translate Toolkit 1.7.0\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr "ระยะห่าง"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:154
+#: activity.py:162
 msgid "Atmosphere"
-msgstr "บรรยากาศ"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:157
+#: activity.py:165
 msgid "Custom metric"
-msgstr "กำหนดตัวชี้วัด"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:179
+#: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr "ในการวัดระยะระหว่างเครื่อง 2 เครื่องคุณต้องแบ่งปันกิจกรรมนี้ก่อน"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:181
+#: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr "กดปุ่มเพื่อวัดระยะห่างกับอีกเครื่อง"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:183
+#: activity.py:191
 msgid "Preparing to measure distance"
-msgstr "กำลังเตรียมวัดระยะทาง"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:184
+#: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "พร้อมจะวัดระยะแล้ว  กำลังรอเพื่อนให้พร้อม"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:186
+#: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr "กำลังบันทึกเสียงจากแต่ละเครื่อง"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:187
+#: activity.py:195
 msgid "Processing recorded audio."
-msgstr "กำลังประมวลผลเสียงที่บันทึก"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:189
+#: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
-msgstr "กิจกรรมนี้มีผู้เข้าร่วม 2 คนแล้ว ดังนั้นคุณไม่สามารถเข้าร่วมได้"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:192
+#: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr "เริ่มวัดระยะทาง"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:193
+#: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr "หยุดวัดระยะทาง"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:227
-#: /home/rafael/Activities/distance/smoot_toolbar.py:100
+#: activity.py:235 smoot_toolbar.py:99
 #, python-format
-#, python-format,
 msgid "Measured distance in %s"
-msgstr "ระยะทางที่วัดได้เป็น %s"
+msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:227
-#: /home/rafael/Activities/distance/smoot_toolbar.py:30
-#: /home/rafael/Activities/distance/smoot_toolbar.py:34
-#: /home/rafael/Activities/distance/smoot_toolbar.py:79
-#: /home/rafael/Activities/distance/smoot_toolbar.py:101
+#: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
+#: smoot_toolbar.py:100
 msgid "meters"
-msgstr "เมตร"
+msgstr ""
 
-#: /home/rafael/Activities/distance/atm_toolbars.py:65
+#: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr "อุณหภูมิ (C): "
+msgstr ""
 
-#: /home/rafael/Activities/distance/atm_toolbars.py:70
+#: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr "ความชื้นสัมพัทธ์ (%): "
+msgstr ""
 
-#: /home/rafael/Activities/distance/atm_toolbars.py:75
+#: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr "ความเร็วของเสียง (เมตร/วินาที): "
+msgstr ""
 
-#: /home/rafael/Activities/distance/calibration_toolbar.py:28
+#: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr "การเทียบมาตรฐาน (เมตร): "
+msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:30
-#: /home/rafael/Activities/distance/smoot_toolbar.py:35
+#: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr "เซนติเมตร"
+msgstr ""
 
 #. TRANS: English units of measure
-#: /home/rafael/Activities/distance/smoot_toolbar.py:32
-#: /home/rafael/Activities/distance/smoot_toolbar.py:36
+#: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr "นิ้ว"
+msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:32
-#: /home/rafael/Activities/distance/smoot_toolbar.py:37
+#: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr "ฟุต"
+msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:32
-#: /home/rafael/Activities/distance/smoot_toolbar.py:38
+#: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr "หลา"
+msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:33
-#: /home/rafael/Activities/distance/smoot_toolbar.py:39
+#: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr "กำหนดหน่วยวัด"
+msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:83
+#: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr "เลือกหน่วยของการวัด:"
+msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:86
+#: smoot_toolbar.py:84
 msgid "select units"
-msgstr "เลือกหน่วยวัด"
+msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:104
+#: smoot_toolbar.py:103
 #, python-format
-msgid "%(20.2)f %(1)s per meter"
-msgstr "%(20.2)f %(1)s ต่อ เมตร"
-
-#~ msgid "Measured Distance in Meters"
-#~ msgstr "ระยะทางที่วัดได้เป็นเมตร"
-
-#~ msgid "Acoustic Tape Measure"
-#~ msgstr "เทปเสียงวัดระยะ"
+msgid "%(unit)20.2f %(name)s per meter"
+msgstr ""

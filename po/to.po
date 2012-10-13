@@ -2,14 +2,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #, fuzzy
 msgid ""
 msgstr ""
@@ -23,15 +15,15 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.6.0\n"
+"X-Generator: Translate Toolkit 1.7.0\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "Mama'o"
 
 #: activity.py:162
 msgid "Atmosphere"
-msgstr ""
+msgstr "'Etimosifia"
 
 #: activity.py:165
 msgid "Custom metric"
@@ -42,38 +34,42 @@ msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"Ke fua e mama'o'oha ongo lepitopu, kuopau keke tomu'a vahevahe atu e "
+"'Ekitiviti ko 'eni."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "Lomi'i e patoni ke fua e mama'o ki ha toe lepitopu kehe"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "Teuteu ke fua e  va mama'o"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "Mateuteu ke fakahoko hono fua Fakatatali ke maau e hoa."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "Lolotonga lekooti e ngaahi ongo meihe ngaahi lepitopu."
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "Lolotonga poloosesi e audio ne lekooti."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
+"Kuo 'osi kau mai e tokoua ia kihe 'ekitiviti ko 'eni, ko ia ai 'oku 'ikai "
+"teke lava koe 'o kau mai."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "Kamata hono Fua e Mama'o"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "Ta'ofi hono fua e Mama'o"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format
@@ -87,7 +83,7 @@ msgstr ""
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr ""
+msgstr "Fuamafana (C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
@@ -95,7 +91,7 @@ msgstr ""
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "Koe vave pe oma 'oe Ongo (m/s): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "

@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-09-26 20:33+0000\n"
+"POT-Creation-Date: 2012-04-27 00:33-0400\n"
 "PO-Revision-Date: 2008-07-05 06:57+0100\n"
 "Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,15 +48,15 @@ msgstr ""
 msgid "Distance"
 msgstr "దూరం"
 
-#: /home/rafael/Activities/distance/activity.py:154
+#: activity.py:162
 msgid "Atmosphere"
 msgstr "ఆకాశము"
 
-#: /home/rafael/Activities/distance/activity.py:157
+#: activity.py:165
 msgid "Custom metric"
 msgstr ""
 
-#: /home/rafael/Activities/distance/activity.py:179
+#: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
@@ -64,106 +64,97 @@ msgstr ""
 "రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికిముందు మీరు ఈ వ్యాపకమును పంచుకోవలిన అవసరం "
 "ఉంది."
 
-#: /home/rafael/Activities/distance/activity.py:181
+#: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
 msgstr "రెండు లేప్ టాప్ లమద్య దూరంకొలవడానికి మీట నొక్కండి"
 
-#: /home/rafael/Activities/distance/activity.py:183
+#: activity.py:191
 msgid "Preparing to measure distance"
 msgstr "దూరంకొలవడానికి తయారవుతుంది"
 
-#: /home/rafael/Activities/distance/activity.py:184
+#: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr "దూరంకొలవడానికి తయారవుగాఉంది. జతగాడి తయారుకై ఎదురుచూస్తుంది."
 
-#: /home/rafael/Activities/distance/activity.py:186
+#: activity.py:194
 msgid "Recording sound from each laptop."
 msgstr "ప్రతీ లేప్ టాప్ లనుంచీ శబ్దమును రికార్డు చేస్తుంది"
 
-#: /home/rafael/Activities/distance/activity.py:187
+#: activity.py:195
 msgid "Processing recorded audio."
 msgstr "రికార్డు చేసిన శబ్దమును విశ్లేషిస్తుంది."
 
-#: /home/rafael/Activities/distance/activity.py:189
+#: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
 msgstr "ఈ వ్యాపకంలో ఇప్పటికే ఇద్దరు పాల్గొన్నారు. అందువలన మీరు పాల్గోలేరు."
 
-#: /home/rafael/Activities/distance/activity.py:192
+#: activity.py:200
 msgid "Begin Measuring Distance"
 msgstr "దూరంకొలత మొదలుపెట్టు"
 
-#: /home/rafael/Activities/distance/activity.py:193
+#: activity.py:201
 msgid "Stop Measuring Distance"
 msgstr "దూరంకొలత ఆపు"
 
-#: /home/rafael/Activities/distance/activity.py:227
-#: /home/rafael/Activities/distance/smoot_toolbar.py:100
+#: activity.py:235 smoot_toolbar.py:99
 #, python-format
 #, python-format, fuzzy
 msgid "Measured distance in %s"
 msgstr "కొలిచిన దూరం, మీటరులలో"
 
-#: /home/rafael/Activities/distance/activity.py:227
-#: /home/rafael/Activities/distance/smoot_toolbar.py:30
-#: /home/rafael/Activities/distance/smoot_toolbar.py:34
-#: /home/rafael/Activities/distance/smoot_toolbar.py:79
-#: /home/rafael/Activities/distance/smoot_toolbar.py:101
+#: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
+#: smoot_toolbar.py:100
 msgid "meters"
 msgstr ""
 
-#: /home/rafael/Activities/distance/atm_toolbars.py:65
+#: atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr "ఉష్ణో్గ్రత (C): "
 
-#: /home/rafael/Activities/distance/atm_toolbars.py:70
+#: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr "సాపేక్ష తేమ (%): "
 
-#: /home/rafael/Activities/distance/atm_toolbars.py:75
+#: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr "ధ్వని వేగము (మీటరు/సెకను): "
 
-#: /home/rafael/Activities/distance/calibration_toolbar.py:28
+#: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
 msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:30
-#: /home/rafael/Activities/distance/smoot_toolbar.py:35
+#: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
 msgstr ""
 
 #. TRANS: English units of measure
-#: /home/rafael/Activities/distance/smoot_toolbar.py:32
-#: /home/rafael/Activities/distance/smoot_toolbar.py:36
+#: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
 msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:32
-#: /home/rafael/Activities/distance/smoot_toolbar.py:37
+#: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
 msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:32
-#: /home/rafael/Activities/distance/smoot_toolbar.py:38
+#: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
 msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:33
-#: /home/rafael/Activities/distance/smoot_toolbar.py:39
+#: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
 msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:83
+#: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
 msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:86
+#: smoot_toolbar.py:84
 msgid "select units"
 msgstr ""
 
-#: /home/rafael/Activities/distance/smoot_toolbar.py:104
+#: smoot_toolbar.py:103
 #, python-format
-msgid "%(20.2)f %(1)s per meter"
+msgid "%(unit)20.2f %(name)s per meter"
 msgstr ""
 
 #~ msgid "Measured Distance in Meters"
