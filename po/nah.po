@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2012-09-28 06:03+0200\n"
+"PO-Revision-Date: 2014-05-20 19:05+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: nah\n"
@@ -18,27 +18,30 @@ msgstr ""
 "X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
-#, fuzzy
 msgid "Distance"
-msgstr "Tlawejkayotl"
+msgstr "Ueueyakatl"
 
 #: activity.py:162
 msgid "Atmosphere"
-msgstr ""
+msgstr "Ajukaktli"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Tlamachiuali tlen ta"
 
 #: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"Tlen ti tlamachiuas pan ome tepostlakuilolistli, mo neki temamakas pan inin "
+"tlatekipanoli."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
 msgstr ""
+"Pejpechos tlapepecholi tlen ti tlamachiuas tlaueuejkayotl tlen seyok "
+"computadora"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
@@ -46,7 +49,7 @@ msgstr ""
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "Mochiualtia tlen tlamachiuas.  Mochia tlen mo uampox istos kuali."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
@@ -54,19 +57,20 @@ msgstr ""
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "Kakilia tlatsilia ajoktik"
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
+"Pan inin tlatekipanoli kipia ome mauiltianin, yeka amo ti ueli ti kalaki."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "Peualtis ti tlamachiuas tlauejkayotl"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "tlamiltis ti tlamachiuas tlauejkayotl"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format
