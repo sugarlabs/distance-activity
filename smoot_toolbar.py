@@ -52,7 +52,7 @@ from gettext import gettext as _
 def _label_factory(label, toolbar):
     ''' Factory for adding a label to a toolbar '''
     my_label = Gtk.Label(label=label)
-    my_label.set_line_wrap(True)
+    my_label.set_line_wrap(False)
     my_label.show()
     _toolitem = Gtk.ToolItem()
     _toolitem.add(my_label)
