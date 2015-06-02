@@ -9,3 +9,28 @@ show_launcher = yes
 summary = How far are you from your friend? use Distance to find out! You can even test how far apart can you be for your XO to still see other's 
 summary = https://github.com/godiard/distance-activity.git
 max_participants = 2
+
+# Added fields
+activity_type = gtk3
+homepage = http://wiki.sugarlabs.org/go/Activities/Distance
+long_description: Sugar Learning Platform - distance activity
+ Sugar Learning Platform promotes collaborative learning through Sugar
+ Activities that encourage critical thinking, the heart of a quality
+ education.  Designed from the ground up especially for children, Sugar
+ offers an alternative to traditional “office-desktop” software.
+ .
+ Learner applications in Sugar are called Activities.  They are software
+ packages that automatically save your work - producing specific
+ instances of the Activity that can be resumed at a later time.  Many
+ Activities support learner collaboration, where multiple learners may
+ be invited to join a collective Activity session.
+ .
+ Distance can measure distance between two computers using sound.
+
+sources_url = http://download.sugarlabs.org/sources/honey/Distance/
+sources_format = tar.bz2
+
+
+[Maintainer]
+name = Gonzalo Odiard
+email = godiard@gmail.com
