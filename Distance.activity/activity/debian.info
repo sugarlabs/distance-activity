@@ -1,6 +1,6 @@
 [Package]
 name = sugar-distance-activity
-version = 0godiard1
+version = 1~godiard1
 vcs-git = https://github.com/godiard/distance-activity.git
 vcs-browser = https://github.com/godiard/distance-activity.git
 primary_branch = debian-packaging

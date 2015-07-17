@@ -7,32 +7,32 @@ Files: activity.py
 Copyright: z
            .
            r
-License: GPLv2+
+License: GPL-2
 
 Files: calibration_toolbar.py
 Copyright: z
-License: GPLv2+
+License: GPL-2
 
 Files: atm_toolbars.py
 Copyright: z
-License: GPLv2+
+License: GPL-2
 
 Files: arange.py
 Copyright: z
-License: GPLv2+
+License: GPL-2
 
 Files: setup.py
 Copyright: (C) 2006, Red Hat, Inc.
-License: GPLv2+
+License: GPL-2
 
 Files: smoot_toolbar.py
 Copyright: z
            r
-License: GPLv2+
+License: GPL-2
 
 Files: *
 Copyright: Gonzalo Odiard
-License: GPLv2+
+License: GPL-2
  
  Copyright (C) 2015 Gonzalo Odiard
  
