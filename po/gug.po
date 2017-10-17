@@ -2,134 +2,131 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2009-06-11 07:00-0400\n"
-"Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
+"PO-Revision-Date: 2017-02-04 19:53+0000\n"
+"Last-Translator: Chris <cjl@sugarlabs.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: gug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 1.2.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1486238038.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr "فاصله"
+msgstr "Pa'û"
 
 #: activity.py:162
 msgid "Atmosphere"
-msgstr "آب و هوا"
+msgstr "Arapytu"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Ta'ã tee"
 
 #: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr "برای اندازه گیری فاصله میان دو لپ تاپ شما باید این فعالیت را شریک کنید."
+msgstr ""
+"Guarâ ha'ã pe pa'ú mbytépe mokõi kombutadóra, ha'e tekotevé mboja'o ko "
+"tembiapo."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr "دکمه را فشار دهید تا فاصله با لپ تاپ دیگر را اندازه نماید"
+msgstr "Ejopy pe votó guará ha'á pe pa'ú ambue kombutadóra"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
-msgstr "درحال آمادگی برای اندازه گیری فاصله"
+msgstr "Mbosako'i guará ha'á pe pa'ú"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "آماده برای یک اندازه گیری.  منتظر همکار، تا آماده شود."
+msgstr "Sako'i guará ha'á.  Aha'arõ ha pe irũ oime oñembosako'i."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr "در حال ثبت صدا از هر دو لپ تاپ."
+msgstr "Moha'anga pe pu gui ñavo kombutadóra."
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr "در حال تهیه صدا."
+msgstr "Hesa'ỹijo pe pu moha'angapapyre."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
-msgstr "این فعالیت قبلا دو شرکت کننده دارد لذا شما نمیتوانید بدان پیوست شوید."
+msgstr "Ko tembiapo oreko mokõi oikéva, pea haguére ndaikatúi oike."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr "اندازی گیری فاصله را شروع کن"
+msgstr "Ñepyrũ ha'ã pe pa'û"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr "اندازی گیری فاصله رامتوقف کن"
+msgstr "Momba gui ha'á pe pa'ú"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format
-#, python-format, fuzzy
 msgid "Measured distance in %s"
-msgstr "فاصله اندازه گیری شد به متر"
+msgstr "Pe paú ta'ã pe %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "Ta'ãha"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr "درجه حرارت (سانتی گراد): "
+msgstr "Àra reko (C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr "رطوبت نسبی (%): "
+msgstr "Te'õ mombe´ypapyre (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr "سرعت صدا (متر فی ثانیه): "
+msgstr "Pya'ekue pu: "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr ""
+msgstr "Tekovia pe ha'ã (ta'ãha): "
 
 #: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "Ta'ãha"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "Kuãguasu"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr ""
+msgstr "Py"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "Ta'ã pa'û"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "Ta'ã tee"
 
 #: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Oiporavo peteĩ peteĩ mba'e ta'ã:"
 
 #: smoot_toolbar.py:84
 msgid "select units"
-msgstr ""
+msgstr "Poravo peteĩ mba'e"
 
 #: smoot_toolbar.py:103
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
-
-#~ msgid "Measured Distance in Meters"
-#~ msgstr "فاصله اندازه گیری شد به متر"
-
-#~ msgid "Acoustic Tape Measure"
-#~ msgstr "مقیاس نوار ضبط صوتی"
+msgstr "%(unit)20.2f %(name)s gui ta'ãha"

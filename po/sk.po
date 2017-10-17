@@ -30,20 +30,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-10-15 18:45+0000\n"
+"Last-Translator: Chris <cjl@sugarlabs.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1rc4\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1508093111.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -51,106 +52,108 @@ msgstr "Vzdialenosť"
 
 #: activity.py:162
 msgid "Atmosphere"
-msgstr ""
+msgstr "Atmosféra"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Bežný meter"
 
 #: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"Premerajte vzdialenosť medzi dvoma notebookmi, ako prvé musíte zdieľať \""
+"Activity\"."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "Kliknite tlačidlo a premerajte vzdialenosť k ďalšiemu notebooku"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "Príprava na meranie vzdialenosti"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "Pripravený na premeranie.   Čakanie na to, či je partner pripravený."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "Nahrávanie zvuku z každého notebooku."
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "Spracovanie nahraného zvuku."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
-msgstr ""
+msgstr "Táto činnosť má už dvoch účastníkov, môžete sa pripojiť."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "Začni merať vzdialenosť"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "Ukonči meranie vzdialenosti"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format
 msgid "Measured distance in %s"
-msgstr ""
+msgstr "Odmeraná vzdialenosť v %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "metre"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr ""
+msgstr "Teplota (° C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "Relatívna vlkosť (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "Rýchlosť zvuku (m/s): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr ""
+msgstr "Nastavenie odchýlky (metre): "
 
 #: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "centimetre"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "inches"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr ""
+msgstr "stopa"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "yardy"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "vlastné jednotky"
 
 #: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Vyberte jednotku miery:"
 
 #: smoot_toolbar.py:84
 msgid "select units"
-msgstr ""
+msgstr "vybraná jednotka"
 
 #: smoot_toolbar.py:103
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
+msgstr "%(unit)20.2f %(name)s na meter"

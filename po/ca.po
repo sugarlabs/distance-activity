@@ -43,15 +43,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2011-08-10 05:02+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2017-10-15 18:32+0000\n"
+"Last-Translator: Chris <cjl@sugarlabs.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1508092330.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -63,59 +64,61 @@ msgstr "Atmosfera"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Mesura personalitzada"
 
 #: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"Per mesurar la distància entre dos ordinadors, primer heu de compartir "
+"aquesta Activitat."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "Premeu el botó per mesurar la distància a un altre ordinador"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "S'està preparant per mesurar la distància"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "Preparat per mesurar.  S'està esperant que el company estigui llest."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "S'està enregistrant el so de cada ordinador."
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "S'està processant l'àudio enregistrat."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
-msgstr ""
+msgstr "Aquesta activitat ja té dos participants, per tant no us hi podeu unir."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "Comença a mesurar la distància"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "Para de mesurar distància"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format
 msgid "Measured distance in %s"
-msgstr ""
+msgstr "Distància mesurada en %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "metres"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr ""
+msgstr "Temperatura (C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
@@ -123,42 +126,42 @@ msgstr "Humitat relativa (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "Velocitat del so (m/s): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr ""
+msgstr "Compensació del calibratge (metres): "
 
 #: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "centímetres"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "polzades"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr ""
+msgstr "peus"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "iardes"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "mesura personalitzada"
 
 #: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Escolliu una unitat de mesura:"
 
 #: smoot_toolbar.py:84
 msgid "select units"
-msgstr ""
+msgstr "selecciona unitats"
 
 #: smoot_toolbar.py:103
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
+msgstr "%(unit)20.2f %(name)s per metre"

@@ -35,15 +35,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2010-02-12 06:15+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2017-03-27 23:02+0000\n"
+"Last-Translator: Anders <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1490655750.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -55,7 +56,7 @@ msgstr "Atmosfär"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Anpassat mätvärde"
 
 #: activity.py:187
 msgid ""
@@ -99,15 +100,14 @@ msgid "Stop Measuring Distance"
 msgstr "Avsluta avståndsmätning"
 
 #: activity.py:235 smoot_toolbar.py:99
-#, python-format
-#, python-format, fuzzy
+#, python-format, python-format
 msgid "Measured distance in %s"
-msgstr "Uppmätt avstånd i meter"
+msgstr "Uppmätt avstånd i %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "meter"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
@@ -127,37 +127,37 @@ msgstr "Kompensation för kalibrering (meter): "
 
 #: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "centimeter"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "tum"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr ""
+msgstr "fot"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "yard"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "anpassade enheter"
 
 #: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Välj en mätenhet:"
 
 #: smoot_toolbar.py:84
 msgid "select units"
-msgstr ""
+msgstr "välj enheter"
 
 #: smoot_toolbar.py:103
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
+msgstr "%(unit)20.2f %(name)s per meter"
 
 #~ msgid "Measured Distance in Meters"
 #~ msgstr "Uppmätt avstånd i meter"

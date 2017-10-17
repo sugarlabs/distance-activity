@@ -7,129 +7,124 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2009-06-11 07:00-0400\n"
-"Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
+"PO-Revision-Date: 2017-10-15 18:49+0000\n"
+"Last-Translator: Chris <cjl@sugarlabs.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ach\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 1.2.1\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1508093364.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr "فاصله"
+msgstr "Bor piny"
 
 #: activity.py:162
 msgid "Atmosphere"
-msgstr "آب و هوا"
+msgstr "Kan oguruwa"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Metrik ame otio kede"
 
 #: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
-msgstr "برای اندازه گیری فاصله میان دو لپ تاپ شما باید این فعالیت را شریک کنید."
+msgstr "Me miyi pimo yi akina laptop aryo, cak ki tiyo Tic man."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr "دکمه را فشار دهید تا فاصله با لپ تاپ دیگر را اندازه نماید"
+msgstr "Di mapeca me wek ipim bor piny itunu i laptop mukene"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
-msgstr "درحال آمادگی برای اندازه گیری فاصله"
+msgstr "Tye kayike me pimo bor piny"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "آماده برای یک اندازه گیری.  منتظر همکار، تا آماده شود."
+msgstr "Otyeko yike oko mecako pimo. Tye kakuru ngat ma gitiyo kwede me yike."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr "در حال ثبت صدا از هر دو لپ تاپ."
+msgstr "Mako dwon maya i laptop acelacel."
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr "در حال تهیه صدا."
+msgstr "Tye kayiko dwon ma gimako."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
-msgstr "این فعالیت قبلا دو شرکت کننده دارد لذا شما نمیتوانید بدان پیوست شوید."
+msgstr "Tic man dong tye jo matiyo aryo, mumio yin pe doki iromo donyo iye."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr "اندازی گیری فاصله را شروع کن"
+msgstr "Cak Pimo Bor Piny"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr "اندازی گیری فاصله رامتوقف کن"
+msgstr "Gik. Pimo Bor Piny"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format
-#, python-format, fuzzy
 msgid "Measured distance in %s"
-msgstr "فاصله اندازه گیری شد به متر"
+msgstr "Bor piny otyeko pimo i %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "mita"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr "درجه حرارت (سانتی گراد): "
+msgstr "Lyeto (C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr "رطوبت نسبی (%): "
+msgstr "Kite me yamo (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr "سرعت صدا (متر فی ثانیه): "
+msgstr "Dwiro akop iyamo (m/s): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr ""
+msgstr "Yik me pimo okeketo oko (mita): "
 
 #: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "centimita"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "ingcec"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
+#, fuzzy
 msgid "feet"
-msgstr ""
+msgstr "pit"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "yad"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "yore me pimo kare ducu"
 
 #: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Yer kit yore me pimo:"
 
 #: smoot_toolbar.py:84
 msgid "select units"
-msgstr ""
+msgstr "yer yore me pimo ducu"
 
 #: smoot_toolbar.py:103
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
-
-#~ msgid "Measured Distance in Meters"
-#~ msgstr "فاصله اندازه گیری شد به متر"
-
-#~ msgid "Acoustic Tape Measure"
-#~ msgstr "مقیاس نوار ضبط صوتی"
+msgstr "%(unit)20.2f %(name)s pi mita acel acel"

@@ -2,147 +2,133 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-04-16 16:34+0000\n"
+"Last-Translator: yurchor <yurchor@ukr.net>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.6.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1492360446.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "Відстань"
 
 #: activity.py:162
 msgid "Atmosphere"
-msgstr ""
+msgstr "Атмосфера"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Нетипова метрична"
 
 #: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
+"Щоб виміряти відстань між двома ноутбуками вам спочатку слід оприлюднити цей "
+"простір дій."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr ""
+msgstr "Натисніть кнопку, щоб виміряти відстань до іншого ноутбука"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
-msgstr ""
+msgstr "Готуємося до вимірювання відстані"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr ""
+msgstr "Готові почати вимірювання. Очікуємо на готовність іншого комп’ютера."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr ""
+msgstr "Записуємо звук з кожного з ноутбуків."
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr ""
+msgstr "Обробляємо записаний звук."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
+"У цьому просторі дій вже є два учасники, тому ви не зможете долучитися до "
+"нього."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr ""
+msgstr "Почати вимірювання відстані"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr ""
+msgstr "Завершити вимірювання відстані"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format
 msgid "Measured distance in %s"
-msgstr ""
+msgstr "Виміряна відстань у %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "метри"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr ""
+msgstr "Температура (у ℃): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "Відносна вологість (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "Швидкість звуку (у м/с): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr ""
+msgstr "Зсув калібрування (у метрах): "
 
 #: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "сантиметри"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "дюйми"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr ""
+msgstr "фути"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "ярди"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "нетипові одиниці"
 
 #: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Виберіть одиницю вимірювання:"
 
 #: smoot_toolbar.py:84
 msgid "select units"
-msgstr ""
+msgstr "вибір одиниці"
 
 #: smoot_toolbar.py:103
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
+msgstr "%(unit)20.2f %(name)s на метр"

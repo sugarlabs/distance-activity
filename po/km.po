@@ -7,14 +7,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2008-12-24 01:57-0500\n"
-"Last-Translator: Noy Shoung <noy_shoung@nida.gov.kh>\n"
+"PO-Revision-Date: 2017-10-15 18:54+0000\n"
+"Last-Translator: Chris <cjl@sugarlabs.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: km\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1508093640.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -82,15 +84,15 @@ msgstr "ម៉ែត្រ"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr "សីតុណ្ហភាព (C)"
+msgstr "សីតុណ្ហភាព (C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr "ពាក់ពាន់​ទៅ​នឹង​សំណើម​ (%)"
+msgstr "ពាក់ពាន់​ទៅ​នឹង​សំណើម​ (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr "ល្បឿន​នៃ​សំឡេង (m/s):"
+msgstr "ល្បឿន​នៃ​សំឡេង (m/s): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
