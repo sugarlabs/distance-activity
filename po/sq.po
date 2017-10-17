@@ -2,170 +2,134 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2011-01-19 03:41+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2016-11-01 14:05+0000\n"
+"Last-Translator: Besnik_b <besnik@programeshqip.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.3\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1478009138.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr "Largësia"
+msgstr "Largësi"
 
 #: activity.py:162
 msgid "Atmosphere"
-msgstr "Atmosfera"
+msgstr "Atmosferë"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr "Matje vetjake"
 
 #: activity.py:187
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
-"Për të matur distancën midis dy laptopëve, ju duhet së pari të ndani këtë "
-"aktivitet."
+"Që të matni largësinë mes dy laptopëve, së pari duhet ta ndani këtë "
+"Veprimtari me tjetrin."
 
 #: activity.py:189
 msgid "Press the button to measure the distance to another laptop"
-msgstr "Shtypni butonin për të matur distancën te një laptop tjetër"
+msgstr "Shtypni butonin që të matni largësinë deri te një laptop tjetër"
 
 #: activity.py:191
 msgid "Preparing to measure distance"
-msgstr "Përgatitja për të matur distancën"
+msgstr "Po përgatitet për matje largësie"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "Gati për të bërë një matje.  Pritje për partnerin të jetë gati."
+msgstr "Gati për të bërë matje.  Po pritet që të bëhet gati partneri."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
-msgstr "Duke inçizuar tingujg nga secili laptop."
+msgstr "Po incizohet tingull nga secili laptop."
 
 #: activity.py:195
 msgid "Processing recorded audio."
-msgstr "Duke përpunuar audion e regjistruar."
+msgstr "Po përpunohet audioja e incizuar."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
-"Ky aktivitet tashmë ka dy pjesëmarrës, kështu që ju nuk mund të bashkoheni."
+"Kjo veprimtari ka tashmë dy pjesëmarrës, ndaj s’mund të merrni dhe ju pjesë."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr "Filloni Matja e Distance"
+msgstr "Fillo Matjen e Largësisë"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr "Ndajo Matja e Distance"
+msgstr "Ndale Matjen e Largësisë"
 
 #: activity.py:235 smoot_toolbar.py:99
-#, python-format
-#, python-format, fuzzy
+#, python-format, python-format
 msgid "Measured distance in %s"
-msgstr "Matja e largësia me metra"
+msgstr "Largësi e matur në %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "metra"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr "Temperatura (C): "
+msgstr "Temperaturë (C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr "Lageshtia relative (%): "
+msgstr "Lagështi Relative (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr "Shpejtësinë e Zërit (m/s): "
+msgstr "Shpejtësi e Zërit (m/s): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
-msgstr "Kalibrimi kompensuar (m): "
+msgstr "Vlerë Kalibrimi (metra): "
 
 #: smoot_toolbar.py:30 smoot_toolbar.py:35
 msgid "centimeters"
-msgstr ""
+msgstr "centimetra"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:32 smoot_toolbar.py:36
 msgid "inches"
-msgstr ""
+msgstr "inç"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr ""
+msgstr "këmbë"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr ""
+msgstr "jard"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"
-msgstr ""
+msgstr "njësi vetjake"
 
 #: smoot_toolbar.py:81
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "Zgjidhni një njësi matëse:"
 
 #: smoot_toolbar.py:84
 msgid "select units"
-msgstr ""
+msgstr "përzgjidhni njësi"
 
 #: smoot_toolbar.py:103
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
+msgstr "%(unit)20.2f %(name)s për metër"
 
 #~ msgid "Measured Distance in Meters"
 #~ msgstr "Matja e largësia me metra"
