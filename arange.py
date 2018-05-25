@@ -22,7 +22,6 @@ import tempfile
 #import pylab
 import time
 import socket
-import types
 import math
 
 import subprocess
@@ -47,38 +46,39 @@ def compute_mls(R):
     determines the phase of the MLS.
     """
 
-    # 1-indexed collection of MLS taps from http://homepage.mac.com/afj/taplist.html
+    # 1-indexed collection of MLS taps from
+    # http://homepage.mac.com/afj/taplist.html
     taps = ((), (), (),  # ignore n=0,1,2
-             (3, 2),
-             (4, 3),
-             (5, 3),
-             (6, 5),
-             (7, 6),
-             (8, 7, 6, 1),
-             (9, 5),
-             (10, 7),
-             (11, 9),
-             (12, 11, 10, 4),
-             (13, 12, 11, 8),
-             (14, 13, 12, 2),
-             (15, 14),
-             (16, 15, 13, 4),
-             (17, 14),
-             (18, 11),
-             (19, 18, 17, 14),
-             (20, 17),
-             (21, 19),
-             (22, 21),
-             (23, 18),
-             (24, 23, 22, 17),
-             (25, 22),
-             (26, 25, 24, 20),
-             (27, 26, 25, 22),
-             (28, 25),
-             (29, 27),
-             (30, 29, 28, 7),
-             (31, 28),
-             (32, 31, 30, 10))
+            (3, 2),
+            (4, 3),
+            (5, 3),
+            (6, 5),
+            (7, 6),
+            (8, 7, 6, 1),
+            (9, 5),
+            (10, 7),
+            (11, 9),
+            (12, 11, 10, 4),
+            (13, 12, 11, 8),
+            (14, 13, 12, 2),
+            (15, 14),
+            (16, 15, 13, 4),
+            (17, 14),
+            (18, 11),
+            (19, 18, 17, 14),
+            (20, 17),
+            (21, 19),
+            (22, 21),
+            (23, 18),
+            (24, 23, 22, 17),
+            (25, 22),
+            (26, 25, 24, 20),
+            (27, 26, 25, 22),
+            (28, 25),
+            (29, 27),
+            (30, 29, 28, 7),
+            (31, 28),
+            (32, 31, 30, 10))
 
     n = len(R)
     return LFSR(R, [i - 1 for i in taps[n]], 2**n - 1)
@@ -90,7 +90,7 @@ def LFSR(R, taps, m):
     R for m steps.
     R = an indexable object
     taps = zero-indexed collection of taps
-    
+
     returns a num.array of length m
     """
     o = num.resize(num.array([], num.bool), (m))
@@ -98,20 +98,20 @@ def LFSR(R, taps, m):
         a = taps[0]
         b = taps[1]
         for i in xrange(m):
-             next = R[a] ^ R[b]
-             o[i] = R[-1]
-             R[1:] = R[:-1]
-             R[0] = next
+            next = R[a] ^ R[b]
+            o[i] = R[-1]
+            R[1:] = R[:-1]
+            R[0] = next
     elif len(taps) == 4:
         a = taps[0]
         b = taps[1]
         c = taps[2]
         d = taps[3]
         for i in xrange(m):
-             next = R[a] ^ R[b] ^ R[c] ^ R[d]
-             o[i] = R[-1]
-             R[1:] = R[:-1]
-             R[0] = next
+            next = R[a] ^ R[b] ^ R[c] ^ R[d]
+            o[i] = R[-1]
+            R[1:] = R[:-1]
+            R[0] = next
     else:
         for i in xrange(m):
             next = False
@@ -132,8 +132,8 @@ def write_wav(o):
     w = wave.open(f)
     w.setparams((2, 1, REC_HZ, 0, 'NONE', 'NONE'))
     n = num.size(o)
-    q = num.zeros((2*n), num.uint8)
-    q[::2] = o*255
+    q = num.zeros((2 * n), num.uint8)
+    q[::2] = o * 255
     q[1::2] = 128
     w.writeframes(q.tostring())
     return f
@@ -141,7 +141,8 @@ def write_wav(o):
 
 def play_wav_alsa(fname):
     subprocess.call(["/usr/bin/aplay", fname])
-    
+
+
 play_wav = play_wav_alsa
 
 
@@ -161,9 +162,19 @@ def record_while_playing(play_name, t):
 
 def start_recording_alsa():
     fname = os.tempnam()
-    
-    rec_process = subprocess.Popen(["/usr/bin/arecord", "--file-type=raw", "--channels=1", "--format=S16_LE", "--rate=%i" % REC_HZ, "--duration=%i" % REC_TIMEOUT, fname])
-    
+
+    rec_process = subprocess.Popen(
+        [
+            "/usr/bin/arecord",
+            "--file-type=raw",
+            "--channels=1",
+            "--format=S16_LE",
+            "--rate=%i" %
+            REC_HZ,
+            "--duration=%i" %
+            REC_TIMEOUT,
+            fname])
+
     s = 0
     while s <= 0:
         try:
@@ -173,14 +184,16 @@ def start_recording_alsa():
 
     f = open(fname, 'rb')
     return (rec_process, f)
-    
+
+
 start_recording = start_recording_alsa
 
 
 def stop_recording_alsa(rec_process):
     os.kill(rec_process.pid, signal.SIGKILL)
     rec_process.wait()
-    
+
+
 stop_recording = stop_recording_alsa
 
 
@@ -192,24 +205,25 @@ def read_wav(f):
     n = w.getnframes()
     nc = w.getnchannels()
     b = w.getsampwidth()
-    if b==2:
+    if b == 2:
         typecode = 'h'
-    elif b==1:
+    elif b == 1:
         typecode = 'b'
     s = w.readframes(n)
-    n = len(s)/(nc*b)
-    a = struct.unpack('<' + str(n*nc) + typecode, s)
+    n = len(s) / (nc * b)
+    a = struct.unpack('<' + str(n * nc) + typecode, s)
     return num.array(a[::nc], num.float)
 
 
 def read_raw(f):
     x = f.read()
-    n = len(x)/2
+    n = len(x) / 2
     print "length " + str(n)
     typecode = 'h'
-    a = struct.unpack('<' + str(n)+typecode, x[:(2*n)]);
+    a = struct.unpack('<' + str(n) + typecode, x[:(2 * n)])
     return num.array(a, num.float)
-    
+
+
 read_recorded_file = read_raw
 
 
@@ -219,7 +233,7 @@ def cross_cov(a, b, a_id=None):
     n = max(a.size, b.size)
     n2 = 2**int(math.ceil(math.log(n, 2)))  # power of 2 >=n
     if a_id is not None:
-        if cache_dict.has_key(('fft', a_id, n2)):
+        if ('fft', a_id, n2) in cache_dict:
             fa = cache_dict[('fft', a_id, n2)]
         else:
             fa = num.fft.rfft(a, n2)
@@ -227,7 +241,7 @@ def cross_cov(a, b, a_id=None):
     else:
         fa = num.fft.rfft(a, n2)
     fb = num.fft.rfft(b, n2)
-    fprod = num.conjugate(fa)*fb
+    fprod = num.conjugate(fa) * fb
     xc = num.fft.irfft(fprod)
     return xc[:n].real
 
@@ -347,15 +361,15 @@ def measure_dt_simul(s, am_server):
     is not usable.
     """
     #assert type(s) == socket._socketobject
-    if cache_dict.has_key(('mls', MLS_INDEX)):
+    if ('mls', MLS_INDEX) in cache_dict:
         mls = cache_dict[('mls', MLS_INDEX)]
     else:
         R = (num.zeros((MLS_INDEX)) == 0)
         mls = compute_mls(R)
         cache_dict[('mls', MLS_INDEX)] = mls
-    
+
     if am_server:
-        if cache_dict.has_key(('mls_rev', MLS_INDEX)):
+        if ('mls_rev', MLS_INDEX) in cache_dict:
             mls = cache_dict[('mls_rev', MLS_INDEX)]
         else:
             mls = mls[::-1]
@@ -388,7 +402,7 @@ def measure_dt_simul(s, am_server):
     else:
         play_wav(mls_wav_file.name)
         s.sendall(playing_command)
-    
+
     stop_command = 'stop'
     if am_server:
         s.sendall(stop_command)
@@ -404,7 +418,7 @@ def measure_dt_simul(s, am_server):
     xc_self = cross_cov(mls_float, rec_array)
     xc_other = cross_cov(mls_float[::-1], rec_array)
     dn = getpeak(xc_other) - getpeak(xc_self)
-    dt = float(dn)/REC_HZ
+    dt = float(dn) / REC_HZ
     format_string = '!d'
     n = struct.calcsize(format_string)
     s.sendall(struct.pack(format_string, dt))
@@ -412,7 +426,7 @@ def measure_dt_simul(s, am_server):
 
     roundtrip = dt + other_dt
 
-    return roundtrip/2
+    return roundtrip / 2
 
 
 def measure_dt_seq(s, am_server, send_signal=False):
@@ -428,23 +442,23 @@ def measure_dt_seq(s, am_server, send_signal=False):
     if send_signal:
         send_signal('preparing')
 
-    if cache_dict.has_key(('mls', MLS_INDEX)):
+    if ('mls', MLS_INDEX) in cache_dict:
         mls = cache_dict[('mls', MLS_INDEX)]
     else:
         R = (num.zeros((MLS_INDEX)) == 0)
         mls = compute_mls(R)
         cache_dict[('mls', MLS_INDEX)] = mls
-    
-    if cache_dict.has_key(('mls_rev', MLS_INDEX)):
+
+    if ('mls_rev', MLS_INDEX) in cache_dict:
         mls_rev = cache_dict[('mls_rev', MLS_INDEX)]
     else:
         mls_rev = mls[::-1]
         cache_dict[('mls_rev', MLS_INDEX)] = mls_rev
-            
+
     if am_server:
-            mls_wav_file = write_wav(mls)
+        mls_wav_file = write_wav(mls)
     else:
-            mls_wav_file = write_wav(mls_rev)
+        mls_wav_file = write_wav(mls_rev)
 
     if send_signal:
         send_signal('waiting')
@@ -465,9 +479,9 @@ def measure_dt_seq(s, am_server, send_signal=False):
     if send_signal:
         send_signal('playing')
 
-    t1=time.time()
+    t1 = time.time()
     (pipeline, rec_wav_file) = start_recording_alsa()
-    t2=time.time()
+    t2 = time.time()
 
     start_confirmation_command = 'started'
     if am_server:
@@ -478,7 +492,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
 
     amp_ringdown = 0.2
     time.sleep(amp_ringdown)
-    
+
     handoff_command = 'your turn'
     ringdown = 0.3  # seconds
     if am_server:
@@ -487,16 +501,16 @@ def measure_dt_seq(s, am_server, send_signal=False):
         print "played wav"
         time.sleep(ringdown)
         t3 = time.time()
-        time.sleep(t2-t1)
+        time.sleep(t2 - t1)
         s.sendall(handoff_command)
     else:
         received = recvmsg(s, handoff_command)
         assert received
         t3 = time.time()
-        time.sleep(t2-t1)
+        time.sleep(t2 - t1)
         play_wav_alsa(mls_wav_file.name)
         time.sleep(ringdown)
-    
+
     stop_command = 'stop'
     if am_server:
         received = recvmsg(s, stop_command)
@@ -515,23 +529,23 @@ def measure_dt_seq(s, am_server, send_signal=False):
 
     if send_signal:
         send_signal('processing')
-    
-    breaktime = t3-t1
+
+    breaktime = t3 - t1
     print breaktime
-    breaknum = int(math.ceil(breaktime*REC_HZ))
-    startnum = int(math.ceil(amp_ringdown*REC_HZ))
+    breaknum = int(math.ceil(breaktime * REC_HZ))
+    startnum = int(math.ceil(amp_ringdown * REC_HZ))
     rec1 = rec_array[startnum:breaknum]
     rec2 = rec_array[breaknum:]
     print num.size(rec1)
     print num.size(rec2)
-    
-    if cache_dict.has_key(('mls_float', MLS_INDEX)):
+
+    if ('mls_float', MLS_INDEX) in cache_dict:
         mls_float = cache_dict[('mls_float', MLS_INDEX)]
     else:
         mls_float = mls - 0.5
         cache_dict[('mls_float', MLS_INDEX)] = mls_float
-    
-    if cache_dict.has_key(('mls_rev_float', MLS_INDEX)):
+
+    if ('mls_rev_float', MLS_INDEX) in cache_dict:
         mls_rev_float = cache_dict[('mls_rev_float', MLS_INDEX)]
     else:
         mls_rev_float = mls_rev - 0.5
@@ -543,7 +557,7 @@ def measure_dt_seq(s, am_server, send_signal=False):
     print xc_server[s_peak]
     print xc_client[c_peak]
     dn = (c_peak + breaknum) - s_peak
-    dt = float(dn)/REC_HZ
+    dt = float(dn) / REC_HZ
     format_string = '!d'
     n = struct.calcsize(format_string)
     s.sendall(struct.pack(format_string, dt))
@@ -551,13 +565,13 @@ def measure_dt_seq(s, am_server, send_signal=False):
 
     roundtrip = abs(dt - other_dt)
 
-    #pylab.plot(xc_server)
-    #pylab.show()
+    # pylab.plot(xc_server)
+    # pylab.show()
 
     if send_signal:
         send_signal('done')
 
-    return roundtrip/2
+    return roundtrip / 2
 
 
 def getpeak(a):
@@ -593,35 +607,36 @@ def speed_of_sound(t=25.0, h=0.6, p=101325.0, x_c=0.0004):
     t2 = t**2
     T = t + 273.15
 
-    f = 1.00062 + 3.14e-8*p + 5.6e-7*t2
-    psv = math.exp(1.2811805e-5*(T**2) - 1.9509874e-2*T \
-                       + 34.04926034 - 6.3536311e3/T)  # Pa
-    x_w = h*f*psv/p
+    f = 1.00062 + 3.14e-8 * p + 5.6e-7 * t2
+    psv = math.exp(1.2811805e-5 * (T**2) - 1.9509874e-2 * T
+                   + 34.04926034 - 6.3536311e3 / T)  # Pa
+    x_w = h * f * psv / p
 
-    return a0 + a1*t + a2*t2 + (a3 + a4*t +a5*t2)*x_w \
-+ (a6 + a7*t + a8*t2)*p + (a9 + a10*t + a11*t2)*x_c \
-+ a12*(x_w**2) + a13*(p**2) + a14*(x_c**2) + a15*x_w*p*x_c
+    return a0 + a1 * t + a2 * t2 + (a3 + a4 * t + a5 * t2) * x_w \
+        + (a6 + a7 * t + a8 * t2) * p + (a9 + a10 * t + a11 * t2) * x_c \
+        + a12 * (x_w**2) + a13 * (p**2) + a14 * (x_c**2) + a15 * x_w * p * x_c
 
 
 def interactive_mode():
-     n = input('Type 1 to be the server, 2 to be the client:')
-     assert (n == 1) or (n == 2)
-     if n==1:
-         server_address = raw_input('Enter the address on which to listen:')
-         port = input('Enter the port on which to listen:')
-         dt = do_server_seq(server_address, port)
-     elif n==2:
-         server_address = raw_input('Enter the IP address or hostname of the server:')
-         port = input('Enter the port on which the server is listening:')
-         dt = do_client_seq(server_address, port)
-     print "The time delay in seconds is ", dt
-     print "The speed of sound in m/s is ", speed_of_sound()
-     print "The distance in meters is therefore ", dt*speed_of_sound()-OLPC_OFFSET
+    n = input('Type 1 to be the server, 2 to be the client:')
+    assert (n == 1) or (n == 2)
+    if n == 1:
+        server_address = raw_input('Enter the address on which to listen:')
+        port = input('Enter the port on which to listen:')
+        dt = do_server_seq(server_address, port)
+    elif n == 2:
+        server_address = raw_input(
+            'Enter the IP address or hostname of the server:')
+        port = input('Enter the port on which the server is listening:')
+        dt = do_client_seq(server_address, port)
+    print "The time delay in seconds is ", dt
+    print "The speed of sound in m/s is ", speed_of_sound()
+    print "The distance in meters is therefore ", dt * speed_of_sound() - OLPC_OFFSET
 
-#pylab.plot(get_room_echo(1))
-#pylab.show()
-#e=get_room_echo(4)
-#n=get_noise_echo(4)
-#print e[getpeak(e)]
-#print n[getpeak(n)]
-#interactive_mode()
+# pylab.plot(get_room_echo(1))
+# pylab.show()
+# e=get_room_echo(4)
+# n=get_noise_echo(4)
+# print e[getpeak(e)]
+# print n[getpeak(n)]
+# interactive_mode()

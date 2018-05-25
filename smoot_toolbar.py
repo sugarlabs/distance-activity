@@ -15,8 +15,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-from gi.repository import Gtk, Gdk, GObject
-from gettext import gettext as _
+from gi.repository import Gtk, GObject
 
 from sugar3.graphics.combobox import ComboBox
 from sugar3.graphics.toolcombobox import ToolComboBox
@@ -34,6 +33,7 @@ CUSTOM = 5
 # http://docs.python.org/library/gettext.html#deferred-translations
 def _(message):
     return message
+
 
 UNITS = [_('meters'), _('centimeters'),
          # TRANS: English units of measure
@@ -92,7 +92,7 @@ class SmootToolbar(Gtk.Toolbar):
         label.show()
 
         self._unit_combo = _combo_factory(UNITS, METERS, _('select units'),
-                self)
+                                          self)
         self._unit_combo.connect('changed', self._unit_combo_cb)
         self._unit_combo.show()
 
@@ -110,8 +110,10 @@ class SmootToolbar(Gtk.Toolbar):
         if name == _('meters'):
             self._factor_label.set_label(' ')
         else:
-            self._factor_label.set_label(_('%(unit)20.2f %(name)s per meter') %
-                    {'unit': self._unit_scale, 'name': _(name)})
+            self._factor_label.set_label(
+                _('%(unit)20.2f %(name)s per meter') % {
+                    'unit': self._unit_scale,
+                    'name': _(name)})
 
     def get_scale(self):
         return self._unit_scale

@@ -14,9 +14,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-import gi
 from gi.repository import Gtk
-from gi.repository import Gdk
 from gi.repository import GObject
 import arange
 import locale
@@ -71,12 +69,12 @@ class TempToolbar(Gtk.Toolbar):
 
         humid_label = _label_factory(_("Relative Humidity (%): "), self)
         self._humid_field = _entry_factory(5, self, self._update_cb)
-        
+
         _separator_factory(self)
 
         results_label = _label_factory(_("Speed of Sound (m/s): "), self)
         self._result = _label_factory('', self)
-        
+
         self.set_temp(25)
         self.set_humid(60)
         self.update_speed()
@@ -84,7 +82,7 @@ class TempToolbar(Gtk.Toolbar):
     def get_temp(self):
         try:
             t = locale.atof(self._temp_field.get_text())
-        except:
+        except BaseException:
             return None
         if t > 70:
             return None
@@ -96,13 +94,13 @@ class TempToolbar(Gtk.Toolbar):
         try:
             self._temp_field.set_text(locale.str(max(-20, min(70, t))))
             return True
-        except:
+        except BaseException:
             return False
 
     def get_humid(self):
         try:
             t = locale.atof(self._humid_field.get_text())
-        except:
+        except BaseException:
             return None
         if t > 100:
             return None
@@ -114,23 +112,23 @@ class TempToolbar(Gtk.Toolbar):
         try:
             self._humid_field.set_text(locale.str(max(0, min(100, h))))
             return True
-        except:
+        except BaseException:
             return False
-    
+
     def get_speed(self):
         return self._speed
-        
+
     def _set_speed(self, s):
         self._speed = s
         try:
             self._result.set_text(locale.format('%.2f', s))
             return True
-        except:
+        except BaseException:
             return False
-            
+
     def _update_cb(self, widget=None):
         GObject.idle_add(self.update_speed)
-    
+
     def update_speed(self):
         t = self.get_temp()
         h = self.get_humid()
