@@ -17,12 +17,12 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import logging
-import telepathy
-import telepathy.client
 import locale
 import gi
 gi.require_version('Gtk', '3.0')
+gi.require_version('TelepathyGLib', '0.12')
 
+from gi.repository import TelepathyGLib
 from gi.repository import Gtk
 from gi.repository import Gdk
 from gi.repository import GObject
@@ -373,9 +373,9 @@ participants, so you cannot join.")
         self.server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.server_socket.bind(f)
 
-        id = self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].OfferStreamTube(
-            SERVICE, {}, telepathy.SOCKET_ADDRESS_TYPE_UNIX,
-            dbus.ByteArray(f), telepathy.SOCKET_ACCESS_CONTROL_LOCALHOST, "")
+        id = self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].OfferStreamTube(
+            SERVICE, {}, TelepathyGLib.SocketAddressType.UNIX,
+            dbus.ByteArray(f), TelepathyGLib.SocketAccessControl.LOCALHOST, "")
 
         thread.start_new_thread(self.watch_for_join, ())
 
@@ -397,9 +397,9 @@ participants, so you cannot join.")
         self.tubes_chan = self.shared_activity.telepathy_tubes_chan
         self.text_chan = self.shared_activity.telepathy_text_chan
 
-        self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].connect_to_signal(
+        self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].connect_to_signal(
             'NewTube', self._new_tube_cb)
-        self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].connect_to_signal(
+        self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].connect_to_signal(
             'TubeStateChanged', self._tube_state_cb)
 
         self.shared_activity.connect('buddy-joined', self._buddy_joined_cb)
@@ -436,7 +436,7 @@ participants, so you cannot join.")
 
             self._logger.debug(
                 'This is not my activity: waiting for a tube...')
-            self.tubes_chan[telepathy.CHANNEL_TYPE_TUBES].ListTubes(
+            self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].ListTubes(
                 reply_handler=self._list_tubes_reply_cb,
                 error_handler=self._list_tubes_error_cb)
         else:
@@ -448,20 +448,20 @@ participants, so you cannot join.")
         self._logger.debug('New tube: ID=%d initator=%d type=%d service=%s '
                            'params=%r state=%d', id, initiator, type, service,
                            params, state)
-        if (type == telepathy.TUBE_TYPE_STREAM and
+        if (type == TelepathyGLib.TubeType.STREAM and
                 service == SERVICE and self.main_tube_id is None):
-            if state == telepathy.TUBE_STATE_LOCAL_PENDING:
+            if state == TelepathyGLib.TubeState.LOCAL_PENDING:
                 self.main_tube_id = id
                 self.main_socket_addr = str(
                     self.tubes_chan[
-                        telepathy.CHANNEL_TYPE_TUBES].AcceptStreamTube(
-                        id, telepathy.SOCKET_ADDRESS_TYPE_UNIX,
-                        telepathy.SOCKET_ACCESS_CONTROL_LOCALHOST, "",
+                        TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].AcceptStreamTube(
+                        id, TelepathyGLib.SocketAddressType.UNIX,
+                        TelepathyGLib.SocketAccessControl.LOCALHOST, "",
                         byte_arrays=True))
 
     def _tube_state_cb(self, tube_id, tube_state):
         if (self.main_socket is None) and \
-            (tube_state == telepathy.TUBE_STATE_OPEN) and \
+            (tube_state == TelepathyGLib.TubeState.OPEN) and \
                 (tube_id == self.main_tube_id):
 
             self.main_socket = socket.socket(
@@ -483,7 +483,7 @@ participants, so you cannot join.")
     def _get_buddy(self, cs_handle):
         '''Get a Buddy from a channel specific handle.'''
         self._logger.debug('Trying to find owner of handle %u...', cs_handle)
-        group = self.text_chan[telepathy.CHANNEL_INTERFACE_GROUP]
+        group = self.text_chan[TelepathyGLib.IFACE_CHANNEL_INTERFACE_GROUP]
         my_csh = group.GetSelfHandle()
         self._logger.debug('My handle in that group is %u', my_csh)
         if my_csh == cs_handle:
@@ -491,7 +491,7 @@ participants, so you cannot join.")
             self._logger.debug('CS handle %u belongs to me, %u',
                                cs_handle, handle)
         elif group.GetGroupFlags() & \
-                telepathy.CHANNEL_GROUP_FLAG_CHANNEL_SPECIFIC_HANDLES:
+                TelepathyGLib.ChannelGroupFlags.CHANNEL_SPECIFIC_HANDLES:
             handle = group.GetHandleOwners([cs_handle])[0]
             self._logger.debug('CS handle %u belongs to %u', cs_handle, handle)
         else:
