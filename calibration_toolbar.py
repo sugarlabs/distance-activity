@@ -15,7 +15,6 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 from gi.repository import Gtk
-from gi.repository import Gdk
 from gi.repository import GObject
 
 import arange
@@ -27,17 +26,18 @@ class CalibrationToolbar(Gtk.Toolbar):
 
     def __init__(self):
         GObject.GObject.__init__(self)
-        
-        offset_label = Gtk.Label(label=gettext("Calibration Offset (meters): "))
+
+        offset_label = Gtk.Label(
+            label=gettext("Calibration Offset (meters): "))
         self._offset_field = Gtk.Entry()
         self._offset_field.set_max_length(10)
         self._offset_field.set_width_chars(10)
-        
-        bigbox = Gtk.Box(orientation = Gtk.Orientation.HORIZONTAL)
-        
+
+        bigbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+
         bigbox.pack_start(offset_label, expand=False, fill=False)
         bigbox.pack_end(self._offset_field, expand=False, fill=False)
-        
+
         self.set_offset(arange.OLPC_OFFSET)
 
         tool_item = Gtk.ToolItem()
@@ -45,18 +45,18 @@ class CalibrationToolbar(Gtk.Toolbar):
         tool_item.set_expand(False)
         self.insert(tool_item, 0)
         tool_item.show()
-        
+
     def get_offset(self):
         try:
             t = locale.atof(self._offset_field.get_text())
-        except:
+        except BaseException:
             t = 0
         finally:
             return t
-        
+
     def set_offset(self, t):
         try:
             self._offset_field.set_text(locale.str(t))
             return True
-        except:
+        except BaseException:
             return False

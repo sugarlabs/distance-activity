@@ -37,7 +37,7 @@ from sugar3.presence import presenceservice
 
 from gettext import gettext as _
 
-#For socket code
+# For socket code
 import threading
 import thread
 import socket
@@ -84,7 +84,7 @@ class AcousticMeasureActivity(activity.Activity):
         self._logger = logging.getLogger('acousticmeasure-activity')
 
         GObject.threads_init()
-        
+
         try:
             self._logger.debug("locale: " + locale.setlocale(locale.LC_ALL,
                                                              ''))
@@ -110,12 +110,12 @@ class AcousticMeasureActivity(activity.Activity):
         title_entry.show()
 
         try:
-                from sugar3.activity.widgets import DescriptionItem
-                description_item = DescriptionItem(self)
-                toolbar_box.toolbar.insert(description_item, -1)
-                description_item.show()
-        except:
-                pass
+            from sugar3.activity.widgets import DescriptionItem
+            description_item = DescriptionItem(self)
+            toolbar_box.toolbar.insert(description_item, -1)
+            description_item.show()
+        except BaseException:
+            pass
 
         share_button = ShareButton(self)
         toolbar_box.toolbar.insert(share_button, -1)
@@ -126,17 +126,16 @@ class AcousticMeasureActivity(activity.Activity):
         separator.show()
 
         self._t_h_bar = atm_toolbars.TempToolbar()
-        tb = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         self._t_h_bar.show_all()
         adj_button = ToolbarButton(page=self._t_h_bar,
-                                       icon_name='preferences-system')
+                                   icon_name='preferences-system')
         toolbar_box.toolbar.insert(adj_button, -1)
         adj_button.show()
 
         self._smoot_bar = smoot_toolbar.SmootToolbar(self)
         self._smoot_bar.show_all()
         custom_button = ToolbarButton(page=self._smoot_bar,
-                                          icon_name='view-source')
+                                      icon_name='view-source')
         toolbar_box.toolbar.insert(custom_button, -1)
         custom_button.show()
 
@@ -152,7 +151,6 @@ class AcousticMeasureActivity(activity.Activity):
 
         self.set_toolbar_box(toolbar_box)
         toolbar_box.show()
-        toolbar = toolbar_box.toolbar
 
         if not self.powerd_running():
             try:
@@ -161,14 +159,14 @@ class AcousticMeasureActivity(activity.Activity):
                                        '/org/freedesktop/ohm/Keystore')
                 self.ohm_keystore = dbus.Interface(
                     proxy, 'org.freedesktop.ohm.Keystore')
-            except dbus.DBusException, e:
+            except dbus.DBusException as e:
                 self._logger.warning("Error setting OHM inhibit: %s" % e)
                 self.ohm_keystore = None
 
         #distance in meters
         self.current_distance = 0.0
 
-        #worker thread
+        # worker thread
         self._button_event = threading.Event()
         thread.start_new_thread(self._helper_thread, ())
 
@@ -231,10 +229,13 @@ participants, so you cannot join.")
         self.fr.set_label_align(0.5, 0.5)
         self.fr.add(eb)
 
-        self.main_panel.pack_start(self.button, expand=False, fill=False, padding=6)
-        self.main_panel.pack_start(self.message, expand=False, fill=True, padding=0)
+        self.main_panel.pack_start(
+            self.button, expand=False, fill=False, padding=6)
+        self.main_panel.pack_start(
+            self.message, expand=False, fill=True, padding=0)
         self.main_panel.pack_start(img, expand=True, fill=False, padding=0)
-        self.main_panel.pack_start(self.fr, expand=False, fill=False, padding=10)
+        self.main_panel.pack_start(
+            self.fr, expand=False, fill=False, padding=10)
 
         self.set_canvas(self.main_panel)
         self.show_all()
@@ -265,8 +266,8 @@ participants, so you cannot join.")
     def _inhibit_suspend(self):
         if self.using_powerd:
             fd = open(POWERD_INHIBIT_DIR + "/%u" % os.getpid(), 'w')
-            self._logger.debug("inhibit_suspend file is %s" % \
-                                   POWERD_INHIBIT_DIR + "/%u" % os.getpid())
+            self._logger.debug("inhibit_suspend file is %s" %
+                               POWERD_INHIBIT_DIR + "/%u" % os.getpid())
             fd.close()
             return True
 
@@ -283,8 +284,8 @@ participants, so you cannot join.")
     def _allow_suspend(self):
         if self.using_powerd:
             os.unlink(POWERD_INHIBIT_DIR + "/%u" % os.getpid())
-            self._logger.debug("allow_suspend unlinking %s" % \
-                                   POWERD_INHIBIT_DIR + "/%u" % os.getpid())
+            self._logger.debug("allow_suspend unlinking %s" %
+                               POWERD_INHIBIT_DIR + "/%u" % os.getpid())
             return True
 
         if self.ohm_keystore is not None:
@@ -301,8 +302,8 @@ participants, so you cannot join.")
         if button.get_active():
             self._inhibit_suspend()
             self._button_event.set()
-            self._logger.debug("button_clicked: self._button_event.isSet(): " \
-                                   + str(self._button_event.isSet()))
+            self._logger.debug("button_clicked: self._button_event.isSet(): "
+                               + str(self._button_event.isSet()))
             button.set_label(self._button_dict['going'])
         else:
             self._button_event.clear()
@@ -312,8 +313,8 @@ participants, so you cannot join.")
     def _helper_thread(self):
         self._logger.debug("helper_thread starting")
         while True:
-            self._logger.debug("helper_thread: button_event.isSet(): " \
-                                   + str(self._button_event.isSet()))
+            self._logger.debug("helper_thread: button_event.isSet(): "
+                               + str(self._button_event.isSet()))
             self._button_event.wait()
             self._logger.debug("initiating measurement")
             dt = arange.measure_dt_seq(self.main_socket, self.initiating,
@@ -381,7 +382,7 @@ participants, so you cannot join.")
         (self.main_socket, self.main_socket_addr) = self.server_socket.accept()
         self.main_socket.setblocking(1)
         # don't know if this works with Telepathy's pseudosockets
-        #self.server_socket.close()
+        # self.server_socket.close()
 
         self._make_ready()
 
@@ -423,8 +424,8 @@ participants, so you cannot join.")
         n = 0
         for buddy in self.shared_activity.get_joined_buddies():
             n += 1
-            self._logger.debug('Buddy %s is already in the activity' % \
-                                   buddy.props.nick)
+            self._logger.debug('Buddy %s is already in the activity' %
+                               buddy.props.nick)
 
         if n <= 2:
             self._logger.debug('Joined an existing shared activity')
@@ -446,7 +447,7 @@ participants, so you cannot join.")
                            'params=%r state=%d', id, initiator, type, service,
                            params, state)
         if (type == telepathy.TUBE_TYPE_STREAM and
-            service == SERVICE and self.main_tube_id is None):
+                service == SERVICE and self.main_tube_id is None):
             if state == telepathy.TUBE_STATE_LOCAL_PENDING:
                 self.main_tube_id = id
                 self.main_socket_addr = str(
@@ -459,7 +460,7 @@ participants, so you cannot join.")
     def _tube_state_cb(self, tube_id, tube_state):
         if (self.main_socket is None) and \
             (tube_state == telepathy.TUBE_STATE_OPEN) and \
-            (tube_id == self.main_tube_id):
+                (tube_id == self.main_tube_id):
 
             self.main_socket = socket.socket(
                 socket.AF_UNIX, socket.SOCK_STREAM)
@@ -504,8 +505,8 @@ participants, so you cannot join.")
     # KP_Home == box gamekey = 65429
     # KP_Page_Up == O gamekey = 65434
     def _keypress_cb(self, widget, event):
-        self._logger.debug("key press: " + Gdk.keyval_name(event.keyval) \
-                               + " " + str(event.keyval))
+        self._logger.debug("key press: " + Gdk.keyval_name(event.keyval)
+                           + " " + str(event.keyval))
         if event.keyval == 65436:
             self.button.clicked()
         return False
