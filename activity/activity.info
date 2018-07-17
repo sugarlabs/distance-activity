@@ -9,3 +9,5 @@ show_launcher = yes
 summary = How far are you from your friend? use Distance to find out! You can even test how far apart can you be for your XO to still see other's 
 max_participants = 2
 repository = https://github.com/sugarlabs/distance-activity.git
+url = https://help.sugarlabs.org/en/distance.html
+tags = Science;Maths
