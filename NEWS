@@ -1,3 +1,7 @@
-Development is occurring too rapidly to create a sensible NEWS file.
-A NEWS file produce by git-log is larger than the actual code of the
-activity.
+36
+
+* New translations,
+* Changed metadata (Rudra Sadhu, Vipul Gupta, Mayank Singh, Shivamchadha),
+* Source reformatting (Rahul Bothra, James Cameron),
+* Fix warnings in logs (Rahul Bothra),
+* Port from Python Telepathy to TelepathyGLib (Rahul Bothra),
