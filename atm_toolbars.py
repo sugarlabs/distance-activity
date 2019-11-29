@@ -62,17 +62,17 @@ class TempToolbar(Gtk.Toolbar):
     def __init__(self):
         GObject.GObject.__init__(self)
 
-        temp_label = _label_factory(_("Temperature (C): "), self)
+        _label_factory(_("Temperature (C): "), self)
         self._temp_field = _entry_factory(6, self, self._update_cb)
 
         _separator_factory(self)
 
-        humid_label = _label_factory(_("Relative Humidity (%): "), self)
+        _label_factory(_("Relative Humidity (%): "), self)
         self._humid_field = _entry_factory(5, self, self._update_cb)
 
         _separator_factory(self)
 
-        results_label = _label_factory(_("Speed of Sound (m/s): "), self)
+        _label_factory(_("Speed of Sound (m/s): "), self)
         self._result = _label_factory('', self)
 
         self.set_temp(25)

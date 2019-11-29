@@ -19,7 +19,6 @@ import numpy as num
 import wave
 import struct
 import tempfile
-#import pylab
 import time
 import socket
 import math
@@ -333,7 +332,6 @@ def recvall(s, n):
     Attempt to receive n bytes from socket s.  Return received message.
     Fails with "Assertion failed" if a message of incorrect length is received.
     """
-    #assert type(s) == socket._socketobject
     received = ''
     while len(received) < n:
         q = s.recv(n - len(received))
@@ -347,7 +345,6 @@ def recvmsg(s, message):
     Attempt to receive a specific message from a socket.  Returns
     a boolean indicating whether or not that message was received.
     """
-    #assert type(s) == socket._socketobject
     return (message == recvall(s, len(message)))
 
 
@@ -360,7 +357,6 @@ def measure_dt_simul(s, am_server):
     practice, due to nonlinearities in the speakers and microphones, it
     is not usable.
     """
-    #assert type(s) == socket._socketobject
     if ('mls', MLS_INDEX) in cache_dict:
         mls = cache_dict[('mls', MLS_INDEX)]
     else:
@@ -437,7 +433,6 @@ def measure_dt_seq(s, am_server, send_signal=False):
     recording are analyzed separately.  This method is much more tolerant
     of low-quality speaker systems and is known to work.
     """
-    #assert type(s) == socket._socketobject
 
     if send_signal:
         send_signal('preparing')
@@ -585,7 +580,10 @@ def speed_of_sound(t=25.0, h=0.6, p=101325.0, x_c=0.0004):
     p = pressure in Pa
     x_c = mole fraction of CO2
     returns an estimate of the speed of sound in (m/s)
-    from Cramer, O. "The variation of the specific heat ratio and the speed of sound in air with temperature, pressure, humidity, and CO2 concentration". Journal of the Acoustical Society of America, 1993, Vol. 93, Issue 5, p. 2510, eq. 15 and A1-A3."""
+    from Cramer, O. "The variation of the specific heat ratio and the
+    speed of sound in air with temperature, pressure, humidity, and
+    CO2 concentration". Journal of the Acoustical Society of America,
+    1993, Vol. 93, Issue 5, p. 2510, eq. 15 and A1-A3."""
 
     a0 = 331.5024
     a1 = 0.603055
@@ -608,8 +606,8 @@ def speed_of_sound(t=25.0, h=0.6, p=101325.0, x_c=0.0004):
     T = t + 273.15
 
     f = 1.00062 + 3.14e-8 * p + 5.6e-7 * t2
-    psv = math.exp(1.2811805e-5 * (T**2) - 1.9509874e-2 * T
-                   + 34.04926034 - 6.3536311e3 / T)  # Pa
+    psv = math.exp(1.2811805e-5 * (T**2) - 1.9509874e-2 * T +
+                   34.04926034 - 6.3536311e3 / T)  # Pa
     x_w = h * f * psv / p
 
     return a0 + a1 * t + a2 * t2 + (a3 + a4 * t + a5 * t2) * x_w \
@@ -631,7 +629,8 @@ def interactive_mode():
         dt = do_client_seq(server_address, port)
     print "The time delay in seconds is ", dt
     print "The speed of sound in m/s is ", speed_of_sound()
-    print "The distance in meters is therefore ", dt * speed_of_sound() - OLPC_OFFSET
+    print "The distance in meters is therefore ", \
+        dt * speed_of_sound() - OLPC_OFFSET
 
 # pylab.plot(get_room_echo(1))
 # pylab.show()

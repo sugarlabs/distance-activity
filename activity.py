@@ -47,7 +47,6 @@ import os
 import os.path
 import dbus
 
-#import socket_test as arange
 import arange
 import atm_toolbars
 import smoot_toolbar
@@ -82,7 +81,6 @@ class AcousticMeasureActivity(activity.Activity):
         '''Set up the Acoustic Tape Measure activity.'''
         super(AcousticMeasureActivity, self).__init__(handle)
 
-        #self.set_title(_('Acoustic Tape Measure Activity'))
         self._logger = logging.getLogger('acousticmeasure-activity')
 
         GObject.threads_init()
@@ -165,7 +163,7 @@ class AcousticMeasureActivity(activity.Activity):
                 self._logger.warning("Error setting OHM inhibit: %s" % e)
                 self.ohm_keystore = None
 
-        #distance in meters
+        # distance in meters
         self.current_distance = 0.0
 
         # worker thread
@@ -304,8 +302,8 @@ participants, so you cannot join.")
         if button.get_active():
             self._inhibit_suspend()
             self._button_event.set()
-            self._logger.debug("button_clicked: self._button_event.isSet(): "
-                               + str(self._button_event.isSet()))
+            self._logger.debug("button_clicked: self._button_event.isSet(): " +
+                               str(self._button_event.isSet()))
             button.set_label(self._button_dict['going'])
         else:
             self._button_event.clear()
@@ -315,8 +313,8 @@ participants, so you cannot join.")
     def _helper_thread(self):
         self._logger.debug("helper_thread starting")
         while True:
-            self._logger.debug("helper_thread: button_event.isSet(): "
-                               + str(self._button_event.isSet()))
+            self._logger.debug("helper_thread: button_event.isSet(): " +
+                               str(self._button_event.isSet()))
             self._button_event.wait()
             self._logger.debug("initiating measurement")
             dt = arange.measure_dt_seq(self.main_socket, self.initiating,
@@ -363,7 +361,6 @@ participants, so you cannot join.")
 
         self._logger.debug('This is my activity: making a tube...')
 
-        #f = os.tempnam()
         # The filename cannot be in $TMP, because this directory is not
         # visible to Telepathy.
         f = sugar3.activity.activity.get_activity_root() \
@@ -373,9 +370,11 @@ participants, so you cannot join.")
         self.server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
         self.server_socket.bind(f)
 
-        id = self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].OfferStreamTube(
+        chan = self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES]
+        chan.OfferStreamTube(
             SERVICE, {}, TelepathyGLib.SocketAddressType.UNIX,
-            dbus.ByteArray(f), TelepathyGLib.SocketAccessControl.LOCALHOST, "")
+            dbus.ByteArray(f), TelepathyGLib.SocketAccessControl.LOCALHOST,
+            "")
 
         thread.start_new_thread(self.watch_for_join, ())
 
@@ -397,10 +396,9 @@ participants, so you cannot join.")
         self.tubes_chan = self.shared_activity.telepathy_tubes_chan
         self.text_chan = self.shared_activity.telepathy_text_chan
 
-        self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].connect_to_signal(
-            'NewTube', self._new_tube_cb)
-        self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].connect_to_signal(
-            'TubeStateChanged', self._tube_state_cb)
+        chan = self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES]
+        chan.connect_to_signal('NewTube', self._new_tube_cb)
+        chan.connect_to_signal('TubeStateChanged', self._tube_state_cb)
 
         self.shared_activity.connect('buddy-joined', self._buddy_joined_cb)
         self.shared_activity.connect('buddy-left', self._buddy_left_cb)
@@ -452,12 +450,11 @@ participants, so you cannot join.")
                 service == SERVICE and self.main_tube_id is None):
             if state == TelepathyGLib.TubeState.LOCAL_PENDING:
                 self.main_tube_id = id
-                self.main_socket_addr = str(
-                    self.tubes_chan[
-                        TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES].AcceptStreamTube(
-                        id, TelepathyGLib.SocketAddressType.UNIX,
-                        TelepathyGLib.SocketAccessControl.LOCALHOST, "",
-                        byte_arrays=True))
+                chan = self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES]
+                self.main_socket_addr = str(chan.AcceptStreamTube(
+                    id, TelepathyGLib.SocketAddressType.UNIX,
+                    TelepathyGLib.SocketAccessControl.LOCALHOST, "",
+                    byte_arrays=True))
 
     def _tube_state_cb(self, tube_id, tube_state):
         if (self.main_socket is None) and \
@@ -507,8 +504,8 @@ participants, so you cannot join.")
     # KP_Home == box gamekey = 65429
     # KP_Page_Up == O gamekey = 65434
     def _keypress_cb(self, widget, event):
-        self._logger.debug("key press: " + Gdk.keyval_name(event.keyval)
-                           + " " + str(event.keyval))
+        self._logger.debug("key press: " + Gdk.keyval_name(event.keyval) +
+                           " " + str(event.keyval))
         if event.keyval == 65436:
             self.button.clicked()
         return False
