@@ -7,15 +7,16 @@ msgstr ""
 "Project-Id-Version: honey VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2012-01-12 08:08+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2017-12-19 17:13+0000\n"
+"Last-Translator: numanccn <numanccn@gmail.com>\n"
 "Language-Team: Bengali <ankur-bd-l10n@googlegroups.com>\n"
-"Language: \n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.5\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1513703639.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -27,7 +28,7 @@ msgstr "পরিবেশ"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr ""
+msgstr " প্রথাগত মেট্রিক"
 
 #: activity.py:187
 msgid ""
@@ -72,15 +73,14 @@ msgid "Stop Measuring Distance"
 msgstr "দূরত্ব পরিমাপ বন্ধ করুন"
 
 #: activity.py:235 smoot_toolbar.py:99
-#, python-format
-#, python-format, fuzzy
+#, python-format, python-format
 msgid "Measured distance in %s"
 msgstr "মিটারে পরিমাপকৃত দূরত্ব"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
 msgid "meters"
-msgstr ""
+msgstr "মিটারস"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "

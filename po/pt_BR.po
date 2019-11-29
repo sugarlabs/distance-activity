@@ -35,8 +35,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2016-08-02 15:18+0000\n"
-"Last-Translator: betoraposa <humberto.celiasilva@gmail.com>\n"
+"PO-Revision-Date: 2018-09-10 18:19+0000\n"
+"Last-Translator: Paulo Francisco <slomp@ufrgs.br>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1470151117.000000\n"
+"X-POOTLE-MTIME: 1536603550.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -56,7 +56,7 @@ msgstr "Atmosfera"
 
 #: activity.py:165
 msgid "Custom metric"
-msgstr "Métrica Customizada"
+msgstr "Medida personalizada"
 
 #: activity.py:187
 msgid ""
@@ -76,7 +76,7 @@ msgstr "Preparando para medir a distância"
 
 #: activity.py:192
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
-msgstr "Pronto para fazer uma medição.  Esperando que o parceiro esteja pronto."
+msgstr "Pronto para medir.   Esperando que o parceiro esteja pronto."
 
 #: activity.py:194
 msgid "Recording sound from each laptop."
@@ -88,20 +88,21 @@ msgstr "Processando o áudio gravado."
 
 #: activity.py:197
 msgid "This activity already has two participants, so you cannot join."
-msgstr "Esta atividade já tem dois participantes, por isso não pode juntar-se."
+msgstr ""
+"Esta atividade já tem dois participantes, por isso você não pode entrar."
 
 #: activity.py:200
 msgid "Begin Measuring Distance"
-msgstr "Começar Medição da Distância"
+msgstr "Começar a medir a distância"
 
 #: activity.py:201
 msgid "Stop Measuring Distance"
-msgstr "Parar Medição da Distância"
+msgstr "Parar de medir a distância"
 
 #: activity.py:235 smoot_toolbar.py:99
 #, python-format, python-format
 msgid "Measured distance in %s"
-msgstr "Distância Medida em %s"
+msgstr "Distância medida em %s"
 
 #: activity.py:235 smoot_toolbar.py:30 smoot_toolbar.py:34 smoot_toolbar.py:77
 #: smoot_toolbar.py:100
@@ -118,7 +119,7 @@ msgstr "Umidade Relativa (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr "Velocidade da Som (m/s): "
+msgstr "Velocidade do som (m/s): "
 
 #: calibration_toolbar.py:28
 msgid "Calibration Offset (meters): "
@@ -135,11 +136,11 @@ msgstr "polegadas"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
 msgid "feet"
-msgstr "pé"
+msgstr "pés"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
-msgstr "metros"
+msgstr "jardas"
 
 #: smoot_toolbar.py:33 smoot_toolbar.py:39
 msgid "custom units"

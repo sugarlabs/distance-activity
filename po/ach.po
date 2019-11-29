@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 00:33-0400\n"
-"PO-Revision-Date: 2017-10-15 18:49+0000\n"
-"Last-Translator: Chris <cjl@sugarlabs.org>\n"
+"PO-Revision-Date: 2018-04-03 06:09+0000\n"
+"Last-Translator: Olot <agwanta2004@yahoo.co.uk>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ach\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.5.1.1\n"
-"X-POOTLE-MTIME: 1508093364.000000\n"
+"X-POOTLE-MTIME: 1522735755.000000\n"
 
 #: activity/activity.info:2
 msgid "Distance"
@@ -104,9 +104,8 @@ msgid "inches"
 msgstr "ingcec"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:37
-#, fuzzy
 msgid "feet"
-msgstr "pit"
+msgstr "puti"
 
 #: smoot_toolbar.py:32 smoot_toolbar.py:38
 msgid "yards"
