@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-17 14:50+1100\n"
+"POT-Creation-Date: 2019-11-29 15:49+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,63 +21,69 @@ msgstr ""
 msgid "Distance"
 msgstr ""
 
-#: activity.py:178
+#: activity/activity.info:3
+msgid ""
+"How far are you from your friend? use Distance to find out! You can even "
+"test how far apart can you be for your XO to still see other's"
+msgstr ""
+
+#: activity.py:176
 msgid ""
 "To measure the distance between two laptops, you must first share this "
 "Activity."
 msgstr ""
 
-#: activity.py:180
+#: activity.py:178
 msgid "Press the button to measure the distance to another laptop"
 msgstr ""
 
-#: activity.py:182
+#: activity.py:180
 msgid "Preparing to measure distance"
 msgstr ""
 
-#: activity.py:183
+#: activity.py:181
 msgid "Ready to make a measurement.  Waiting for partner to be ready."
 msgstr ""
 
-#: activity.py:185
+#: activity.py:183
 msgid "Recording sound from each laptop."
 msgstr ""
 
-#: activity.py:186
+#: activity.py:184
 msgid "Processing recorded audio."
 msgstr ""
 
-#: activity.py:188
+#: activity.py:186
 msgid "This activity already has two participants, so you cannot join."
 msgstr ""
 
-#: activity.py:191
+#: activity.py:189
 msgid "Begin Measuring Distance"
 msgstr ""
 
-#: activity.py:192
+#: activity.py:190
 msgid "Stop Measuring Distance"
 msgstr ""
 
-#: activity.py:230 smoot_toolbar.py:109
+#: activity.py:228 smoot_toolbar.py:109
 #, python-format
 msgid "Measured distance in %s"
 msgstr ""
 
-#: activity.py:230 smoot_toolbar.py:38 smoot_toolbar.py:42 smoot_toolbar.py:87
+#: activity.py:228 smoot_toolbar.py:38 smoot_toolbar.py:42 smoot_toolbar.py:87
 #: smoot_toolbar.py:110
 msgid "meters"
 msgstr ""
 
-#: atm_toolbars.py:67
+#: atm_toolbars.py:65
 msgid "Temperature (C): "
 msgstr ""
 
-#: atm_toolbars.py:72
+#: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
 msgstr ""
 
-#: atm_toolbars.py:77
+#: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
 msgstr ""
 
@@ -114,7 +120,7 @@ msgstr ""
 msgid "select units"
 msgstr ""
 
-#: smoot_toolbar.py:113
+#: smoot_toolbar.py:114
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
 msgstr ""
