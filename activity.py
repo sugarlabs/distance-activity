@@ -302,8 +302,8 @@ participants, so you cannot join.")
         if button.get_active():
             self._inhibit_suspend()
             self._button_event.set()
-            self._logger.debug("button_clicked: self._button_event.isSet(): " +
-                               str(self._button_event.isSet()))
+            self._logger.debug("button_clicked: self._button_event.isSet(): "
+                               + str(self._button_event.isSet()))
             button.set_label(self._button_dict['going'])
         else:
             self._button_event.clear()
@@ -313,8 +313,8 @@ participants, so you cannot join.")
     def _helper_thread(self):
         self._logger.debug("helper_thread starting")
         while True:
-            self._logger.debug("helper_thread: button_event.isSet(): " +
-                               str(self._button_event.isSet()))
+            self._logger.debug("helper_thread: button_event.isSet(): "
+                               + str(self._button_event.isSet()))
             self._button_event.wait()
             self._logger.debug("initiating measurement")
             dt = arange.measure_dt_seq(self.main_socket, self.initiating,
@@ -442,12 +442,13 @@ participants, so you cannot join.")
             self.shared_activity.leave()
             thread.start_new_thread(self._change_message, ('full',))
 
-    def _new_tube_cb(self, tube_id, initiator, tube_type, service, params, state):
+    def _new_tube_cb(self, tube_id, initiator, tube_type, service, params,
+                     state):
         self._logger.debug('New tube: ID=%d initator=%d type=%d service=%s '
-                           'params=%r state=%d', tube_id, initiator, tube_type, service,
-                           params, state)
-        if (tube_type == TelepathyGLib.TubeType.STREAM and
-                service == SERVICE and self.main_tube_id is None):
+                           'params=%r state=%d', tube_id, initiator, tube_type,
+                           service, params, state)
+        if (tube_type == TelepathyGLib.TubeType.STREAM
+                and service == SERVICE and self.main_tube_id is None):
             if state == TelepathyGLib.TubeState.LOCAL_PENDING:
                 self.main_tube_id = tube_id
                 chan = self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES]
@@ -504,8 +505,8 @@ participants, so you cannot join.")
     # KP_Home == box gamekey = 65429
     # KP_Page_Up == O gamekey = 65434
     def _keypress_cb(self, widget, event):
-        self._logger.debug("key press: " + Gdk.keyval_name(event.keyval) +
-                           " " + str(event.keyval))
+        self._logger.debug("key press: " + Gdk.keyval_name(event.keyval)
+                           + " " + str(event.keyval))
         if event.keyval == 65436:
             self.button.clicked()
         return False
