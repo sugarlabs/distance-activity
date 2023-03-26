@@ -442,17 +442,17 @@ participants, so you cannot join.")
             self.shared_activity.leave()
             thread.start_new_thread(self._change_message, ('full',))
 
-    def _new_tube_cb(self, id, initiator, type, service, params, state):
+    def _new_tube_cb(self, tube_id, initiator, tube_type, service, params, state):
         self._logger.debug('New tube: ID=%d initator=%d type=%d service=%s '
-                           'params=%r state=%d', id, initiator, type, service,
+                           'params=%r state=%d', tube_id, initiator, tube_type, service,
                            params, state)
-        if (type == TelepathyGLib.TubeType.STREAM and
+        if (tube_type == TelepathyGLib.TubeType.STREAM and
                 service == SERVICE and self.main_tube_id is None):
             if state == TelepathyGLib.TubeState.LOCAL_PENDING:
-                self.main_tube_id = id
+                self.main_tube_id = tube_id
                 chan = self.tubes_chan[TelepathyGLib.IFACE_CHANNEL_TYPE_TUBES]
                 self.main_socket_addr = str(chan.AcceptStreamTube(
-                    id, TelepathyGLib.SocketAddressType.UNIX,
+                    tube_id, TelepathyGLib.SocketAddressType.UNIX,
                     TelepathyGLib.SocketAccessControl.LOCALHOST, "",
                     byte_arrays=True))
 
