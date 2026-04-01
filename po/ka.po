@@ -8,17 +8,20 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-29 15:49+1100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-04-01 08:11+0000\n"
+"Last-Translator: NF <rkavt@smartprojects.ge>\n"
+"Language-Team: Georgian <http://weblate.sugarlabs.org/projects/"
+"sugar-activities/distance/ka/>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.4.2\n"
 
 #: activity/activity.info:2
 msgid "Distance"
-msgstr ""
+msgstr "მანძილი"
 
 #: activity/activity.info:3
 msgid ""
@@ -72,19 +75,19 @@ msgstr ""
 #: activity.py:228 smoot_toolbar.py:38 smoot_toolbar.py:42 smoot_toolbar.py:87
 #: smoot_toolbar.py:110
 msgid "meters"
-msgstr ""
+msgstr "მეტრი"
 
 #: atm_toolbars.py:65
 msgid "Temperature (C): "
-msgstr ""
+msgstr "ტემპერატურა (C): "
 
 #: atm_toolbars.py:70
 msgid "Relative Humidity (%): "
-msgstr ""
+msgstr "ფარდობითი ტენიანობა (%): "
 
 #: atm_toolbars.py:75
 msgid "Speed of Sound (m/s): "
-msgstr ""
+msgstr "ხმის სიჩქარე (მ/წმ): "
 
 #: calibration_toolbar.py:31
 msgid "Calibration Offset (meters): "
@@ -92,34 +95,34 @@ msgstr ""
 
 #: smoot_toolbar.py:38 smoot_toolbar.py:43
 msgid "centimeters"
-msgstr ""
+msgstr "სანტიმეტრი"
 
 #. TRANS: English units of measure
 #: smoot_toolbar.py:40 smoot_toolbar.py:44
 msgid "inches"
-msgstr ""
+msgstr "დუიმი"
 
 #: smoot_toolbar.py:40 smoot_toolbar.py:45
 msgid "feet"
-msgstr ""
+msgstr "ფუტი"
 
 #: smoot_toolbar.py:40 smoot_toolbar.py:46
 msgid "yards"
-msgstr ""
+msgstr "იარდი"
 
 #: smoot_toolbar.py:41 smoot_toolbar.py:47
 msgid "custom units"
-msgstr ""
+msgstr "მორგებული ერთეულები"
 
 #: smoot_toolbar.py:91
 msgid "Choose a unit of measure:"
-msgstr ""
+msgstr "აირჩიეთ საზომი ერთეული:"
 
 #: smoot_toolbar.py:94
 msgid "select units"
-msgstr ""
+msgstr "აირჩიეთ ერთეულები"
 
 #: smoot_toolbar.py:114
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
-msgstr ""
+msgstr "%(unit)20.2f %(name)s მეტრზე"
