@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-29 15:49+1100\n"
-"PO-Revision-Date: 2026-04-01 08:11+0000\n"
+"PO-Revision-Date: 2026-06-30 00:37+0000\n"
 "Last-Translator: NF <rkavt@smartprojects.ge>\n"
 "Language-Team: Georgian <http://weblate.sugarlabs.org/projects/"
 "sugar-activities/distance/ka/>\n"
@@ -126,3 +126,7 @@ msgstr "აირჩიეთ ერთეულები"
 #, python-format
 msgid "%(unit)20.2f %(name)s per meter"
 msgstr "%(unit)20.2f %(name)s მეტრზე"
+
+#: activity.py:162
+msgid "Atmosphere"
+msgstr "ატმოსფერო"
